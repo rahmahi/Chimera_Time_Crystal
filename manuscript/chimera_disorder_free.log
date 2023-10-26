@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  26 OCT 2023 15:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  26 OCT 2023 16:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -498,22 +498,18 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 51.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<pic_regions.jpg, id=148, 374.5995pt x 210.7875pt>
+<pic_regions.jpg, id=144, 374.5995pt x 210.7875pt>
 File: pic_regions.jpg Graphic file (type jpg)
 <use pic_regions.jpg>
-Package pdftex.def Info: pic_regions.jpg  used on input line 101.
+Package pdftex.def Info: pic_regions.jpg  used on input line 92.
 (pdftex.def)             Requested size: 199.16928pt x 112.07385pt.
- [2]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 107.
-
-<drive_distribution.pdf, id=177, 358.5374pt x 141.25333pt>
+ [2 <./pic_regions.jpg>]
+<drive_distribution.pdf, id=179, 358.5374pt x 141.25333pt>
 File: drive_distribution.pdf Graphic file (type pdf)
 <use drive_distribution.pdf>
 Package pdftex.def Info: drive_distribution.pdf  used on input line 113.
 (pdftex.def)             Requested size: 213.39566pt x 84.07153pt.
-<sz_t_strongweakJ_ea_N_8.pdf, id=192, 440.84702pt x 179.32733pt>
+<sz_t_strongweakJ_ea_N_8.pdf, id=194, 440.84702pt x 179.32733pt>
 File: sz_t_strongweakJ_ea_N_8.pdf Graphic file (type pdf)
 <use sz_t_strongweakJ_ea_N_8.pdf>
 Package pdftex.def Info: sz_t_strongweakJ_ea_N_8.pdf  used on input line 149.
@@ -528,8 +524,7 @@ Underfull \hbox (badness 1389) in paragraph at lines 154--155
 \T1/cmr/m/n/10 our model, we will nu-mer-i-cally cal-cu-late the lo-cal
  []
 
-[3 <./pic_regions.jpg> <./drive_distribution.pdf>] [4 <./sz_t_strongweakJ_ea_N_
-8.pdf>]
+[3 <./drive_distribution.pdf>] [4 <./sz_t_strongweakJ_ea_N_8.pdf>]
 <quasienergy_8.pdf, id=269, 456.23369pt x 335.71483pt>
 File: quasienergy_8.pdf Graphic file (type pdf)
 <use quasienergy_8.pdf>
@@ -642,7 +637,7 @@ Package rerunfilecheck Info: File `chimera_disorder_free.out' has not changed.
 Here is how much of TeX's memory you used:
  13483 strings out of 478287
  201536 string characters out of 5849289
- 573984 words of memory out of 5000000
+ 573989 words of memory out of 5000000
  31339 multiletter control sequences out of 15000+600000
  491285 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -678,7 +673,7 @@ pe1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/
 sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti0900.pfb></usr/s
 hare/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on chimera_disorder_free.pdf (12 pages, 5206942 bytes).
+Output written on chimera_disorder_free.pdf (12 pages, 5207031 bytes).
 PDF statistics:
  1158 PDF objects out of 1200 (max. 8388607)
  649 compressed objects within 7 object streams
