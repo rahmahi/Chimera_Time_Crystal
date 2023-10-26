@@ -17,6 +17,16 @@ prb,
 \usepackage{hyperref}
 \usepackage{bbm}
 
+
+
+
+\usepackage[dvipsnames]{xcolor}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\usepackage{cancel}
+
+
+
 \begin{document}
 	\preprint{APS/123-QED}
 	
@@ -42,7 +52,7 @@ prb,
 	
 	Symmetry is a fundamental concept in physics. It provides insight into finding the conservation laws, establishing new theories, such as a gauge theory~\cite{Yang_1954}, and understanding the many-body physics. In condensed matter physics, symmetry and its breaking (spontaneous symmetry breaking or SSB) play an essential role in formulating the phases of matter. SSB has been seen at different scales, such as the Higgs mechanism in high-energy physics, cosmology, and Bose-Einstein condensation in cold atoms, etc. ~\cite{krasnov_spontaneous_2012, sadler_spontaneous_2006, vanderbruggen_spontaneous_2015}.
 	
-	In solid-state physics, a state shows crystalline order due to continuous translational symmetry breaking in space. Motivated by the equivalence between space and time in relativistic theory, one can consider SSB along the time axis and a new phase of matter in the temporal axis. Frank Wilczek proposed a framework in 2012 on  $\textit{time translation symmetry breaking}$ (TTSB) in quantum mechanical systems ~\cite{wilczek_quantum_2012}. In another paper, Shapere and Wilczek proposed TTSB for a classical system~\cite{shapere_classical_2012}. This unveils a new state of matter, $\textit{Time Crystals}$ (TC), where the ground state of the system possesses its own dynamics, distinct from external influence~\cite{wilczek_quantum_2012}, which arises from the intrinsic properties and interactions among the system constituents. Additionally, to sustain the periodicity of the TC, the necessary energy originates from external fields. Wilczek's proposed TC was an equilibrium state of matter where continuous time translation symmetry was broken. Later, Oshikawa and Watanabe proved that the TC cannot exist in a thermal equilibrium system (\textit{the no-go theorem}) ~\cite{watanabe_absence_2015}. Their proof does not reject the possibility of the TC  existing in a non-equilibrium system, such as Floquet systems. Hence, the Floquet time crystal (or Discrete time crystal(DTC)) was proposed, in which discrete, not continuous symmetry is broken~\cite{else_floquet_2016}.
+	In solid-state physics, a state shows crystalline order due to continuous translational symmetry breaking in space. Motivated by the equivalence between space and time in relativistic theory, one can consider SSB along the time axis and a new phase of matter in the temporal axis. Frank Wilczek proposed a framework in 2012 on  $\textit{time translation symmetry breaking}$ (TTSB) in quantum mechanical systems ~\cite{wilczek_quantum_2012}. In another paper, Shapere and Wilczek proposed TTSB for a classical system~\cite{shapere_classical_2012}. This unveils a new state of matter, $\textit{Time Crystals}$ (TC), where the ground state of the system possesses its own dynamics, distinct from external influence~\cite{wilczek_quantum_2012}, which arises from the intrinsic properties and interactions among the system constituents. Additionally, to sustain the periodicity of the TC, the necessary energy originates from external fields. Wilczek's proposed TC was an equilibrium state of matter where continuous time translation symmetry was broken. \blue{Bruno commented that Wilczek's proposed rotating soliton should not be the correct ground state corresponding to the proposed model. Bruno also pointed out a confliction regarding energy-conservation principle due to periodic motion in ground state\cite{Bruno2013}.} Later, Oshikawa and Watanabe proved that the TC cannot exist in a thermal equilibrium system (\textit{the no-go theorem}) ~\cite{watanabe_absence_2015}. Their proof does not reject the possibility of the TC  existing in a non-equilibrium system, such as Floquet systems. Hence, the Floquet time crystal (or Discrete time crystal(DTC)) was proposed, in which discrete, not continuous symmetry is broken~\cite{else_floquet_2016}.
 	
 	In a generic DTC, a strong disorder is applied, which results in many-body localization (MBL) in the system in a controlled fashion. This prevents DTC from undergoing a thermalization by exchanging energy with heat-bath (or by sub-system of the closed system)~\cite{alet_many-body_2018,else_floquet_2016,smith_many-body_2016,nguyen_signature_2021}. The introduction of MBL sustains the DTC order to survive for a sufficiently long time ~\cite{zhang_observation_2017}. Direct quenches, Delta-Kicks, and other periodic driving methods are also widely used to construct DTCs~\cite{else_prethermal_2017, russomanno_spin_2017, ho_critical_2017, yu2019, russomanno_floquet_2017}. These methods do not need the application of disorder. DTCs have been experimentally realized in several different many-body systems, such as an array of ion trapped interacting spins~\cite{huang2018,taheri_all-optical_2022, Soham2018, zhang_observation_2017, yao_time_2018,sacha_modeling_2015}, qubits ~\cite{frey_realization_2022}, ordered dipolar $NH_4H_2PO_4$~\cite{rovny_observation_2018}, bouncing ultracold atoms on oscillating mirror~\cite{sacha_time_nodate,golletz_basis_2022} etc. Recent works corroborate the emergence of disorder-free dynamical many-body localization(DMBL) through system dynamics by applying an external periodic drive~\cite{Keser2016, haldar_dynamical_2017, haldar_dynamical_2021,bhattacharyya_transverse_2012,aditya2023dynamical,dutta2014,das_exotic_2010} which is another prospect in the construction of a stable DTC.
 	
@@ -103,10 +113,10 @@ prb,
 	\end{figure}	
 	We have the employed the \textit{moving frame method}~\cite{haldar_dynamical_2021}, where a unitary transformation operator is operated to transform the Hamiltonian into a reduced form. The transformation evolution operator $\hat{U}$ reduces the state $\ket{\psi(t)}$ into a mobile frame in time $t$ as $\ket{\psi(t)}_{mov} = \hat{U}^\dagger \ket{\psi(t)}$, where $\hat{U}$ can be expressed as the time-varying constituent of the Hamiltonian,
 	\begin{equation}
-		\hat{U}(t) = e^{-\frac{i}{\hbar}\int_{0}^{t} dt' \hat{H}_D}.
+		\hat{U}(t) = \blue{\mathcal{T}} e^{-\frac{i}{\hbar}\int_{0}^{t} dt' \hat{H}_D},
 		\label{eq:rot1}
 	\end{equation}
-	The unitary transformation operator for the Hamiltonian $\hat{H_2}$ for the time interval $T_2$, $\in{\Big[\frac{T}{2}, (\frac{T}{2}+t) \Big]}$ is,
+	\blue{where $\mathcal{T}$ is the time ordered exponential}. The unitary transformation operator \blue{$\hat{U}(t)$} for the Hamiltonian $\hat{H_2}$ for the time interval $T_2$, $\in{\Big[\frac{T}{2}, (\frac{T}{2}+t) \Big]}$ is,
 	\begin{align}
 		\hat{U}(t) =& \exp \Bigg[-\frac{i}{\hbar}\int_{\frac{T}{2}}^{\frac{T}{2}+t} (-h \sin(\omega t'))dt'\hbar\sum_i\hat{\sigma}^z_i\Bigg]\nonumber\\
 		=& \prod_{i} \exp\Big[-i \hat{\sigma}^z_i\xi(t))\Big],
@@ -120,25 +130,24 @@ prb,
 		&=\hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) e^{i 2\xi \hat{\sigma}^z_i}  e^{i 2\xi \hat{\sigma}^z_j}
 		\label{eq:movham}
 	\end{align}
-	We have applied Jacobi Anger expansion, $\displaystyle e^{iz \cos(\theta)} = \sum_{n=-\infty}^{\infty} \mathcal{J}_n(z) e^{in\theta}$, where $\mathcal{J}_n$'s denote the roots of the Bessel's function of first kind of $n$'th order. We can neglect the high-order terms due to the high-frequency external drives. Considering only the zeroth order term, the transformed Hamiltonian Eq.\eqref{eq:movham}reduces to,
+	We have applied Jacobi Anger expansion, $\displaystyle e^{iz \cos(\theta)} = \sum_{n=-\infty}^{\infty} \mathcal{J}_n(z) e^{in\omega t}$, \blue{where $\mathcal{J}_n(z)$ is the Bessel function of the first kind of n'th order. We invoke Rotating wave approximation(RWA)\cite{das_exotic_2010, Ashhab2007, Kiely2018, haldar_dynamical_2017,fuji2017}, which suggests to neglect the faster oscillating terms and to keep the resonant or close-to-resonant term among the constituent elements in $\hat{H^{mov}}$. RWA also implies that the resonant term should be time independent\cite{Ashhab2007, das_exotic_2010}, which yields, $n\omega = 0$. The drive frequency $\omega\neq 0$, so $n=0$ (see Appendix A). }  Considering only the zeroth order term, the transformed Hamiltonian Eq.\eqref{eq:movham}reduces to,
 	\begin{multline}
-		\hat{H}^{mov} =\hbar \sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big)J_0\Big(\frac{4h}{\omega}\Big) \\\Bigg[\cos[2](\frac{2h}{\omega}) -i\Big(\hat{\sigma}^z_i\hat{\sigma}^z_j\Big) \sin[2](\frac{2h}{\omega})\\+ i (\hat{\sigma}^z_i + \hat{\sigma}^z_j)\cos(\frac{2h}{\omega})\sin(\frac{2h}{\omega})\Bigg]
+		\hat{H}^{mov} =\hbar \sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big)\blue{\mathcal{J}}_0\Big(\frac{4h}{\omega}\Big) \\\Bigg[\cos[2](\frac{2h}{\omega}) -i\Big(\hat{\sigma}^z_i\hat{\sigma}^z_j\Big) \sin[2](\frac{2h}{\omega})\\+ i (\hat{\sigma}^z_i + \hat{\sigma}^z_j)\cos(\frac{2h}{\omega})\sin(\frac{2h}{\omega})\Bigg]
 		\label{eq:movham1}
 	\end{multline}
-	Now, if the drive parameters $h$ and $\omega$  are varied in such a way that the ratio, $({4h}/{\omega})$ lies at one of the roots of $\mathcal{J}_0$, it is possible to nullify the effective Hamiltonian $\hat{H}^{mov}$ which localizes the system during $T_2$. The Eq.\eqref{eq:movham1} describes the necessary condition for emergence of DMBL during $T_2$. This is supported by the numerical results in section~\ref{sec:level42}, where $\hat{\sigma}^z$ is detected as an existing integral of motion as $M^Z_B$ for region-B remains constant unity and independent of time, which confirms a DMBL~\cite{Keser2016,Dodonov1978}. 
+	Now, if the drive parameters $h$ and $\omega$, \blue{both}  are varied \blue{simultanuously} in such a way that the ratio, $({4h}/{\omega})$ lies at one of the roots of $\mathcal{J}_0(4h/\omega)$, it is possible to nullify the effective Hamiltonian $\hat{H}^{mov}$ which localizes the system during $T_2$. The Eq.\eqref{eq:movham1} describes the necessary condition for emergence of DMBL during $T_2$. This is supported by the numerical results in section~\ref{sec:level42}, where $\hat{\sigma}^z$ is detected as an existing integral of motion as $M^Z_B$ for region-B remains constant unity and independent of time, which confirms a DMBL~\cite{Keser2016,Dodonov1978}. 
 	
 	
 	\section{\label{sec:level3}Coexistence of DTC \& DMBL}
 	
 	To see the emergence of the chimera state in our model, we will numerically calculate the local magnetization,$\left\langle{\hat{S}^z}\right\rangle_i = \expval{\hat{\sigma}^z_i}{\Psi(t)}$ of spin chain, for sufficiently longer time (up to 80 periods) for different $\beta = 0,1.5,2.5,\infty$ and different interaction strengths, weak($J_0 = 0.2/T$) and strong ($J_0 = 0.072/T$), following Sakurai's work~\cite{sakurai_phys_nodate}. To investigate the rigidity of our model, we set the rotational error $\epsilon_A = 0.03$, $\epsilon_B = 0.9$. Additionally, to see the emergence of the chimera state in our model, we consider periodic drive at $\hat{H}_2$ with high frequency $\omega=20$ for both cases where $\mathcal{J}_0(\varpi)$ with $\varpi = 4h/\omega$ is at the roots of $\mathcal{J}_0$ \textit{i.e.} the DL point and away from it. The results are shown in Fig.~\ref{Fig:strong_weak_ea}. 
-
-    \begin{figure*}[t!]
+	
+	\begin{figure*}[t!]
 		\centering
 		\includegraphics[width=17.5cm]{sz_t_strongweakJ_ea_N_8.pdf}
 		\caption{The time evolution of local magnetization for each spin at region A (Site(i)=0,1,2,3) and region B (Site(i)=4,5,6,7) is plotted for up to 80T, taking spin rotation error $\epsilon_A = 0.03$ and $\epsilon_B = 0.9$ with $g=\pi/T$.  In all three panels P, Q, and R, different spin-spin interactions such as long-range, intermediate range, short range, and nearest neighbor range are taken into account and plotted respectively from left to right, namely, (a, b,c,d) in the top row and (e,f,g,h) in the bottom row of each panel. The time evolution considering strong spin coupling ($J_0 = 0.2/T$) in the left panel (P) and weak spin coupling ($J_0 = 0.027/T$) in the middle panel (Q) is plotted  for the DL point (top panels of P \& Q) and away from the DL point (bottom panels of P \& Q). In the right panel (R), local magnetization for an effectively small spin rotational error $\epsilon_A = 0.05$ (top panel of R) and a larger $\epsilon_A = 0.1$ (bottom panel of R) are plotted at the DL point. At small $\epsilon_A=0.5$, the DTC-DMBL chimera is stable, while at $\epsilon_A=0.1$, DTC is stable only for long-range interaction, but in other spin ranges, the DTC phase melts at larger times.}
 		\label{Fig:strong_weak_ea}
-	\end{figure*}
-	
+	\end{figure*}	 
 	As shown in Fig.~\ref{Fig:strong_weak_ea}, at the DL points with strong coupling, the local magnetization for all types of spin-spin interaction shows periodic dynamics with double periods ($2T$) of the driving in region A, while that of region B is stable in time. Thus, regions A and B are the DTC and DMBL phases respectively. It indicates that two different phases of matter coexist in the same spin chain. Thus a chimera state emerges. In contrast, the system dynamics is unstable away from the DL point for both values of $J_0$. Similarly, in the weak interaction, the long-range $(\beta=0.0)$ shows stable DTC and DMBL phases. However, for intermediate($\beta = 1.5$), short-range ($\beta = 2.5$), and nearest neighbour range ($\beta = \infty$) interactions, DTC melts in a short period ($\sim$ 20 periods) in region A. These results are in agreement with previous work~\cite{sakurai_phys_nodate}.
 		
 	The stability of the DTC phase exhibits notable disparities between strong and weak coupling interactions. Specifically, even at the DL point, the DTC phase demonstrates greater stability in the presence of strong coupling as compared to weak coupling for interactions other than long-range interaction. The long-range interaction persists in a stable DTC for both strong and weak spin interactions. Thus the spin chain constitutes two existing simultaneous distinct phases of matter, a DTC and a ferromagnetic localized phase coupled together, manifesting a \textit{chimera} in the quantum spin chain. So in general, long-range coupling is the best candidate for constructing a DTC-ferromagnetic(DTC-DMBL) chimera.
@@ -162,7 +171,7 @@ prb,
 	
 	\begin{figure}
 		\centering
-		\includegraphics[width=8.3cm]{quasienergy_8.pdf}	
+		\includegraphics[width=8.3cm]{quasienergy_8.pdf}[t!]	
 		\caption{Floquet quasi-energy evaluated numerically for the exact Hamiltonian for the one dimensional spin-1/2 spin chain which constitutes a DTC-ferromagnetic-chimera, is plotted for different $\frac{4h}{\omega}$ where $h$ and $\omega$ are drive amplitude and frequency for N = 8 with strong spin coupling interaction. The quasi-energy level repulsion is found (vertical black dashed lines) to be minimum at $(2n+1)\pi$, $n=0,1,2\dots$ The vertical red solid lines represent the roots of Bessel's function of zeroth order i.e. DL points.}
 		\label{Fig:quasienergy}
 	\end{figure}
@@ -175,7 +184,7 @@ prb,
 	The relative \textit{regional} nature of a segmented spin system can be better comprehended through the analysis of regional magnetization. The concept of regional magnetization, $\displaystyle M^z_{A/B}=\frac{2}{N}\sum_{i\in{A/B}}\expval{\hat{\sigma}^z_i(t)}$~\cite{sakurai_phys_nodate}, pertains to the magnetization exhibited by distinct sections of the system.
 	\begin{figure}
 		\centering
-		\includegraphics[width = 8cm]{clean_J_strong_MzAB_betas.pdf}
+		\includegraphics[width = 8cm]{clean_J_strong_MzAB_betas.pdf}[t!]
 		\caption{Regional magnetization $M^z_{A/B}$ of spins of region A and B for weak spin-coupling (left panels) and strong spin-coupling(right panels) for different spin interactions defined by $\beta$'s up to 500T.}
 		\label{Fig:regiogionalmag}
 	\end{figure}
@@ -242,40 +251,64 @@ prb,
 	\onecolumngrid
 	\section{ DMBL in $T_2$ time interval}
 	
-	We have considered a spin-1/2 chain consisting of N numbers of spins, which  incorporates Heisenberg interaction following the power law decay rule. The spin chain is considered to be divided into two regions, A and B. In the first half of the time period ($T_1$), a spin flip operation takes place in region A. In the second half of the time period ($T_2$), the spin chain is driven by a global sinusoidal periodic drive \textit{s.t.} $h_D = -h\sin(\omega t)$ as shown in fig \ref{Fig:time_distribution}. This drive is controlled in such a way that in $T_2$, the system is localized by system dynamics.
+	We have considered a spin-1/2 chain consisting of N numbers of spins, which  incorporates Heisenberg interaction following the power law decay rule. The spin chain is considered to be divided into two regions, A and B. In the first half of the time period ($T_1$), a spin flip operation takes place in region A. In the second half of the time period ($T_2$), the spin chain is driven by a global sinusoidal periodic drive \textit{s.t.} $h_D = -h\sin(\omega t)$ as shown in fig \ref{Fig:time_distribution}. This drive is controlled in such a way that in $T_2$, the \blue{spin-1/2} system is localized by \blue{dynamics of the system itself}.
 	
-	The Hamiltonian in $T_2$ is $\displaystyle \hat{H}_2(t) = \hbar\sum_{i>j} J_{ij}\hat{\sigma}^y_i\hat{\sigma}^y_j - \hbar h \sin(\omega t) \sum_i \hat{\sigma}^z_i$.
-	Where $i$ and $j$ are the sites of spins. $J_{ij} = \frac{J_0}{|i-j|^\beta}$ is the Heisenberg interaction term which incorporates the interaction between the spins at positions  $i$ and $j$ for a power law decay with an exponent $\beta$. 
-	The time evolution operator is found to be,
+	The Hamiltonian\blue{, during} in $T_2$ is $\displaystyle \hat{H}_2(t) = \hbar\sum_{i>j} J_{ij}\hat{\sigma}^y_i\hat{\sigma}^y_j - \hbar h \sin(\omega t) \sum_i \hat{\sigma}^z_i$\blue{, where} $i$ and $j$ are the sites of spins \blue{on the spin-chain}. $J_{ij} = \frac{J_0}{|i-j|^\beta}$ is the Heisenberg interaction term which incorporates the interaction between the spins at positions  $i$ and $j$ for a power law decay with an exponent $\beta$. 
+	The time evolution operator \blue{$\hat{U}(t)$} is found to be\cite{Daniel2020},
 	\begin{equation}
-		\hat{W}(t) = \exp \bigg[-\frac{i}{\hbar}\int_{\frac{T}{2}}^{\frac{T}{2}+t} (-h \sin(\omega t'))dt' \hbar\sum_i\hat{\sigma}^z_i\bigg]
+		\blue{\hat{U}(t)} = \exp \bigg[-\frac{i}{\hbar}\int_{\frac{T}{2}}^{\frac{T}{2}+t} (-h \sin(\omega t'))dt' \hbar\sum_i\hat{\sigma}^z_i\bigg]
 		=\prod_{i} \exp\big[-i \hat{\sigma}^z_i\theta(t)\big],
 	\end{equation}
 	where, $\displaystyle \theta (t) = h\int_{\frac{T}{2}}^{\frac{T}{2}+t}  (-\sin(\omega t')dt') =\frac{h}{\omega}(1-\cos(\omega t))$.
-	Now, the Hamiltonian in moving frame can be transformed to\cite{haldar_statistical_2022},
+	Now, the Hamiltonian in moving frame can be transformed to\cite{haldar_statistical_2022, haldar_dynamical_2021},
 	\begin{align}
-		\hat{H^{mov}} &= \hat{W}^\dagger(t) \hat{H}(t) \hat{W}(t)- i \hat{W}^\dagger(t) \partial_t \hat{W}(t) \nonumber\\
-		&= \hat{W}^\dagger(t) H_0 \hat{W}(t)\nonumber\\
+		\hat{H^{mov}} &= \blue{\hat{U}}^\dagger(t) \hat{H}(t) \blue{\hat{U}}(t)- i \blue{\hat{U}}^\dagger(t) \partial_t \blue{\hat{U}}(t) \nonumber\\
+		&= \blue{\hat{U}}^\dagger(t) H_0 \blue{\hat{U}}(t)\nonumber\\
 		&= \prod_{i} \exp\big[-i\hat{\sigma}^z_i \theta(t)\big] \big[\hbar\sum_{ij}J_{ij}\hat{\sigma}^y_i\hat{\sigma}^y_j\big] \exp\big[ i\hat{\sigma}^z_i \theta(t)\big]\nonumber\\
 		&= \hbar\sum_{ij} J_{ij} e^{-i\hat{\sigma}^z_i \theta(t)} e^{-i\hat{\sigma}^z_j  \theta(t)}\Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big)e^{i\hat{\sigma}^z_i \theta(t)} e^{i\hat{\sigma}^z_j \theta(t)}\nonumber\\
 		&= \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big)e^{i2\hat{\sigma}^z_i \theta(t)} e^{i2\hat{\sigma}^z_j \theta(t)}\nonumber\\
 		&= \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) \Big(\cos^2(2\zeta) -\hat{\sigma}^z_i\hat{\sigma}^z_j \sin^2(2\zeta) + i (\hat{\sigma}^z_i + \hat{\sigma}^z_j)\cos(2\zeta)\sin(2\zeta)\Big).
 		\label{eq:hmovap1}
 	\end{align}
-	Here, we have considered, $\zeta = \frac{h}{\omega}(1-\cos(\omega t))$ and used the expression, $\exp(\mathbbm{1} \cos(a) + i (\hat{n}.\vec{\sigma})\sin(a))$. 
-	Thus one can get,
-	\begin{multline}
-		\cos(2\zeta) =\cos(\frac{2h}{\omega})\Bigg(J_0\Big(\frac{2h}{\omega}\Big) + 2\sum_{n=1}^\infty (-1)^n J_{2n}\Big(\frac{2h}{\omega}\Big)\cos(2n\omega t)\Bigg)\\ + \sin(\frac{2h}{\omega})\Bigg(-2\sum_{n=1}^\infty (-1)^n J_{2n-1}\Big(\frac{2h}{\omega}\Big)\cos([2n-1]\omega t)\Bigg).
-	\end{multline}
-	The drive frequency being high, higher-order terms can be neglected. So, we get,  $\displaystyle \cos(2\zeta) = \cos(\frac{2h}{\omega})J_0\Big(\frac{2h}{\omega}\Big)$. Similarly, $\displaystyle \sin(2\zeta) = \sin(\frac{2h}{\omega})J_0\Big(\frac{2h}{\omega}\Big)$. Here we have applied Jacobi Anger expansion which is $e^{i z \cos(\theta)} = \sum_{n=-\infty}^{\infty} \mathcal{J}_n(z) e^{in\theta}$, where $\mathcal{J}$'s are the roots of the Bessel's function of first kind.
-	
-	\noindent Putting the values in ~\eqref{eq:hmovap1}, the moving frame transformed Hamiltonian becomes,
-	\begin{equation}
-		\hat{H}^{mov} = \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big)\;J_0\Big(\frac{4h}{\omega}\Big)\Bigg(\cos[2](\frac{2h}{\omega}) -i\Big(\hat{\sigma}^z_i\hat{\sigma}^z_j\Big) \sin[2](\frac{2h}{\omega})+ i (\hat{\sigma}^z_i + \hat{\sigma}^z_j)\cos(\frac{2h}{\omega})\sin(\frac{2h}{\omega})\Bigg).
-		\label{eq:hmovfinal}
-	\end{equation}
-	At the roots of Bessel's function of the first order, the rotating frame Hamiltonian($\hat{H}^{mov}$) vanishes. Eq.\eqref{eq:hmovfinal} describes the necessary and sufficient condition for dynamical localization in $T_2$. At the roots of Bessel's function of the first kind,  which is determined by the system parameters as $\frac{4h}{\omega}$, the transformed Hamiltonian in the moving frame vanishes, which manifests dynamical localization (DL).
-	
+\blue{
+	Here, we have considered, $\zeta = \frac{h}{\omega}(1-\cos(\omega t))$ and used the expression, $\exp[ia(\hat{n}.\vec{\sigma})] = \exp[\mathbbm{1} \cos(a) + i (\hat{n}.\vec{\sigma})\sin(a)]$. We also invoke the Jacobi-Anger expression $\displaystyle e^{iz\cos(\omega t)} = \sum_{n=-\infty}^{\infty}\mathcal{J}_n(z)e^{in\omega t}$\cite{arfkenmath}, where $\mathcal{J}_n(z)$ is the Bessel funciton of the first kind of n'th order. In order to simplify the aforementioned Eq.\eqref{eq:hmovap1}, it is necessary to ascertain certain expressions as presented below.\\
+	Firstly,
+	\begin{align}
+		&\cos(\frac{2h}{\omega}\cos(\omega t)) = \frac12\Bigg[\sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{in\omega t} + \sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{-in\omega t}\Bigg],
+	\end{align}
+	Secondly,
+	\begin{align}
+		&\sin(\frac{2h}{\omega}\cos(\omega t)) = \frac{1}{2i}\Bigg[\sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{in\omega t} - \sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{-in\omega t}\Bigg],
+	\end{align}
+	Thirdly,
+	\begin{align}
+	\cos(2\zeta) &= \cos\Big(\frac{2h}{\omega}[1-\cos(\omega t)]\Big)\nonumber\\
+	&=  \cos(\frac{2h}{\omega})\cos(\frac{2h}{\omega} \cos(\omega t)) + \sin(\frac{2h}{\omega})\sin(\frac{2h}{\omega} \cos(\omega t))\nonumber\\
+	&=  \cos(\frac{2h}{\omega})\frac12\Bigg[\sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{in\omega t} + \sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{-in\omega t}\Bigg] \nonumber\\ & \hskip 5cm + \sin(\frac{2h}{\omega})\frac{1}{2i}\Bigg[\sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{in\omega t} - \sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{-in\omega t}\Bigg],
+	\label{eq:hmovap2}
+	\end{align}
+	Finally,
+	\begin{align}
+		\sin(2\zeta) &= \sin\Big(\frac{2h}{\omega}[1-\cos(\omega t)]\Big)\nonumber\\
+		&=  \sin(\frac{2h}{\omega})\frac12\Bigg[\sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{in\omega t} + \sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{-in\omega t}\Bigg] \nonumber\\ & \hskip 5cm - \cos(\frac{2h}{\omega})\frac{1}{2i}\Bigg[\sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{in\omega t} - \sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{-in\omega t}\Bigg].
+		\label{eq:hmovap3}
+	\end{align}
+	Next, to simplify Eq.\eqref{eq:hmovap2} and \eqref{eq:hmovap3}, we employ the Rotating Wave Approximation (RWA)\cite{Ashhab2007, Kiely2018, haldar_dynamical_2017, das_exotic_2010,fuji2017,haldar_statistical_2022}, which suggests that we can ignore the faster-oscillating terms and only keep the resonant or close-to-resonant term among the constituting elements of $\hat{H^{mov}}$. 
+	The resonant term of RWA  is time independent\cite{Ashhab2007}, so at the resosnance condition, in Eq.\eqref{eq:hmovap2} and \eqref{eq:hmovap3}  $n\omega = 0$. The finite drive frequency yields that $n=0$. Thus one can get,
+	\begin{align}
+	\cos(2\zeta) &= \cos\Big(\frac{2h}{\omega}\Big)\mathcal{J}_0\Big(\frac{2h}{\omega}\Big),\nonumber\\
+	\sin(2\zeta) &= \cos\Big(\frac{2h}{\omega}\Big)\mathcal{J}_0\Big(\frac{2h}{\omega}\Big). 
+	\label{eq:hmovap4}
+	\end{align}
+	Substituing these values from Eq.\eqref{eq:hmovap4} to Eq.\eqref{eq:hmovap1},
+	\begin{align}
+		\hat{H}^{mov} &= \sum_{ij} J_{ij} \Big(\hat{\sigma^y_i}\hat{\sigma^y_j}\Big)\Bigg(\mathcal{J}_0\Big(\frac{2h}{\omega}\Big)\Bigg) ^2\Bigg[\cos[2](\frac{2h}{\omega}) -i\Big(\hat{\sigma}^z_i\hat{\sigma}^z_j\Big) \sin[2](\frac{2h}{\omega})+ i (\hat{\sigma}^z_i + \hat{\sigma}^z_j)\cos(\frac{2h}{\omega})\sin(\frac{2h}{\omega})\Bigg]\nonumber\\
+		&= \sum_{ij} J_{ij} \Big(\hat{\sigma^y_i}\hat{\sigma^y_j}\Big)\mathcal{J}_0\Big(\frac{4h}{\omega}\Big)\Bigg[\cos[2](\frac{2h}{\omega}) -i\Big(\hat{\sigma}^z_i\hat{\sigma}^z_j\Big) \sin[2](\frac{2h}{\omega})+ i (\hat{\sigma}^z_i + \hat{\sigma}^z_j)\cos(\frac{2h}{\omega})\sin(\frac{2h}{\omega})\Bigg].
+	\end{align}
+	If the amplitude $h$ and frquency $\omega$ of the drive is varied in such a way that the ratio $\frac{4h}{\omega}$ is one of the roots of Bessel function of first kind and zeroth order which is $\mathcal{J}_0\big(\frac{4h}{\omega}\big)$, $\hat{H^{mov}}$ becomes zero, resulting in localization of the spin system.
+}
+
+
 	\section{\label{sec:appnfloq} Effective Floquet Hamiltonian}
 	
 	Floquet theory is an efficient methodology for evaluating the behavior of systems that undergo periodic driving by converting the time-varying problem into a time-invariant one. The Hamiltonian for a periodically driven system can be written as,
