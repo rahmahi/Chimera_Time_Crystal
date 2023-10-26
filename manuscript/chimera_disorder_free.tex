@@ -103,7 +103,7 @@ prb,
 	
 	In this paper, we have initially fixed $\hat{V}(\hat{\sigma}^\gamma)=0$ and investigated the realization of the proposed chimera. Later in section\ref{sec:level6} we introduced finite values of $\hat{V}(\hat{\sigma}^\gamma)$ to investigate the robustness of the chimera in the presence of the additional external static magnetic field.
 	
-	At the outset, it is postulated that the spins exhibit polarization exclusively in the spin-up orientation. During $T_1$ the spins located within region A, undergo a \textit{spin-flip} resulting in a spin-down orientation, while the spins situated within region B, remain in spin-up orientation as in Fig.~\ref{Fig:spinflip}. There is no spin-spin interaction term in $\hat{H}_1$. \sout{This keeps the spins localized in region A at each spin-flip operation via quantum tunneling destruction.} \blue{This makes each of the spins of the system independent of each other, preventing any growth of correlations or entanglement between them. This leads to the spins being localized in their respective regions.}. In $T_2$ time interval, a periodically driven transverse field is globally applied to the spin chain, such that both regions A and B experience DMBL. If the system is driven up to the next time period 2T, a spin magnetization \textit{period doubling}~\cite{rovny_31mathrmp_2018, Pan2020} is expected. Experimentally, it can be performed using external driving with high frequency to the Hamiltonian $\hat{H}_2$, in which, in other words, its time scale is much shorter than that of interactions.~\cite{choi_observation_2017,zhang_observation_2017,Cirac_1995,Blatt_2012}
+	At the outset, it is postulated that the spins exhibit polarization exclusively in the spin-up orientation. During $T_1$ the spins located within region A, undergo a \textit{spin-flip} resulting in a spin-down orientation, while the spins situated within region B, remain in spin-up orientation as in Fig.~\ref{Fig:spinflip}. There is no spin-spin interaction term in $\hat{H}_1$. \sout{This keeps the spins localized in region A at each spin-flip operation via quantum tunneling destruction.} \blue{This makes each of the spins of the system independent of each other, preventing any growth of correlations or entanglement between them. This leads to the spins being localized in their respective regions during in $T_1$}. In $T_2$ time interval, a periodically driven transverse field is globally applied to the spin chain, such that both regions A and B experience DMBL. If the system is driven up to the next time period 2T, a spin magnetization \textit{period doubling}~\cite{rovny_31mathrmp_2018, Pan2020} is expected. Experimentally, it can be performed using external driving with high frequency to the Hamiltonian $\hat{H}_2$, in which, in other words, its time scale is much shorter than that of interactions.~\cite{choi_observation_2017,zhang_observation_2017,Cirac_1995,Blatt_2012}
 	
 	\section{\label{sec:level2} Interacting Dynamical Localization}
 	
@@ -134,9 +134,9 @@ prb,
 		&=\hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) e^{i 2\xi \hat{\sigma}^z_i}  e^{i 2\xi \hat{\sigma}^z_j}
 		\label{eq:movham}
 	\end{align}
-	We have applied Jacobi Anger expansion, $\displaystyle e^{iz \cos(\theta)} = \sum_{n=-\infty}^{\infty} \mathcal{J}_n(z) e^{in\omega t}$, \blue{where $\mathcal{J}_n(z)$ is the Bessel function of the first kind of n'th order. We invoke Rotating wave approximation(RWA)\cite{das_exotic_2010, Ashhab2007, Kiely2018, haldar_dynamical_2017,fuji2017} in Eq.\eqref{eq:movham}, which suggests to neglect the faster oscillating terms and to keep the resonant or close-to-resonant term among the constituent elements in $\hat{H^{mov}}$. RWA also implies that the resonant term should be time independent\cite{Ashhab2007, das_exotic_2010}, which yields, $n\omega = 0$. The drive frequency is $\omega\neq 0$, so $n=0$ (see Appendix A). }  Considering only the zeroth order term, the transformed Hamiltonian Eq.\eqref{eq:movham}reduces to,
+	We have applied Jacobi Anger expansion, $\displaystyle e^{iz \cos(\theta)} = \sum_{n=-\infty}^{\infty} \mathcal{J}_n(z) e^{in\omega t}$, \blue{where $\mathcal{J}_n(z)$ is the Bessel function of the first kind of n'th order. We invoke Rotating wave approximation(RWA)\cite{das_exotic_2010, Ashhab2007, Kiely2018, haldar_dynamical_2017,fuji2017} in Eq.\eqref{eq:movham}, which suggests to neglect the faster oscillating terms and to keep the resonant or close-to-resonant term among the constituent elements in $\hat{H^{mov}}$. RWA also implies that the resonant term should be time independent\cite{Ashhab2007, das_exotic_2010}, which yields, $n\omega = 0$. The drive frequency is $\omega\neq 0$, so $n=0$ (see Appendix \ref{appendixA}). }  So, considering only $\mathcal{J}_0\big(\frac{4h}{\omega}\big)$ term, the transformed Hamiltonian in Eq.\eqref{eq:movham} reduces to,
 	\begin{multline}
-		\hat{H}^{mov} =\hbar \sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big)\blue{\mathcal{J}}_0\Big(\frac{4h}{\omega}\Big) \\\Bigg[\cos[2](\frac{2h}{\omega}) -i\Big(\hat{\sigma}^z_i\hat{\sigma}^z_j\Big) \sin[2](\frac{2h}{\omega})\\+ i (\hat{\sigma}^z_i + \hat{\sigma}^z_j)\cos(\frac{2h}{\omega})\sin(\frac{2h}{\omega})\Bigg]
+		\hat{H}^{mov} =\hbar \sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big)\blue{\mathcal{J}_0}\Big(\frac{4h}{\omega}\Big) \\\Bigg[\cos[2](\frac{2h}{\omega}) -i\Big(\hat{\sigma}^z_i\hat{\sigma}^z_j\Big) \sin[2](\frac{2h}{\omega})\\+ i (\hat{\sigma}^z_i + \hat{\sigma}^z_j)\cos(\frac{2h}{\omega})\sin(\frac{2h}{\omega})\Bigg]
 		\label{eq:movham1}
 	\end{multline}
 	Now, if the drive parameters $h$ and $\omega$, \blue{both}  are varied \blue{simultanuously} in such a way that the ratio, $({4h}/{\omega})$ lies at one of the roots of $\mathcal{J}_0(4h/\omega)$, it is possible to nullify the effective Hamiltonian $\hat{H}^{mov}$, \blue{which resutls in localization in} the system during $T_2$. The Eq.\eqref{eq:movham1} describes the necessary condition for emergence of DMBL during $T_2$. This is supported by the numerical results in section~\ref{sec:level42}, where $\hat{\sigma}^z$ is detected as an existing integral of motion as $M^Z_B$ for region-B remains constant unity and independent of time, which confirms a DMBL~\cite{Keser2016,Dodonov1978}. 
@@ -166,7 +166,7 @@ prb,
 			\label{eq:floq_eff3}
 		\end{multline}
 	\end{widetext}
-	where $\displaystyle \hat{\theta}_l = 2 \Big(\sum_{m \in B}J_{lm}\hat{\sigma}^y_m \frac{T}{2} \Big)$ denotes a rotation acting on operator $\hat{\sigma}^y_l$ (See Appendix B).
+	where $\displaystyle \hat{\theta}_l = 2 \Big(\sum_{m \in B}J_{lm}\hat{\sigma}^y_m \frac{T}{2} \Big)$ denotes a rotation acting on operator $\hat{\sigma}^y_l$ (See Appendix\ref{AppendixB}).
 	
 	Similar to the original chimera DTC model~\cite{sakurai_phys_nodate}, we see that the rotation error $\epsilon_A$ plays an important role in chimera order in the spin system. To see this point, let us consider the extreme case, where $\epsilon_A=0$, then in Eq.~\eqref{eq:floq_eff3}  $H^\mathrm{eff}$ decouples into terms in regions A and B, \textit{i.e.}
 	\begin{multline}
@@ -254,7 +254,7 @@ prb,
 	\clearpage
 	\appendix
 	\onecolumngrid
-	\section{ DMBL in $T_2$ time interval}
+	\section{ \label{appendixA} DMBL in $T_2$ time interval}
 	
 	We have considered a spin-1/2 chain consisting of N numbers of spins, which  incorporates Heisenberg interaction following the power law decay rule. The spin chain is considered to be divided into two regions, A and B. In the first half of the time period ($T_1$), a spin flip operation takes place in region A. In the second half of the time period ($T_2$), the spin chain is driven by a global sinusoidal periodic drive \textit{s.t.} $h_D = -h\sin(\omega t)$ as shown in fig \ref{Fig:time_distribution}. This drive is controlled in such a way that in $T_2$, the \blue{spin-1/2} system is localized by \blue{dynamics of the system itself}.
 	
@@ -314,7 +314,7 @@ prb,
 }
 
 
-	\section{\label{sec:appnfloq} Effective Floquet Hamiltonian}
+	\section{\label{AppendixB} Effective Floquet Hamiltonian}
 	
 	Floquet theory is an efficient methodology for evaluating the behavior of systems that undergo periodic driving by converting the time-varying problem into a time-invariant one. The Hamiltonian for a periodically driven system can be written as,
 	\begin{equation*}
