@@ -276,7 +276,7 @@ prb,
 		\label{eq:hmovap1}
 	\end{align}
 \blue{
-	Here, we have considered, $\zeta = \frac{h}{\omega}(1-\cos(\omega t))$ and used the expression, $\exp[ia(\hat{n}.\vec{\sigma})] = \exp[\mathbbm{1} \cos(a) + i (\hat{n}.\vec{\sigma})\sin(a)]$. We also invoke the Jacobi-Anger expression $\displaystyle e^{iz\cos(\omega t)} = \sum_{n=-\infty}^{\infty}\mathcal{J}_n(z)e^{in\omega t}$\cite{arfkenmath}, where $\mathcal{J}_n(z)$ is the Bessel funciton of the first kind of n'th order. In order to simplify the aforementioned Eq.\eqref{eq:hmovap1}, it is necessary to ascertain certain expressions as presented below.\\
+	Here, we have considered, $\zeta = \frac{h}{\omega}(1-\cos(\omega t))$ and used the expression, $\exp[ia(\hat{n}\cdot\vec{\sigma})] = \exp[\mathbbm{1} \cos(a) + i (\hat{n}\cdot\vec{\sigma})\sin(a)]$. We also invoke the Jacobi-Anger expression $\displaystyle e^{iz\cos(\omega t)} = \sum_{n=-\infty}^{\infty}\mathcal{J}_n(z)e^{in\omega t}$\cite{arfkenmath}, where $\mathcal{J}_n(z)$ is the Bessel funciton of the first kind of n'th order. In order to simplify the aforementioned Eq.\eqref{eq:hmovap1}, it is necessary to ascertain certain expressions as presented below.\\
 	Firstly,
 	\begin{align}
 		&\cos(\frac{2h}{\omega}\cos(\omega t)) = \frac12\Bigg[\sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{in\omega t} + \sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{-in\omega t}\Bigg],
@@ -298,19 +298,19 @@ prb,
 		&=  \sin(\frac{2h}{\omega})\frac12\Bigg[\sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{in\omega t} + \sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{-in\omega t}\Bigg] \nonumber\\ & \hskip 5cm - \cos(\frac{2h}{\omega})\frac{1}{2i}\Bigg[\sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{in\omega t} - \sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{-in\omega t}\Bigg].
 		\label{eq:hmovap3}
 	\end{align}
-	Next, to simplify Eq.\eqref{eq:hmovap2} and \eqref{eq:hmovap3}, we employ the Rotating Wave Approximation (RWA)\cite{Ashhab2007, Kiely2018, haldar_dynamical_2017, das_exotic_2010,fuji2017,haldar_statistical_2022}, which suggests that we can ignore the faster-oscillating terms and only keep the resonant or close-to-resonant term among the constituting elements of $\hat{H^{mov}}$. 
-	The resonant term of RWA  is time independent\cite{Ashhab2007}, so at the resosnance condition, in Eq.\eqref{eq:hmovap2} and \eqref{eq:hmovap3}  $n\omega = 0$. The finite drive frequency yields that $n=0$. Thus one can get,
+	Next, to simplify Eq.\eqref{eq:hmovap2} and \eqref{eq:hmovap3}, we employ the Rotating Wave Approximation (RWA)\cite{Ashhab2007, Kiely2018, haldar_dynamical_2017, das_exotic_2010,fuji2017,haldar_statistical_2022}, which suggests to ignore the faster-oscillating terms and to keep only the resonant or close-to-resonant term among the constituting elements of $\hat{H^{mov}}$. 
+	The resonant term of RWA  is time independent\cite{Ashhab2007}, so at the resosnance condition, in Eq.\eqref{eq:hmovap2} and \eqref{eq:hmovap3}  $n\omega = 0$. The finite drive frequency yields that $\omega \neq 0$, which results in $n=0$. Thus one can get,
 	\begin{align}
 	\cos(2\zeta) &= \cos\Big(\frac{2h}{\omega}\Big)\mathcal{J}_0\Big(\frac{2h}{\omega}\Big),\nonumber\\
 	\sin(2\zeta) &= \cos\Big(\frac{2h}{\omega}\Big)\mathcal{J}_0\Big(\frac{2h}{\omega}\Big). 
 	\label{eq:hmovap4}
 	\end{align}
-	Substituing these values from Eq.\eqref{eq:hmovap4} to Eq.\eqref{eq:hmovap1},
+	Substituing values from Eq.\eqref{eq:hmovap4} to Eq.\eqref{eq:hmovap1} we get,
 	\begin{align}
 		\hat{H}^{mov} &= \sum_{ij} J_{ij} \Big(\hat{\sigma^y_i}\hat{\sigma^y_j}\Big)\Bigg(\mathcal{J}_0\Big(\frac{2h}{\omega}\Big)\Bigg) ^2\Bigg[\cos[2](\frac{2h}{\omega}) -i\Big(\hat{\sigma}^z_i\hat{\sigma}^z_j\Big) \sin[2](\frac{2h}{\omega})+ i (\hat{\sigma}^z_i + \hat{\sigma}^z_j)\cos(\frac{2h}{\omega})\sin(\frac{2h}{\omega})\Bigg]\nonumber\\
 		&= \sum_{ij} J_{ij} \Big(\hat{\sigma^y_i}\hat{\sigma^y_j}\Big)\mathcal{J}_0\Big(\frac{4h}{\omega}\Big)\Bigg[\cos[2](\frac{2h}{\omega}) -i\Big(\hat{\sigma}^z_i\hat{\sigma}^z_j\Big) \sin[2](\frac{2h}{\omega})+ i (\hat{\sigma}^z_i + \hat{\sigma}^z_j)\cos(\frac{2h}{\omega})\sin(\frac{2h}{\omega})\Bigg].
 	\end{align}
-	If the amplitude $h$ and frquency $\omega$ of the drive is varied in such a way that the ratio $\frac{4h}{\omega}$ is one of the roots of Bessel function of first kind and zeroth order which is $\mathcal{J}_0\big(\frac{4h}{\omega}\big)$, $\hat{H^{mov}}$ becomes zero, resulting in localization of the spin system.
+	If the amplitude $h$ and frquency $\omega$ of the drive is varied simultaneously in such a way that the ratio $\frac{4h}{\omega}$ is one of the roots of Bessel function of first kind and zeroth order which is $\mathcal{J}_0\big(\frac{4h}{\omega}\big)$, then $\hat{H^{mov}}$ becomes zero, resulting in localization of the spin system during $T_2$.
 }
 
 
@@ -320,7 +320,7 @@ prb,
 	\begin{equation*}
 		\hat{H}(t) = \hat{H}_0 + \varepsilon \hat{H}_1(t)
 	\end{equation*}
-	The corresponding unitary evolution operator can be found from $\displaystyle{i\hbar \partial_t \hat{U}(t) = \hat{H}(t) \hat{U}(t)}$. Here $\displaystyle{\hat{U}(t) = \hat{U}(t+ nT)}$. For one time period T, the unitary operator $\displaystyle \hat{U}(T) = \hat{\mathcal{F}}$ is called the Floquet operator which is related to Floquet effective Hamiltonian ($\hat{H}_F$) as $\hat{U}(t) = \exp[-\frac{i}{\hbar}\hat{H}_F T]$~\cite{Eckardt_2015}. $\hat{H}_F\,(=H^\mathrm{eff})$ is derived from the original time-dependent Hamiltonian through a suitable transformation  \blue{given by, $\displaystyle \hat{H}_F(t) = \Bigg(\hat{H}(t) - i\hbar \pdv{t}\Bigg)$}. Floquet Magnus expansion (FM) provides a systematic approach for analyzing the dynamics of quantum systems subjected to high-frequency periodic driving. By calculating successive terms in the expansion, one can derive an effective Hamiltonian that captures the essential physics of the system and allows for a deeper understanding of its behavior. $\hat{H}_F$ can be expanded as~\cite{Sen_2021},	
+	The corresponding unitary evolution operator can be found from $\displaystyle{i\hbar \partial_t \hat{U}(t) = \hat{H}(t) \hat{U}(t)}$. Here $\displaystyle{\hat{U}(t) = \hat{U}(t+ nT)}$. For one time period T, the unitary operator $\displaystyle \hat{U}(T) = \hat{\mathcal{F}}$ is called the Floquet operator which is related to Floquet effective Hamiltonian ($\hat{H}_F$) as $\hat{U}(t) = \exp[-\frac{i}{\hbar}\hat{H}_F T]$~\cite{Eckardt_2015}. $\hat{H}_F\,(=H^\mathrm{eff})$ is derived from the original time-dependent Hamiltonian through a suitable transformation  \blue{given by, $\displaystyle \hat{H}_F(t) = \Bigg(\hat{H}(t) - i\hbar \pdv{t}\Bigg)$}\cite{linda_chaos}. Floquet Magnus expansion (FM) provides a systematic approach for analyzing the dynamics of quantum systems subjected to high-frequency periodic driving. By calculating successive terms in the expansion, one can derive an effective Hamiltonian that captures the essential physics of the system and allows for a deeper understanding of its behavior. $\hat{H}_F$ can be expanded as~\cite{Sen_2021},	
 	\begin{align}
 		\hat{H}_F &= \sum_{n=0}^{\infty} H_F^{(n)}\nonumber\\
 		H_F^{(0)} &= \frac{1}{T} \int_{t_0}^{T+t_0} dt H(t), \nonumber\\

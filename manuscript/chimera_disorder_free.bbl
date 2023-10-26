@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{61}%
+\begin{thebibliography}{62}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -444,13 +444,15 @@
   {82}},\ \bibinfo {pages} {172402} (\bibinfo {year} {2010})}\BibitemShut
   {NoStop}%
 \bibitem [{\citenamefont {Kuramoto}\ and\ \citenamefont
-  {Battogtokh}(2002)}]{kuramoto_coexistence_2002}%
+  {Dorjsuren}(2002)}]{kuramoto_coexistence_2002}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
-  {Kuramoto}}\ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
-  {Battogtokh}},\ }\href {https://doi.org/10.48550/arXiv.cond-mat/0210694}
-  {\bibinfo {title} {Coexistence of coherence and incoherence in nonlocally
-  coupled phase oscillators}} (\bibinfo {year} {2002})\BibitemShut {NoStop}%
+  {Kuramoto}}\ and\ \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Dorjsuren}},\ }\href
+  {http://www.j-npcs.org/abstracts/vol2002/v5no4/v5no4p380.html} {\bibfield
+  {journal} {\bibinfo  {journal} {Nonlinear Phenomena in Complex Systems}\
+  }\textbf {\bibinfo {volume} {5}},\ \bibinfo {pages} {380} (\bibinfo {year}
+  {2002})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Panaggio}\ and\ \citenamefont
   {Abrams}(2015)}]{panaggio_chimera_2015}%
   \BibitemOpen
@@ -693,6 +695,13 @@
   {\bibfield  {journal} {\bibinfo  {journal} {New Journal of Physics}\ }\textbf
   {\bibinfo {volume} {17}},\ \bibinfo {pages} {093039} (\bibinfo {year}
   {2015})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Reichl}(2021)}]{linda_chaos}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Reichl}},\ }\href {https://doi.org/10.1007/978-3-030-63534-3} {\emph
+  {\bibinfo {title} {The Transition to Chaos}}},\ \bibinfo {edition} {3rd}\
+  ed.\ (\bibinfo  {publisher} {Springer Cham},\ \bibinfo {year}
+  {2021})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Sen}\ \emph {et~al.}(2021)\citenamefont {Sen},
   \citenamefont {Sen},\ and\ \citenamefont {Sengupta}}]{Sen_2021}%
   \BibitemOpen
