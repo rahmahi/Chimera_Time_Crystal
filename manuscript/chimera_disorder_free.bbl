@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{62}%
+\begin{thebibliography}{63}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -712,4 +712,11 @@
   {journal} {Journal of Physics: Condensed Matter}\ }\textbf {\bibinfo {volume}
   {33}},\ \bibinfo {pages} {443003} (\bibinfo {year} {2021})}\BibitemShut
   {NoStop}%
+\bibitem [{\citenamefont {Scharf}(1988)}]{Scharf_1988}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Scharf}},\ }\href {https://doi.org/10.1088/0305-4470/21/9/017} {\bibfield
+  {journal} {\bibinfo  {journal} {Journal of Physics A: Mathematical and
+  General}\ }\textbf {\bibinfo {volume} {21}},\ \bibinfo {pages} {2007}
+  (\bibinfo {year} {1988})}\BibitemShut {NoStop}%
 \end{thebibliography}%
