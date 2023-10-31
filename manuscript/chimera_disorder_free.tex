@@ -288,15 +288,32 @@ prb,
 	Thirdly,
 	\begin{align}
 	\cos(2\zeta) &= \cos\Big(\frac{2h}{\omega}[1-\cos(\omega t)]\Big)\nonumber\\
-	&=  \cos(\frac{2h}{\omega})\cos(\frac{2h}{\omega} \cos(\omega t)) + \sin(\frac{2h}{\omega})\sin(\frac{2h}{\omega} \cos(\omega t))\nonumber\\
-	&=  \cos(\frac{2h}{\omega})\frac12\Bigg[\sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{in\omega t} + \sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{-in\omega t}\Bigg] \nonumber\\ & \hskip 5cm + \sin(\frac{2h}{\omega})\frac{1}{2i}\Bigg[\sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{in\omega t} - \sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{-in\omega t}\Bigg],
+	&=  \cos(\frac{2h}{\omega})\cos(\frac{2h}{\omega} \cos(\omega t)) + \sin(\frac{2h}{\omega})\sin(\frac{2h}{\omega} \cos(\omega t)),
 	\label{eq:hmovap2}
 	\end{align}
-	Finally,
+	Fourthly,
 	\begin{align}
 		\sin(2\zeta) &= \sin\Big(\frac{2h}{\omega}[1-\cos(\omega t)]\Big)\nonumber\\
-		&=  \sin(\frac{2h}{\omega})\frac12\Bigg[\sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{in\omega t} + \sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{-in\omega t}\Bigg] \nonumber\\ & \hskip 5cm - \cos(\frac{2h}{\omega})\frac{1}{2i}\Bigg[\sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{in\omega t} - \sum_{n=-\infty}^{\infty} \mathcal{J}_n\Big(\frac{2h}{\omega}\Big)e^{-in\omega t}\Bigg].
+		&=  \sin(\frac{2h}{\omega})\cos(\frac{2h}{\omega} \cos(\omega t)) - \cos(\frac{2h}{\omega})\sin(\frac{2h}{\omega} \cos(\omega t)).
 		\label{eq:hmovap3}
+	\end{align}	
+	Fifthly,
+	\begin{align}
+		\sin(2\zeta) \cos(2\zeta)
+		&=  \Bigg[\sin(\frac{2h}{\omega})\cos(\frac{2h}{\omega} \cos(\omega t)) - \cos(\frac{2h}{\omega})\sin(\frac{2h}{\omega} \cos(\omega t))\Bigg].\nonumber\\
+		&\hskip 3cm \Bigg[\cos(\frac{2h}{\omega})\cos(\frac{2h}{\omega} \cos(\omega t)) + \sin(\frac{2h}{\omega})\sin(\frac{2h}{\omega} \cos(\omega t))\Bigg]\nonumber\\		
+		&= \frac12 \Bigg[\sin\Big(\frac{4h}{\omega}\Big)\cos\Big(\frac{4h}{\omega}\cos(\omega t)\Big) - \cos\Big(\frac{4h}{\omega}\Big)\sin\Big(\frac{4h}{\omega}\cos(\omega t)\Big)\Bigg].
+		\label{eq:hmovap3}
+	\end{align}	
+	Sixthly,
+	\begin{align}
+	\cos[2](2\zeta) &= \Bigg[\cos(\frac{2h}{\omega})\cos(\frac{2h}{\omega} \cos(\omega t)) + \sin(\frac{2h}{\omega})\sin(\frac{2h}{\omega} \cos(\omega t))\Bigg]^2\nonumber\\
+	&=\frac12 \Bigg[\cos\Big(\frac{4h}{\omega}\Big)\cos\Big(\frac{4h}{\omega}\cos(\oemga t)\Big) + \sin\Big(\frac{4h}{\omega}\Big)\sin\Big(\frac{4h}{\omega}\cos(\oemga t)\Big)\Bigg]
+	\end{align}
+	Seventhly,
+	\begin{align}
+		\sin[2](2\zeta) &=  \Bigg[\sin(\frac{2h}{\omega})\cos(\frac{2h}{\omega} \cos(\omega t)) - \cos(\frac{2h}{\omega})\sin(\frac{2h}{\omega} \cos(\omega t))\Bigg]^2\nonumber\\
+		&= -\frac12 \Bigg[\cos\Big(\frac{4h}{\omega}\Big)\cos\Big(\frac{4h}{\omega}\cos(\oemga t)\Big) + \sin\Big(\frac{4h}{\omega}\Big)\sin\Big(\frac{4h}{\omega}\cos(\oemga t)\Big)\Bigg]
 	\end{align}
 	Next, to simplify Eq.\eqref{eq:hmovap2} and \eqref{eq:hmovap3}, we employ the Rotating Wave Approximation (RWA)\cite{Ashhab2007, Kiely2018, haldar_dynamical_2017, das_exotic_2010,fuji2017,haldar_statistical_2022}, which suggests to ignore the faster-oscillating terms and to keep only the resonant or close-to-resonant term among the constituting elements of $\hat{H^{mov}}$. In high frequency regime RWA can be applicable\cite{das_exotic_2010}.
 	The resonant term of RWA  is time independent\cite{Ashhab2007}, so at the resosnance condition, in Eq.\eqref{eq:hmovap2} and \eqref{eq:hmovap3}  $n\omega = 0$. The finite drive frequency yields that $\omega \neq 0$, which results in $n=0$. Thus one can get,
@@ -308,7 +325,7 @@ prb,
 	Substituing values from Eq.\eqref{eq:hmovap4} to Eq.\eqref{eq:hmovap1} we get,
 	\begin{align}
 		\hat{H}^{^{RWA}} &= \sum_{ij} J_{ij} \Big(\hat{\sigma^y_i}\hat{\sigma^y_j}\Big)\Bigg(\mathcal{J}_0\Big(\frac{2h}{\omega}\Big)\Bigg) ^2\Bigg[\cos[2](\frac{2h}{\omega}) -i\Big(\hat{\sigma}^z_i\hat{\sigma}^z_j\Big) \sin[2](\frac{2h}{\omega})+ i (\hat{\sigma}^z_i + \hat{\sigma}^z_j)\cos(\frac{2h}{\omega})\sin(\frac{2h}{\omega})\Bigg]\nonumber\\
-		&= \sum_{ij} J_{ij} \Big(\hat{\sigma^y_i}\hat{\sigma^y_j}\Big)\mathcal{J}_0\Big(\frac{4h}{\omega}\Big)\Bigg[\cos[2](\frac{2h}{\omega}) -i\Big(\hat{\sigma}^z_i\hat{\sigma}^z_j\Big) \sin[2](\frac{2h}{\omega})+ i (\hat{\sigma}^z_i + \hat{\sigma}^z_j)\cos(\frac{2h}{\omega})\sin(\frac{2h}{\omega})\Bigg].
+		&= \sum_{ij} J_{ij} \Big(\hat{\sigma^y_i}\hat{\sigma^y_j}\Big)\mathcal{J}_0\Big(\frac{4h}{\omega}\Big)\Bigg[\cos[2](\frac{2h}{\omega}) -i\Big(\hat{\sigma}^z_i\hat{\sigma}^z_j\Big) \sin[2](\frac{2h}{\omega})+ i (\hat{\sigma}^z_i + \hat{\sigma}^z_j)\cos(\frac{2h}{\omega})\sin(\frac{2h}{\omega})\Bigg]\nonumber\\
 	\end{align}
 	If the amplitude $h$ and frquency $\omega$ of the drive is varied simultaneously in such a way that the ratio $\frac{4h}{\omega}$ is one of the roots of Bessel function of first kind and zeroth order which is $\mathcal{J}_0\big(\frac{4h}{\omega}\big)$, then $\hat{H^{mov}}$ becomes zero, resulting in localization of the spin system during $T_2$.
 }
