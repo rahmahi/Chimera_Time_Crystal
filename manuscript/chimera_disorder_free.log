@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  31 OCT 2023 19:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  1 NOV 2023 07:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -512,15 +512,15 @@ Package pdftex.def Info: drive_distribution.pdf  used on input line 113.
 <sz_t_strongweakJ_ea_N_8.pdf, id=193, 440.84702pt x 179.32733pt>
 File: sz_t_strongweakJ_ea_N_8.pdf Graphic file (type pdf)
 <use sz_t_strongweakJ_ea_N_8.pdf>
-Package pdftex.def Info: sz_t_strongweakJ_ea_N_8.pdf  used on input line 149.
+Package pdftex.def Info: sz_t_strongweakJ_ea_N_8.pdf  used on input line 151.
 (pdftex.def)             Requested size: 497.92322pt x 202.54446pt.
 
-Underfull \hbox (badness 2818) in paragraph at lines 154--155
+Underfull \hbox (badness 2818) in paragraph at lines 156--157
 []\T1/cmr/m/n/10 To see the emer-gence of the chimera state in
  []
 
 
-Underfull \hbox (badness 1389) in paragraph at lines 154--155
+Underfull \hbox (badness 1389) in paragraph at lines 156--157
 \T1/cmr/m/n/10 our model, we will nu-mer-i-cally cal-cu-late the lo-cal
  []
 
@@ -528,51 +528,51 @@ Underfull \hbox (badness 1389) in paragraph at lines 154--155
 <quasienergy_8.pdf, id=269, 456.23369pt x 335.71483pt>
 File: quasienergy_8.pdf Graphic file (type pdf)
 <use quasienergy_8.pdf>
-Package pdftex.def Info: quasienergy_8.pdf  used on input line 179.
+Package pdftex.def Info: quasienergy_8.pdf  used on input line 181.
 (pdftex.def)             Requested size: 236.15796pt x 173.7787pt.
 
-Overfull \hbox (1.46074pt too wide) in paragraph at lines 179--180
+Overfull \hbox (1.46074pt too wide) in paragraph at lines 181--182
  [][]\T1/cmr/m/n/9 [t!] 
  []
 
 <clean_J_strong_MzAB_betas.pdf, id=274, 370.15027pt x 286.75331pt>
 File: clean_J_strong_MzAB_betas.pdf Graphic file (type pdf)
 <use clean_J_strong_MzAB_betas.pdf>
-Package pdftex.def Info: clean_J_strong_MzAB_betas.pdf  used on input line 192.
+Package pdftex.def Info: clean_J_strong_MzAB_betas.pdf  used on input line 194.
 
 (pdftex.def)             Requested size: 227.62204pt x 176.3413pt.
 [5 <./quasienergy_8.pdf>]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 200.
+ on input line 202.
 
 <entangEntrp.pdf, id=709, 520.27124pt x 275.85591pt>
 File: entangEntrp.pdf Graphic file (type pdf)
 <use entangEntrp.pdf>
-Package pdftex.def Info: entangEntrp.pdf  used on input line 206.
+Package pdftex.def Info: entangEntrp.pdf  used on input line 208.
 (pdftex.def)             Requested size: 241.84842pt x 128.22957pt.
 <robustness_N_8.pdf, id=712, 387.2335pt x 380.582pt>
 File: robustness_N_8.pdf Graphic file (type pdf)
 <use robustness_N_8.pdf>
-Package pdftex.def Info: robustness_N_8.pdf  used on input line 222.
+Package pdftex.def Info: robustness_N_8.pdf  used on input line 224.
 (pdftex.def)             Requested size: 241.84842pt x 237.70056pt.
 [6 <./clean_J_strong_MzAB_betas.pdf> <./entangEntrp.pdf>]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 233.
+ on input line 235.
 
 
-Underfull \hbox (badness 1152) in paragraph at lines 236--237
+Underfull \hbox (badness 1152) in paragraph at lines 238--239
 \T1/cmr/m/n/10 tribute to the sta-bil-ity of the DTC-DMBL-chimera
  []
 
 
-Underfull \hbox (badness 2150) in paragraph at lines 236--237
+Underfull \hbox (badness 2150) in paragraph at lines 238--239
 \T1/cmr/m/n/10 ad-di-tional ex-ter-nal static field, and pe-ri-odic drive
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 236--237
+Underfull \hbox (badness 10000) in paragraph at lines 238--239
 
  []
 
@@ -615,23 +615,23 @@ Underfull \hbox (badness 5548) in paragraph at lines 684--690
 ) [8]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 257.
+(hyperref)                removing `math shift' on input line 259.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 257.
+(hyperref)                removing `subscript' on input line 259.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 257.
+(hyperref)                removing `math shift' on input line 259.
 
-LaTeX Font Info:    Trying to load font information for U+bbm on input line 280
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 282
 .
 (/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 ) [9] [10]
 ! Too many }'s.
-l.343 }
+l.345 }
        
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -679,7 +679,7 @@ pe1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/
 sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti0900.pfb></usr/s
 hare/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on chimera_disorder_free.pdf (13 pages, 5212643 bytes).
+Output written on chimera_disorder_free.pdf (13 pages, 5212962 bytes).
 PDF statistics:
  1177 PDF objects out of 1200 (max. 8388607)
  667 compressed objects within 7 object streams
