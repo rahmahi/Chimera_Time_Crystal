@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  2 NOV 2023 01:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  2 NOV 2023 09:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -525,12 +525,12 @@ Underfull \hbox (badness 1389) in paragraph at lines 152--153
  []
 
 [3 <./drive_distribution.pdf>] [4 <./sz_t_strongweakJ_ea_N_8.pdf>]
-<quasienergy_8.pdf, id=260, 456.23369pt x 335.71483pt>
+<quasienergy_8.pdf, id=261, 456.23369pt x 335.71483pt>
 File: quasienergy_8.pdf Graphic file (type pdf)
 <use quasienergy_8.pdf>
 Package pdftex.def Info: quasienergy_8.pdf  used on input line 179.
 (pdftex.def)             Requested size: 236.15796pt x 173.7787pt.
-<clean_J_strong_MzAB_betas.pdf, id=265, 370.15027pt x 286.75331pt>
+<clean_J_strong_MzAB_betas.pdf, id=266, 370.15027pt x 286.75331pt>
 File: clean_J_strong_MzAB_betas.pdf Graphic file (type pdf)
 <use clean_J_strong_MzAB_betas.pdf>
 Package pdftex.def Info: clean_J_strong_MzAB_betas.pdf  used on input line 192.
@@ -541,12 +541,12 @@ Package pdftex.def Info: clean_J_strong_MzAB_betas.pdf  used on input line 192.
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
  on input line 200.
 
-<entangEntrp.pdf, id=700, 520.27124pt x 275.85591pt>
+<entangEntrp.pdf, id=701, 520.27124pt x 275.85591pt>
 File: entangEntrp.pdf Graphic file (type pdf)
 <use entangEntrp.pdf>
 Package pdftex.def Info: entangEntrp.pdf  used on input line 206.
 (pdftex.def)             Requested size: 241.84842pt x 128.22957pt.
-<robustness_N_8.pdf, id=703, 387.2335pt x 380.582pt>
+<robustness_N_8.pdf, id=704, 387.2335pt x 380.582pt>
 File: robustness_N_8.pdf Graphic file (type pdf)
 <use robustness_N_8.pdf>
 Package pdftex.def Info: robustness_N_8.pdf  used on input line 222.
@@ -559,11 +559,6 @@ LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
 
 Underfull \hbox (badness 1152) in paragraph at lines 236--237
 \T1/cmr/m/n/10 tribute to the sta-bil-ity of the DTC-DMBL-chimera
- []
-
-
-Underfull \hbox (badness 2150) in paragraph at lines 236--237
-\T1/cmr/m/n/10 ad-di-tional ex-ter-nal static field, and pe-ri-odic drive
  []
 
 
@@ -624,13 +619,13 @@ Package rerunfilecheck Info: File `chimera_disorder_free.out' has not changed.
 (rerunfilecheck)             Checksum: B83EE9A71EF9C8A3B3D6DA2BDC1C58EC;2937.
  ) 
 Here is how much of TeX's memory you used:
- 13474 strings out of 478287
- 201401 string characters out of 5849289
- 567092 words of memory out of 5000000
- 31333 multiletter control sequences out of 15000+600000
+ 13477 strings out of 478287
+ 201435 string characters out of 5849289
+ 562503 words of memory out of 5000000
+ 31336 multiletter control sequences out of 15000+600000
  491285 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,15n,77p,1974b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,15n,77p,1974b,518s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/mahi/.texlive2021/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk>{/
 usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-di
@@ -662,10 +657,10 @@ pe1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/
 sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti0900.pfb></usr/s
 hare/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on chimera_disorder_free.pdf (12 pages, 5208598 bytes).
+Output written on chimera_disorder_free.pdf (12 pages, 5207380 bytes).
 PDF statistics:
- 1140 PDF objects out of 1200 (max. 8388607)
- 631 compressed objects within 7 object streams
+ 1143 PDF objects out of 1200 (max. 8388607)
+ 634 compressed objects within 7 object streams
  120 named destinations out of 1000 (max. 500000)
  148 words of extra memory for PDF output out of 10000 (max. 10000000)
 
