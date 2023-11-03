@@ -327,29 +327,35 @@ prb,
 	\end{equation} 
 	Let us consider, $\epsilon_A \neq 0$ and $\epsilon_B=1$. Also, we consider $\displaystyle \hat{V}_{\epsilon_A} = \exp\Big(\frac{i\epsilon_A \pi}{2}\sum_{l\in A}\hat{\sigma}^x_l\Big)$  and $\displaystyle \hat{\theta}_l = 2 \Big(\sum_{m \in B}J_{lm}\hat{\sigma}^y_m \frac{T}{2} \Big)$ which denotes a rotation acting on operator $\hat{\sigma}^y_l$, also we have contracted all the terms contributed from only region B. We consider, $\displaystyle {H}_B = \Big(\sum_{l,m\in B} J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m + \frac{4h}{\omega T}\sum_{m \in B}\hat{\sigma^z_m}\Big)$. So, we can write,		
 	\begin{multline}
-		\mathcal{T}\exp(-\frac{i}{\hbar}\int_{\frac{T}{2}}^{T} \hat{H}_2 dt) = \exp\Bigg[-i \Big[ \sum_{l,m\in A}J_{lm} \hat{\sigma}_l^y\hat{\sigma}_m^y +\sum_{l,m\in B}J_{lm}
+		\mathcal{T}\exp\bigg\{-\frac{i}{\hbar}\int_{\frac{T}{2}}^{T} \hat{H}_2 dt\bigg\} = \exp\Bigg\{-i \bigg[ \sum_{l,m\in A}J_{lm} \hat{\sigma}_l^y\hat{\sigma}_m^y +\sum_{l,m\in B}J_{lm}
 		\hat{\sigma_l^y}\hat{\sigma_m^y}-\sum_{\substack{%
 				l \in A,\\
-				m \in B\hfill}} J_{lm}\hat{\sigma}^y_l\hat{\sigma}^y_m\\+\frac{4h}{\omega T}\Big\{ -\sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{m\in B}^{}\hat{\sigma}^z_m\Big\}\Big]\frac{T}{2}\Bigg],
+				m \in B\hfill}} J_{lm}\hat{\sigma}^y_l\hat{\sigma}^y_m\\+\frac{4h}{\omega T}\big( -\sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{m\in B}^{}\hat{\sigma}^z_m\big)\bigg]\frac{T}{2}\Bigg\},
 	\end{multline}	
 	and, $\displaystyle 
 	\exp\Big(-\frac{i}{\hbar} \hat{H}_1 T_1\Big) = \exp\Bigg[\frac{-i(1-\epsilon_A)\pi}{2}\sum_{l \in A}\hat{\sigma}^x_l\Bigg].$
 	Putting these values in the Floquet operator equation can be written as,    	
 	\begin{align}
 		\hat{\mathcal{F}}^2 
-		=& \exp\Bigg[-i \Big[ \sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2} +\sum_{l,m\in B}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}+\sum_{\substack{%
+		=& \exp\Bigg\{-i \Big[ \sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2} +\sum_{l,m\in B}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}+\sum_{\substack{%
 				l \in A,\\
-				m \in B\hfill}} J_{lm}\hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2} +\frac{2h}{\omega }\Big\{ +\sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{m\in B}^{}\hat{\sigma}^z_m\Big\}\Big]\Bigg] \hat{V}_{\epsilon_A} \nonumber\\
-		& \hspace{1 cm}\exp\Bigg[-i \Big[ \sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2} +\sum_{l,m\in B}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}-\sum_{\substack{%
+				m \in B\hfill}} J_{lm}\hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2} +\frac{2h}{\omega }\big( +\sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{m\in B}^{}\hat{\sigma}^z_m\big)\Big]\Bigg\} \hat{V}_{\epsilon_A} \nonumber\\
+		& \hspace{1 cm}\exp\Bigg\{-i \Big[ \sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2} +\sum_{l,m\in B}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}-\sum_{\substack{%
 				l \in A,\\
-				m \in B\hfill}} J_{lm}\hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2} +\frac{2h}{\omega}\Big\{ -\sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{m\in B}^{}\hat{\sigma}^z_m\Big\}\Big]\Bigg] \hat{V}_{\epsilon_A}\nonumber\\
-		=& \exp\Bigg[-i \sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}\Bigg] \exp\Bigg[-i\Big(\frac{2h}{\omega } \sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{l \in A}\frac{\hat{\theta}_{l}}{2}\hat{\sigma}^y_l\Big)\Bigg]\nonumber\\ 
-		&\hspace{3cm} \hat{V}_{\epsilon_A} \exp\Bigg[i \Big(\sum_{l \in A}\frac{\hat{\theta}_{l}}{2}\hat{\sigma}^y_l + \frac{2h}{\omega} \sum_{l\in A}^{}\hat{\sigma}^z_l\Big)\Bigg] \exp\Bigg[-i\sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}\Bigg] \exp\big[-i H_B T\big]\hat{V}_{\epsilon_A}\nonumber\\
-		=& \exp\Bigg[-i 2 \sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}\Bigg]\exp\Bigg[\frac{i \epsilon_A \pi}{2}\sum_{l\in A}\Big\{\hat{\sigma}^x_l \cos(\hat{\theta}_l)\cos(\frac{4h}{\omega})\nonumber\\
+				m \in B\hfill}} J_{lm}\hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2} +\frac{2h}{\omega}\big( -\sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{m\in B}^{}\hat{\sigma}^z_m\big)\Big]\Bigg\} \hat{V}_{\epsilon_A}\nonumber
+		\end{align}
+	We can simplify this expression further with the approximation that all operators with norm $\sim T$ approximately commute with each other, since all operators of $\mathcal{O}(T^2)$ can be neglected for sufficiently large $\omega\equiv 2\pi/T$. Thus, for instance, $e^{T\hat{A} + T\hat{B}}= e^{T\hat{A}}\; e^{T\hat{B}}\;e^{C_2 T^2\left[\hat{A}, \hat{B}\right]}\;e^{C_3 T^3\left[\hat{A},\left[\hat{A}, \hat{B}\right]\right]}\;\dots \approx e^{T\hat{A}} e^{T\hat{B}}$, once all higher order operators are neglected after applying the Zassenhaus' formula~\cite{Magnus1954}. This yields
+		\begin{align}	
+	\hat{\mathcal{F}}^2 	\approx& \exp\Bigg[-i \sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}\Bigg] \exp\Bigg[-i\Big(\frac{2h}{\omega } \sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{l \in A}\frac{\hat{\theta}_{l}}{2}\hat{\sigma}^y_l\Big)\Bigg]\nonumber\\ 
+		&\hspace{3cm} \hat{V}_{\epsilon_A} \exp\Bigg[i \Big(\sum_{l \in A}\frac{\hat{\theta}_{l}}{2}\hat{\sigma}^y_l + \frac{2h}{\omega} \sum_{l\in A}^{}\hat{\sigma}^z_l\Big)\Bigg] \exp\Bigg[-i\sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}\Bigg] \exp\big[-i H_B T\big]\hat{V}_{\epsilon_A}\nonumber
+	\end{align}
+	We now observe that $\hat{\theta}_l$ commutes with all operators that live in sector $A$, thus allowing us to treat it effectively as a $c-$number in the expression above. This allows for the simplification
+	\begin{align}		
+		\hat{\mathcal{F}}^2 	\approx& \exp\Bigg[-2i  \sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}\Bigg]\exp\Bigg[\frac{i \epsilon_A \pi}{2}\sum_{l\in A}\Big\{\hat{\sigma}^x_l \cos(\hat{\theta}_l)\cos(\frac{4h}{\omega})\nonumber\\
 		&\hspace{7cm}+ \hat{\sigma}^y_l \cos(\hat{\theta}_l)\sin(\frac{4h}{\omega})-\hat{\sigma}^z_l \sin(\hat{\theta}_l)\Big\}\Bigg] \exp\big[-i H_B T\big]\hat{V}_{\epsilon_A}\nonumber\\
-		=&exp\Bigg[-i 2\sum_{l,m\in A}J_{lm} \hat{\sigma}_l^y\hat{\sigma}_m^y\frac{T}{2}\Bigg] \exp\Big(\frac{i\epsilon_A \pi}{2}\sum_{l\in A}\hat{\sigma^x_l}\Big) \exp\Bigg[\frac{i \epsilon_A \pi}{2}\sum_{l\in A}\Big\{\hat{\sigma}^x_l \cos(\hat{\theta}_l)\cos(\frac{4h}{\omega})\nonumber\\
+		=&\exp\Bigg[-2i \sum_{l,m\in A}J_{lm} \hat{\sigma}_l^y\hat{\sigma}_m^y\frac{T}{2}\Bigg] \exp\Big(\frac{i\epsilon_A \pi}{2}\sum_{l\in A}\hat{\sigma^x_l}\Big) \exp\Bigg[\frac{i \epsilon_A \pi}{2}\sum_{l\in A}\Big\{\hat{\sigma}^x_l \cos(\hat{\theta}_l)\cos(\frac{4h}{\omega})\nonumber\\
 		&\hspace{ 7cm}  +\hat{\sigma}^y_l \cos(\hat{\theta}_l)\sin(\frac{4h}{\omega})-\hat{\sigma}^z_l \sin(\hat{\theta}_l)\Big\}\Bigg]\exp\big[-i H_B T\big]\nonumber\\
-		=&\exp\Bigg[-i2\sum_{l,m\in A}J_{lm}\hat{\sigma}^y_l\hat{\sigma}^y_m \frac{T}{2}\Bigg] \exp\Bigg[-i\epsilon_A \pi \sum_{\substack{l,m \in A\\l\neq m}}J_{lm} \hat{\sigma}^z_l\hat{\sigma}^y_m\frac{T}{2}\Bigg] \exp\Bigg[\frac{i \epsilon_A \pi}{2}\sum_{l\in A}\Bigg\{\hat{\sigma}^x_l\Bigg( \cos(\hat{\theta}_l)\cos(\frac{4h}{\omega})+1\Bigg)\nonumber\\
+		=&\exp\Bigg[-2i\sum_{l,m\in A}J_{lm}\hat{\sigma}^y_l\hat{\sigma}^y_m \frac{T}{2}\Bigg] \exp\Bigg[-i\epsilon_A \pi \sum_{\substack{l,m \in A\\l\neq m}}J_{lm} \hat{\sigma}^z_l\hat{\sigma}^y_m\frac{T}{2}\Bigg] \exp\Bigg[\frac{i \epsilon_A \pi}{2}\sum_{l\in A}\Bigg\{\hat{\sigma}^x_l\Bigg( \cos(\hat{\theta}_l)\cos(\frac{4h}{\omega})+1\Bigg)\nonumber\\
 		&\hspace{7cm} +\hat{\sigma}^y_l \cos(\hat{\theta}_l)\sin(\frac{4h}{\omega})-\hat{\sigma}^z_l \sin(\hat{\theta}_l)\Bigg\}\Bigg] \exp\big[-i H_B T\big]
 		\label{eq:floq_couple1}
 	\end{align}
@@ -358,7 +364,7 @@ prb,
 		H^{\mathrm{eff}} \approx\frac{\hbar}{2} \sum_{l,m\in A}J_{lm}\hat{\sigma}_l^y\hat{\sigma}_m^y +\frac{\hbar \epsilon_A \pi}{4} \sum_{\substack{l,m\in A\\l\neq m}} J_{lm}\hat{\sigma}^z_l\hat{\sigma}^y_m + \frac{\hbar}{2}\sum_{l,m\in B}J_{lm}\hat{\sigma}_l^y \hat{\sigma}_m^y + \frac{h\hbar}{\pi}\sum_{m \in B}\hat{\sigma}^z_m \\ -\frac{\hbar \pi \epsilon_A}{4T}\sum_{l\in A}\Bigg[\hat{\sigma}^x_l \Bigg(\cos(\hat{\theta}_l)\cos(\frac{4h}{\omega})+1 \Bigg) + \hat{\sigma}^y_l \cos(\hat{\theta}_l)\sin(\frac{4h}{\omega})-\hat{\sigma}^z_l \sin(\hat{\theta}_l)\Bigg].
 		\label{eq:app:nfloq_eff3}
 	\end{multline}
-	At high frequency drive $T\rightarrow 0$ which makes $\hat{\theta}_l \rightarrow 0$. Thus  Eq.\eqref{eq:app:nfloq_eff3} becomes dependent on ratio $\frac{4h}{\omega}$ when $\epsilon_A \neq 0$.
+	In the limit of very high frequencies, $T\rightarrow 0$. Therefore,  $\hat{\theta}_l \rightarrow 0$. Thus, the regions $A$ and $B$ decouple in eq.\eqref{eq:app:nfloq_eff3}, and effective fields $\sim \hat{\sigma}^{x,y}_l$ are appended to the Hamiltonian in region $A$ whose intensities depend only on $\epsilon_A$, and the ratio $\frac{4h}{\omega}$. When $\frac{4h}{\omega}$ is an odd multiple of $\pi$, the two regions decouple completely in the ultra-high frequency limit.
 	
 	
 	
