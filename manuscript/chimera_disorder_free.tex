@@ -41,7 +41,7 @@ prb,
 	\affiliation{Department of Physics, The University of Burdwan, Burdwan 713104, India}
 	
 	\begin{abstract}
-		Chimera states are a captivating occurrence in which a system comprised of multiple interconnected elements exhibits a distinctive combination of synchronized and desynchronized behavior. The emergence of these states can be attributed to the complex interdependence between quantum entanglement and the delicate balance of interactions among system constituents. The emergence of Discrete Time Crystal (DTC) in typical many-body periodically driven systems occurs when there is a breaking of time translation symmetry. Coexisting coupled DTC and a ferromagnetic dynamically many-body localized (DMBL) phase at distinct regions have been investigated under the controlled spin rotational error of a disorder-free spin-1/2 chain for different types of spin-spin interactions. We contribute a novel approach for the emergence of the DTC-DMBL-Chimera phase, which is robust against external static fields in a periodically driven quantum many-body system.
+		Chimera states are a captivating occurrence in which a system comprised of multiple interconnected elements exhibits a distinctive combination of synchronized and de-synchronized behavior. The emergence of these states can be attributed to the complex interdependence between quantum entanglement and the delicate balance of interactions among system constituents. The emergence of Discrete Time Crystal (DTC) in typical many-body periodically driven systems occurs when there is a breaking of time translation symmetry. Coexisting coupled DTC and a ferromagnetic dynamically many-body localized (DMBL) phase at distinct regions have been investigated under the controlled spin rotational error of a disorder-free spin-1/2 chain for different types of spin-spin interactions. We contribute a novel approach for the emergence of the DTC-DMBL-Chimera phase, which is robust against external static fields in a periodically driven quantum many-body system.
 	\end{abstract}
 	
 	\keywords{Dynamical Many Body localization, Chimera in a quantum system, Time crystal, Periodic drive.}
@@ -87,7 +87,7 @@ In solid-state physics, matter is characterized by the presence of crystalline 
 	
 	\section{\label{sec:level2} Interacting Dynamical Localization}
 	
-	Before investigating the chimera order in our model, let us explain that the Hamiltonian $\hat{H}_2$ in Eq.~\eqref{eq:cleanham} shows the Dynamical Many-Body Localization (DMBL). We investigate DMBL analytically for $T_2$  when the system is driven by a sinusoidal transverse periodic drive $h_D$ in $\hat{H}_2$ as illustrated in Fig.~\ref{Fig:time_distribution}.
+	Before investigating the chimera order in our model, we explain how the Hamiltonian $\hat{H}_2$ in Eq.~\eqref{eq:cleanham} exhibits CDT/DL by analytically solving for the dynamics during all $T_2-$cycles. During these times,  the system is driven by a sinusoidal transverse periodic drive $h_D$ as illustrated in Fig.~\ref{Fig:time_distribution}.
 	\begin{figure}
 		\begin{center}
 			\includegraphics[width=7.5cm]{drive_distribution.pdf}
@@ -95,33 +95,35 @@ In solid-state physics, matter is characterized by the presence of crystalline 
 		\caption[]{Pictorial realization of the temporal progression of external drive for two time periods. The drive is considered in such a way that a spin-flip constant drive $\hat{H_1}$ acts during $T_1$(blue curve) and the periodic drive part of $\hat{H_2}$ in $T_2$(red dashed curve). The ordinate is amplitude and abscissa denotes n'th time period.}
 		\label{Fig:time_distribution}
 	\end{figure}	
-	We have the employed the \textit{moving frame method}~\cite{haldar_dynamical_2021}, where a unitary transformation operator is operated to transform the Hamiltonian into a reduced form. The transformation evolution operator $\hat{U}$ reduces the state $\ket{\psi(t)}$ into a mobile frame in time $t$ as $\ket{\psi(t)}_{mov} = \hat{U}^\dagger \ket{\psi(t)}$, where $\hat{U}$ can be expressed as the time-varying constituent of the Hamiltonian,
+	Let us employ the \textit{moving frame method}~\cite{haldar_dynamical_2021}, where a unitary transformation ia performed to the instantaneous rest frame of the rotation representing the drive. The transformation on the state yields $\ket{\psi(t)}_{mov} = \hat{U}^\dagger(t_0,t) \ket{\psi(t)}$, where 
 	\begin{equation}
-		\hat{U}(t) = \blue{\mathcal{T}} e^{-\frac{i}{\hbar}\int_{0}^{t} dt' \hat{H}_D}.
+		\hat{U}(t_0,t) \equiv \blue{\mathcal{T}} e^{-\frac{i}{\hbar}\int_{t_0}^{t} dt' \hat{H}_D}.
 		\label{eq:rot1}
 	\end{equation}
-	The unitary transformation operator for the Hamiltonian $\hat{H_2}$ for the time interval $T_2$, $\in{\Big[\frac{T}{2}, (\frac{T}{2}+t) \Big]}$ is,
+	During the first $T_2-$cycle, $t \in{\Big[\frac{T}{2}, T \Big]}$. Thus,
 	\begin{align}
-		\hat{U}(t) =& \exp \Bigg[-\frac{i}{\hbar}\int_{\frac{T}{2}}^{\frac{T}{2}+t} (-h \sin(\omega t'))dt'\hbar\sum_i\hat{\sigma}^z_i\Bigg]\nonumber\\
+		\hat{U}\left(T/2,t\right) =& \exp \Bigg[-\frac{i}{\hbar}\int_{T/2}^{t+T/2} (-h \sin(\omega t'))dt'\hbar\sum_i\hat{\sigma}^z_i\Bigg]\nonumber\\
 		=& \prod_{i} \exp\Big[-i \hat{\sigma}^z_i\zeta(t))\Big],
 	\end{align}	
 	where, $\displaystyle{
-		\zeta (t) = h\int_{\frac{T}{2}}^{\frac{T}{2}+t}  \Big[-\sin(\omega t')dt'\Big]=  \frac{h}{\omega}\Big[1-\cos(\omega t)\Big]}$.		
-	Now, in the rotating frame, the Hamiltonian can be written as~\cite{haldar_dynamical_2021},
+		\zeta (t) = h\int_{T/2}^{T/2+t}  \Big[-\sin(\omega t')dt'\Big]=  \frac{h}{\omega}\Big[1-\cos(\omega t)\Big]}$.		
+	Now, in this 'rotating frame', the Hamiltonian transforms to~\cite{haldar_dynamical_2021},
 	\begin{align}
-		\hat{H}^{mov} &= \hat{U}^\dagger(t) \hat{H}(t) \hat{U}(t)- i \hat{U}^\dagger(t) \partial_t \hat{U}(t)\nonumber\\
-		&= \hat{U}^\dagger(t) \big[\hbar\sum_{ij}J_{ij}\hat{\sigma}^y_i\hat{\sigma}^y_j\big] \hat{U}(t)\nonumber\\
+		\hat{H}^{mov}(t) &= \hat{U}^\dagger \hat{H}_2(t) \hat{U}- i \hat{U}^\dagger \partial_t \hat{U}\nonumber\\
+		&= \hat{U}^\dagger \big[\hbar\sum_{ij}J_{ij}\hat{\sigma}^y_i\hat{\sigma}^y_j\big] \hat{U}\nonumber\\
 		&=\hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) e^{i 2\zeta(t) \hat{\sigma}^z_i}  e^{i 2\zeta(t) \hat{\sigma}^z_j}
 		\label{eq:movham}
 	\end{align}
-	We have applied Jacobi Anger expansion, $\displaystyle e^{iz \cos(\theta)} = \sum_{n=-\infty}^{\infty} \mathcal{J}_n(z) e^{in\theta}$, where $\mathcal{J}_n$'s denote the roots of the Bessel's function of first kind of $n$'th order. \blue{We introduce Rotating Wave Approximation (RWA) which at high frequency limit, approximately equates terms in Eq.\eqref{eq:movham} with their coarse-grained values. This results in averaging all the harmonic oscillating terms to be 0, except for zero'th order term (see Appendix \ref{sec:AppendixA}). Thus considering only the zeroth order terms in Jacobi-Anger expansion, the moving frame Hamiltonian $\hat{H}^{mov}$ reduces to,
+	Next, we apply the \textit{Jacobi Anger expansion}, $\displaystyle e^{iz \cos(\theta)} = \sum_{n=-\infty}^{\infty} \mathcal{J}_n(z) e^{in\theta}$, where $\mathcal{J}_n$'s denote the  Bessel's function of first kind of $n$'th order. This allows for a Fourier series expansion of $\hat{H}^{mov}(t)$. Now, we introduce Rotating Wave Approximation (RWA), which, in the high frequency limit, approximates the Fourier modes with their coarse-grained values over long times. This allows us to average out all but the zeroth Fourier mode (see Appendix \ref{sec:AppendixA} for details), resulting in the approximation,
 		\begin{multline}
-			\hat{H}^{_{RWA}} = \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) \mathcal{J}_0\Big(\frac{4h}{\omega}\Big)\\
+			\hat{H}^{mov}(t)\approx \hat{H}^{_{RWA}} = \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) \mathcal{J}_0\Big(\frac{4h}{\omega}\Big)\\
 			\Bigg[\mathcal{J}_0\Big(\frac{4h}{\omega}\Big) + \cos(\frac{4h}{\omega})-\hat{\sigma}^z_i\hat{\sigma}^z_j \bigg\{\mathcal{J}_0\Big(\frac{4h}{\omega}\Big)\\
 			- \cos(\frac{4h}{\omega})\bigg\} + \frac{i}{2} (\hat{\sigma}^z_i + \hat{\sigma}^z_j) \sin(\frac{4h}{\omega})\Bigg].
 			\label{eq:movham1}
-	\end{multline}}
-	Now, if the drive parameters $h$ and $\omega$  are \blue{controlled} in such a way that the ratio, $({4h}/{\omega})$ lies at one of the roots of $\mathcal{J}_0$, it is possible to nullify $\hat{H}^{_{RWA}}$, \blue{hence inducing localization of the system}. The Eq.\eqref{eq:movham1} describes the necessary condition for emergence of DMBL during $T_2$ \blue{time cycles}. This is supported by the numerical results in section~\ref{sec:level42}, where $\hat{\sigma}^z$ is detected as an existing integral of motion as $M^Z_B$ for region-B remains constant unity and independent of time, which confirms a DMBL~\cite{Keser2016,Dodonov1978}. 
+	\end{multline}
+	Now, if the drive parameters $h$ and $\omega$  are {engineered} in such a way that the ratio ${4h}/{\omega}$ lies at one of the roots of $\mathcal{J}_0$~\footnote{This can be accomplished in the $\omega \gg J_0$ limit by ensuring that $h\gg J_0$.}, it is possible to nullify the dynamics of $\hat{H}_2$ during all $T_2-$cycles, hence inducing localization in the system. We have supported this result by numerical simulations, detailed in section~\ref{sec:level42}. There, $\hat{\sigma}^z$ is detected as an approximate integral invariant ~\cite{Keser2016,Dodonov1978}. 
+	
+	\textbf{Revised till here.}
 	
 	
 	\section{\label{sec:level3}Coexistence of DTC \& DMBL}
@@ -216,7 +218,7 @@ In solid-state physics, matter is characterized by the presence of crystalline 
 	
 	We have found DTC-DMBL-chimera on a  disorder-free spin-1/2 chain by applying spin-flip operations regionally (with two regions labeled `A' and `B') and, afterward, a global dynamical localization by application of  a high-frequency drive. The weak spin coupling interaction is found to fail to persist in the DTC phase for all interactions except for long-range interaction. A strong spin exchange coupling interaction influences spins to resist relaxation in system dynamics, which yields a stable DTC phase regionally for a sufficiently long time for all types of spin-spin interactions. The stability of DTC in region A depends on the stability of DMBL in region B. The long-range spin interaction is fascinatingly robust against the exchange energy per spin. Long-range interaction enables DTC-DMBL-chimera at both weak and strong coupling interactions. We investigated tuning the spin rotational error at region A and found that at CDT/DL points, chimera can persist only at small rotational error $\epsilon_A$. In the effective Floquet Hamiltonian in Eq.~\ref{eq:floq_eff3} the inter-region interaction term is proportional to the spin rotation error $\epsilon_A$. At large $\epsilon_A$ there is higher coupling in between both the regions, which leads to DTC melting immediately for all interactions except for long-range. 
 	
-	An additional external static field is applied to investigate numerically the robustness of chimera against static perturbations. At small perturbations, the system is found to be robust by retaining the DTC phase in region A for a long time, while at higher perturbations, the system is no longer robust and the DTC melts immediately for all types of spin-spin interactions. The effective Flouquet Hamiltonian depicts time period doubling at the reversal of global ferromagnetic order in the spin chain, which is supported by the exact numerics. The entanglement entropy rises at a very slow rate for both weak and strong regional spin interactions. Thus, the whole system is prevented from thermalization even when the DTC phase is dissolved in region A. This property can be utilized as quantum memory in applications. The proposed model and dynamics can be realized experimentally in trapped ions~\cite{sakurai_phys_nodate, Friedenauer2008}.
+	An additional external static field is applied to investigate numerically the robustness of chimera against static perturbations. At small perturbations, the system is found to be robust by retaining the DTC phase in region A for a long time, while at higher perturbations, the system is no longer robust and the DTC melts immediately for all types of spin-spin interactions. The effective Floquet Hamiltonian depicts time period doubling at the reversal of global ferromagnetic order in the spin chain, which is supported by the exact numerics. The entanglement entropy rises at a very slow rate for both weak and strong regional spin interactions. Thus, the whole system is prevented from thermalization even when the DTC phase is dissolved in region A. This property can be utilized as quantum memory in applications. The proposed model and dynamics can be realized experimentally in trapped ions~\cite{sakurai_phys_nodate, Friedenauer2008}.
 	
 	In summary, we investigated the factors that contribute to the stability of the DTC-DMBL-chimera order. Long-range spin interaction is found to be the most suitable choice to construct DTC-DMBL-chimera where at CDT/DL points, other ranges of spin-spin interactions also contribute. Our analysis focuses on different types of spin-spin interaction defined by the power-law decay rule, the applied regional spin rotational error, the strength of spin-coupling interactions, the applied additional external static field, and periodic drive parameters. These variables are crucial in determining the stability of the chimera order.\\
 	
@@ -261,7 +263,7 @@ In solid-state physics, matter is characterized by the presence of crystalline 
 		&= \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) \Big(\cos^2(2\zeta) -\hat{\sigma}^z_i\hat{\sigma}^z_j \sin^2(2\zeta) + i (\hat{\sigma}^z_i + \hat{\sigma}^z_j)\cos(2\zeta)\sin(2\zeta)\Big).
 		\label{eq:hmovap1}
 	\end{align}
-	Here, we have utitlized the expression, $\displaystyle \exp[ia(\hat{n}\cdot\vec{\sigma})] = \mathbbm{1} \cos(a) + i (\hat{n}\cdot\vec{\sigma})\sin(a)$.	We invoke the Jacobi-Anger expansion $\displaystyle e^{iz\cos(\omega t)} = \sum_{n=-\infty}^{\infty}\mathcal{J}_n(z)e^{in\omega t}$\cite{arfkenmath}, where $\mathcal{J}_n(z)$ is the Bessel funciton of the first kind of n'th order and can be applied to the corresponding terms in Eq.\eqref{eq:hmovap1}. The drive parameters $h$ and $\omega$ are independent of each other. This allows to coarse-grain average on the terms of the Jacobi-Anger expansion in Eq.\eqref{eq:hmovap1}. In high frequency limit the Rotating Wave Approximation (RWA) approximately equates the terms of Jacobi-Anger expansion to their coarse grained value. This provides with the option to average all the harmonic oscillations to zero, with the exception of only the zeroth order term. So considering only $\mathcal{J}_0\left(\frac{4h}{\omega}\right)$ terms in Eq.\eqref{eq:hmovap1}, the $\hat{H}^{mov}$ reduces to RWA-Hamiltonian ($\hat{H}^{_{RWA}}$) as given by,
+	Here, we have utilized the expression, $\displaystyle \exp[ia(\hat{n}\cdot\vec{\sigma})] = \mathbbm{1} \cos(a) + i (\hat{n}\cdot\vec{\sigma})\sin(a)$.	We invoke the Jacobi-Anger expansion $\displaystyle e^{iz\cos(\omega t)} = \sum_{n=-\infty}^{\infty}\mathcal{J}_n(z)e^{in\omega t}$\cite{arfkenmath}, where $\mathcal{J}_n(z)$ is the Bessel funciton of the first kind of n'th order and can be applied to the corresponding terms in Eq.\eqref{eq:hmovap1}. The drive parameters $h$ and $\omega$ are independent of each other. This allows to coarse-grain average on the terms of the Jacobi-Anger expansion in Eq.\eqref{eq:hmovap1}. In high frequency limit the Rotating Wave Approximation (RWA) approximately equates the terms of Jacobi-Anger expansion to their coarse grained value. This provides with the option to average all the harmonic oscillations to zero, with the exception of only the zeroth order term. So considering only $\mathcal{J}_0\left(\frac{4h}{\omega}\right)$ terms in Eq.\eqref{eq:hmovap1}, the $\hat{H}^{mov}$ reduces to RWA-Hamiltonian ($\hat{H}^{_{RWA}}$) as given by,
 	\begin{equation}
 		\hat{H}^{_{RWA}} = \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) \mathcal{J}_0\Big(\frac{4h}{\omega}\Big)\Bigg[\mathcal{J}_0\Big(\frac{4h}{\omega}\Big) + \cos(\frac{4h}{\omega}) -\hat{\sigma}^z_i\hat{\sigma}^z_j \bigg\{\mathcal{J}_0\Big(\frac{4h}{\omega}\Big) - \cos(\frac{4h}{\omega})\bigg\} + \frac{i}{2} (\hat{\sigma}^z_i + \hat{\sigma}^z_j) \sin(\frac{4h}{\omega})\Bigg].
 		\label{eq:hrwa}
@@ -284,7 +286,7 @@ In solid-state physics, matter is characterized by the presence of crystalline 
 	\end{align} 
 	Here each order `$n$' of the previous expansion in Eq.~\ref{eq:app:mageff} is hermitian~\cite{haldar_statistical_2022}.
 	
-	The proposed spin chain in Eq.\eqref{eq:cleanham}undergoes two time periods to construct a DTC. To obtain Floquet equation for the Hamiltonian in Eq.~\ref{eq:cleanham}, Flqouet operator $\hat{\mathcal{F}}$ is acted twice on the Hamiltonian from time $t=0$ to $t=2T$ as,
+	The proposed spin chain in Eq.\eqref{eq:cleanham}undergoes two time periods to construct a DTC. To obtain Floquet equation for the Hamiltonian in Eq.~\ref{eq:cleanham}, Floquet operator $\hat{\mathcal{F}}$ is acted twice on the Hamiltonian from time $t=0$ to $t=2T$ as,
 	\begin{align*}
 		\hat{\mathcal{F}}^2 &= \exp\Big(-\frac{i}{\hbar}\hat{H}_{\epsilon_A, 2T}^{\mathrm{eff}}2T\Big)\\ 
 		&= \mathcal{T}\exp\Big(-\frac{i}{\hbar}\int_{\frac{3T}{2}}^{2T}\hat{H}_2 dt\Big)
@@ -346,7 +348,7 @@ In solid-state physics, matter is characterized by the presence of crystalline 
 		&\hspace{7cm} +\hat{\sigma}^y_l \cos(\hat{\theta}_l)\sin(\frac{4h}{\omega})-\hat{\sigma}^z_l \sin(\hat{\theta}_l)\Bigg\}\Bigg] \exp\big[-i H_B T\big].
 		\label{eq:floq_couple1}
 	\end{align}
-	Now, utilizing the relation $\displaystyle \hat{\mathcal{F}}^2 = \exp\Big(-\frac{i}{\hbar}H^{\mathrm{eff}}2T\Big)$, the effective Floquet hamiltonian can be found as,
+	Now, utilizing the relation $\displaystyle \hat{\mathcal{F}}^2 = \exp\Big(-\frac{i}{\hbar}H^{\mathrm{eff}}2T\Big)$, the effective Floquet Hamiltonian can be found as,
 	\begin{multline}
 		H^{\mathrm{eff}} \approx\frac{\hbar}{2} \sum_{l,m\in A}J_{lm}\hat{\sigma}_l^y\hat{\sigma}_m^y +\frac{\hbar \epsilon_A \pi}{4} \sum_{\substack{l,m\in A\\l\neq m}} J_{lm}\hat{\sigma}^z_l\hat{\sigma}^y_m + \frac{\hbar}{2}\sum_{l,m\in B}J_{lm}\hat{\sigma}_l^y \hat{\sigma}_m^y + \frac{h\hbar}{\pi}\sum_{m \in B}\hat{\sigma}^z_m \\ -\frac{\hbar \pi \epsilon_A}{4T}\sum_{l\in A}\Bigg\{\hat{\sigma}^x_l \bigg[\cos(\hat{\theta}_l)\cos(\frac{4h}{\omega})+1 \bigg] + \hat{\sigma}^y_l \cos(\hat{\theta}_l)\sin(\frac{4h}{\omega})-\hat{\sigma}^z_l \sin(\hat{\theta}_l)\Bigg\}.
 		\label{eq:app:nfloq_eff3}
