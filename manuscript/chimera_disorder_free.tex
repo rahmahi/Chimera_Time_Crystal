@@ -233,44 +233,47 @@ In contrast to the preceding subsection, which focused on the examination of mac
 	\onecolumngrid
 	\section{\label{sec:AppendixA} DMBL in $T_2$ time interval}
 	
-	We have considered a spin-1/2 chain consisting of N numbers of spins, which  incorporates Heisenberg interaction following the power law decay rule. The spin chain is considered to be divided into two regions, A and B. In the first half of the time period ($T_1$), a spin flip operation takes place in region A. In the second half of the time period ($T_2$), the spin chain is driven by a global sinusoidal periodic drive \textit{s.t.} $h_D = -h\sin(\omega t)$ as shown in fig \ref{Fig:time_distribution}. This drive is controlled in such a way that in $T_2$, the system is localized by system dynamics.
+	Let us consider a one-dimensional spin-$1/2$ chain consisting of $N$ spins, with Heisenberg exchange interaction between them. The interaction follows a power law decay rule, where the exchange energy between the $i^{th}$ and $j^{th}$ spins is presumed to be  $J_{ij}=J_0\abs{i-j}^{-\beta}$. Let us now  divide the chain into two regions, A and B, and introduce time dependencies via two pulse wave sequences in the manner described in sec.~\ref{sec:mdl_n_dynam} and Fig \ref{Fig:time_distribution}. The first sequence  induces spin-flips in region A within time $T_1$, and the second modulates a global sinusoidal periodic drive in the field \textit{s.t.} $h_D = -h\sin(\omega t)$ within time $T_2$, chosen to be such that the time period $T\equiv 2\pi/\omega = T_1 + T_2$. This drive parameters are controlled in such a way that the system is dynamically localized during the $T_2-$cycles.
 	
-	The Hamiltonian in $T_2$ is $\displaystyle \hat{H}_2(t) = \hbar\sum_{i>j} J_{ij}\hat{\sigma}^y_i\hat{\sigma}^y_j - \hbar h \sin(\omega t) \sum_i \hat{\sigma}^z_i$.
-	Where $i$ and $j$ are the sites of spins. $J_{ij} = \frac{J_0}{|i-j|^\beta}$ is the Heisenberg interaction term which incorporates the interaction between the spins at positions  $i$ and $j$ for a power law decay with an exponent $\beta$. 
-	The time evolution operator is found to be,
+	The Hamiltonian during the $T_2-$cycle is $\displaystyle \hat{H}_2(t) = \hbar\sum_{i>j} J_{ij}\hat{\sigma}^y_i\hat{\sigma}^y_j - \hbar h \sin(\omega t) \sum_i \hat{\sigma}^z_i$. Let us define the free propagator 
 	\begin{equation}
-		\hat{U}(t) = \exp \bigg[-\frac{i}{\hbar}\int_{\frac{T}{2}}^{\frac{T}{2}+t} (-h \sin(\omega t'))dt' \hbar\sum_i\hat{\sigma}^z_i\bigg]
+		\hat{U}(t) \equiv \exp \bigg[-\frac{i}{\hbar}\int_{\frac{T}{2}}^{\frac{T}{2}+t} (-h \sin(\omega t'))dt' \hbar\sum_i\hat{\sigma}^z_i\bigg]
 		=\prod_{i} \exp\big[-i \hat{\sigma}^z_i\zeta(t)\big],
 	\end{equation}
 	where, $\displaystyle \zeta (t) = h\int_{\frac{T}{2}}^{\frac{T}{2}+t}  (-\sin(\omega t')dt') =\frac{h}{\omega}(1-\cos(\omega t))$.
-	Now, the Hamiltonian in moving frame can be transformed to\cite{haldar_statistical_2022},
+	Now, the Hamiltonian can be transformed to the moving frame as follows \cite{haldar_statistical_2022}.
 	\begin{align}
-		\hat{H^{mov}} &= \hat{U}^\dagger(t) \hat{H}_2(t) \hat{U}(t)- i \hat{U}^\dagger(t) \partial_t \hat{U}(t) \nonumber\\
+		\hat{H^{mov}}(t) &= \hat{U}^\dagger(t) \hat{H}_2(t) \hat{U}(t)- i \hat{U}^\dagger(t) \partial_t \hat{U}(t) \nonumber\\
 		&= \prod_{i} \exp\big[-i\hat{\sigma}^z_i \zeta(t)\big] \big[\hbar\sum_{ij}J_{ij}\hat{\sigma}^y_i\hat{\sigma}^y_j\big] \exp\big[ i\hat{\sigma}^z_i \zeta(t)\big]\nonumber\\
 		&= \hbar\sum_{ij} J_{ij} e^{-i\hat{\sigma}^z_i \zeta(t)} e^{-i\hat{\sigma}^z_j  \zeta(t)}\Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big)e^{i\hat{\sigma}^z_i \zeta(t)} e^{i\hat{\sigma}^z_j \zeta(t)}\nonumber\\
 		&= \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big)e^{i2\hat{\sigma}^z_i \zeta(t)} e^{i2\hat{\sigma}^z_j \zeta(t)}\nonumber\\
-		&= \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) \Big(\mathbbm{1}\cos^2(2\zeta) -\hat{\sigma}^z_i\hat{\sigma}^z_j \sin^2(2\zeta) + i (\hat{\sigma}^z_i + \hat{\sigma}^z_j)\cos(2\zeta)\sin(2\zeta)\Big).
+		&= \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) \Big[\mathbbm{1}\cos^2(2\zeta) -\hat{\sigma}^z_i\hat{\sigma}^z_j \sin^2(2\zeta) + i (\hat{\sigma}^z_i + \hat{\sigma}^z_j)\cos(2\zeta)\sin(2\zeta)\Big].
 		\label{eq:hmovap1}
 	\end{align}
-	Here, we have utilized the expression, $\displaystyle \exp[ia(\hat{n}\cdot\vec{\sigma})] = \mathbbm{1} \cos(a) + i (\hat{n}\cdot\vec{\sigma})\sin(a)$.	We invoke the Jacobi-Anger expansion $\displaystyle e^{iz\cos(\omega t)} = \sum_{n=-\infty}^{\infty}\mathcal{J}_n(z)e^{in\omega t}$\cite{arfkenmath}, where $\mathcal{J}_n(z)$ is the Bessel function of the first kind of n'th order and can be applied to expand the $\hat{H}^{mov}$ to expand in Fourier series expansion. The drive parameters $h$ and $\omega$ are independent of each other. In high frequency limit, Roatating Wave Approximaiton(RWA) approximates the Fourier modes with their long time  coarse-grain averages. This provides us with the option to average all the Fourier modes to zero, with the exception of only the zeroth order. Thus considering only $\mathcal{J}_0\left(\frac{4h}{\omega}\right)$ terms, the $\hat{H}^{mov}$ reduces to RWA-Hamiltonian ($\hat{H}^{_{RWA}}$) as given by,
+	Here, we have utilized the expression, $\displaystyle \exp[ia(\hat{n}\cdot\vec{\sigma})] = \mathbbm{1} \cos(a) + i (\hat{n}\cdot\vec{\sigma})\sin(a)$.	Now, we invoke the Jacobi-Anger formula $\displaystyle e^{iz\cos(\omega t)} = \sum_{n=-\infty}^{\infty}\mathcal{J}_n(z)e^{in\omega t}$\cite{arfkenmath}, where $\mathcal{J}_n(z)$ is the Bessel function of the first kind of $n^{th}$ order, and apply to the RHS of  Eq~\ref{eq:hmovap1}. This produces a Fourier series expansion for 
+	 $\hat{H}^{mov}(t)$ with period $\omega$. Note however, that the drive parameters $h$ and $\omega$ are independent of each other. In high frequency limit, where $\omega \gg J_0$, the Rotating Wave Approximaiton (RWA) allows for approximating the Fourier modes with their long time coarse-grain averages. This provides us with the option to average all the Fourier modes to zero, except for the zeroth order mode. Thus, the $\hat{H}^{mov}$ reduces to the RWA-Hamiltonian ($\hat{H}^{_{RWA}}$),
 	\begin{equation}
-		\hat{H}^{mov}\approx \hat{H}^{_{RWA}} = \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) \mathcal{J}_0\Big(\frac{4h}{\omega}\Big)\Bigg[\mathbbm{1}\bigg\{\mathcal{J}_0\Big(\frac{4h}{\omega}\Big) + \cos(\frac{4h}{\omega})\bigg\} -\hat{\sigma}^z_i\hat{\sigma}^z_j \bigg\{\mathcal{J}_0\Big(\frac{4h}{\omega}\Big) - \cos(\frac{4h}{\omega})\bigg\} + \frac{i}{2} (\hat{\sigma}^z_i + \hat{\sigma}^z_j) \sin(\frac{4h}{\omega})\Bigg].
+		\hat{H}^{mov}\approx \hat{H}^{_{RWA}} = \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) \mathcal{J}_0(\chi)\Bigg\{\mathbbm{1}\bigg[\mathcal{J}_0(\chi) + \cos(\chi)\bigg] -\hat{\sigma}^z_i\hat{\sigma}^z_j \bigg[\mathcal{J}_0(\chi) - \cos(\chi)\bigg] + \frac{i}{2} \left(\hat{\sigma}^z_i + \hat{\sigma}^z_j\right) \sin(\chi)\Bigg\}.
 		\label{eq:hrwa}
 	\end{equation}	
-	If $h$ and $\omega$ are controlled in such fashion that $\left(\frac{4h}{\omega}\right)$ is one the roots of Bessel's function of the first kind (${i.e.}$ $\mathcal{J}_0\left(\frac{4h}{\omega}\right)$), then $\hat{H}^{_{RWA}}$ vanishes totally, which results in localization during the second half cycles of time period.
+	Now, for a particular $\omega$, if $h$ is controlled in such fashion that $\chi\equiv\frac{4h}{\omega}$ lies on one of the roots of $\mathcal{J}_0(\chi)$, then $\hat{H}^{_{RWA}}$ vanishes, resulting in localization of any initial state during the $T_2-$cycles. This can be accomplished in various ways, for instance, if $\omega\gg J_0$, ensuring that $h\gg J_0$ such that $4h/\omega$ is of $\mathcal{O}(1)$ allows for the possibility of $\chi$ falling on the first root of $\mathcal{J}_0(\chi)$ even for large $\omega$.
 	
 	\section{\label{sec:AppendixB} Effective Floquet Hamiltonian}
 	
-	Floquet theory is an efficient methodology for evaluating the behavior of systems that undergo periodic driving by converting the time-varying problem into a time-invariant one. The Hamiltonian for a periodically driven system can be written as,
+	Floquet theory is a widely used methodology for evaluating the behavior of time-periodic systems.  In a quantum system that is time periodic with period $T$, the Hamiltonian obeys $\hat{H}(t+T) = \hat{H}(t)\;\forall t$. If we split the time-dependent part from the time-independent, or \textit{d.c.} part, we can write
 	\begin{equation*}
 		\hat{H}(t) = \hat{H}_0 + \varepsilon \hat{H}_1(t)
 	\end{equation*}
-	The corresponding unitary evolution operator can be found from $\displaystyle{i\hbar \partial_t \hat{U}(t) = \hat{H}(t) \hat{U}(t)}$. Here $\displaystyle{\hat{U}(t) = \hat{U}(t+ nT)}$. For one time period T, the unitary operator $\displaystyle \hat{U}(T) = \hat{\mathcal{F}}$ is called the Floquet operator which is related to Floquet effective Hamiltonian ($\hat{H}_F$) as $\hat{U}(t) = \exp[-\frac{i}{\hbar}\hat{H}_F T]$~\cite{Eckardt_2015}. $\hat{H}_F\,(=H^\mathrm{eff})$ is derived from the original time-dependent Hamiltonian through a suitable transformation, given by, $\displaystyle \hat{H}_F(t) = \Bigg(\hat{H}(t) - i\hbar \pdv{t}\Bigg)$. Floquet Magnus expansion (FM) provides a systematic approach for analyzing the dynamics of quantum systems subjected to high-frequency periodic driving. By calculating successive terms in the expansion, one can derive an effective Hamiltonian that captures the essential physics of the system and allows for a deeper understanding of its behavior. $\hat{H}_F$ can be expanded as~\cite{Sen_2021},	
+	The corresponding propagator can be obtained by solving the Schr\"odinger equation $\displaystyle{i\hbar \partial_t \hat{U}(t) = \hat{H}(t) \hat{U}(t)}$.  The propagator at $t=T$, given by $ \hat{\mathcal{F}}\equiv \hat{U}(T)$ is called the \textit{Floquet operator}. Now, it follows from Floquet's Theorem that, if the system is strobed at integer multiples of $T$, the dynamics can be mapped to that of a time-independent effective Hamiltonian $\hat{H}_F$, such that  $\displaystyle\hat{U}(nT) = \exp\bigg[-\frac{i}{\hbar}\hat{H}_F\; nT \bigg]$~\cite{Eckardt_2015}.  The operator$\hat{H}_F$ (also denoted by $H^\mathrm{eff}$) is obtained from the original time-dependent Hamiltonian, and is given by, $\displaystyle \hat{H}_F = \Bigg(\hat{H}(t) - i\hbar \pdv{t}\Bigg)$ evaluated at $t=T$. 
+	
+	The Floquet Magnus expansion (FM) provides a systematic approach for obtaining a high-frequency expansion for the Floquet Hamiltonian $\hat{H}_F$, allowing for analyzing the dynamics of quantum systems subjected to high-frequency periodic driving. By calculating successive terms in the expansion, one can derive an effective Hamiltonian that captures the essential physics of the system and allows for a deeper understanding of its behavior. $\hat{H}_F$ can be expanded as~\cite{Sen_2021},	
+	\todo[inline]{I'm going to stop here. The expression below is totally wrong, and does not agree with equations 2 and 3 of Sen \textit{et. al.}.  There, the series is $H_F = \sum_n T^n H^{(n)}_F$ and the coefficients of the terms are all different. Please correct them and adjust all subsequent calculations to match. I cannot trust the rest of the calculations until the coefficients are corrected. Also, please use the physics package from \LaTeX\;for commutators and other quantum expressions.}
 	\begin{align}
-		\hat{H}_F &= \sum_{n=0}^{\infty} H_F^{(n)}\nonumber\\
-		H_F^{(0)} &= \frac{1}{T} \int_{t_0}^{T+t_0} dt H(t), \nonumber\\
-		H_F^{(1)} &= \frac{1}{2!\hbar(i)T} \int_{t_0}^{T+t_0} dt_1  \int_{t_0}^{t_1} dt_2 [H(t_1), H(t_2)]\nonumber\\
-		H_F^{(2)} &= -\frac{1}{3!\hbar^2 T^3} \int_{t_0}^{T+t_0} dt_1  \int_{t_0}^{t_1} dt_2 \int_{t_0}^{t_2} dt_3([H(t_1),[H(t_2), H(t_3)]] + [H(t_3),[H(t_2), H(t_1)]])
+		\hat{H}_F &= \sum_{n=0}^{\infty} H_F^{(n)},\nonumber\\
+		H_F^{(0)} &= \frac{1}{T} \int_{t_0}^{T+t_0} \mathrm{d}t\;\hat{H}(t), \nonumber\\
+		H_F^{(1)} &= \frac{1}{i\!\hbar T} \int_{t_0}^{T+t_0} \mathrm{d}t_1  \int_{t_0}^{t_1} \mathrm{d}t_2\; \comm{\hat{H}(t_1)} {\hat{H}(t_2)},\nonumber\\
+		H_F^{(2)} &= -\frac{1}{3!\hbar^2 T^3} \int_{t_0}^{T+t_0} \mathrm{d}t_1  \int_{t_0}^{t_1} \mathrm{d}t_2 \int_{t_0}^{t_2} \mathrm{d}t_3\;\bigg(\comm{\hat{H}(t_1)}{\comm{\hat{H}(t_2)}{\hat{H}(t_3)}} + \comm{\hat{H}(t_3)}{\comm{\hat{H}(t_2)}{\hat{H}(t_1)}}\bigg), \\
+		\dots & \nonumber
 		\label{eq:app:mageff}
 	\end{align} 
 	Here each order `$n$' of the previous expansion in Eq.~\ref{eq:app:mageff} is hermitian~\cite{haldar_statistical_2022}.
@@ -280,11 +283,11 @@ In contrast to the preceding subsection, which focused on the examination of mac
 		\hat{\mathcal{F}}^2 &= \exp\Big(-\frac{i}{\hbar}\hat{H}_{\epsilon_A, 2T}^{\mathrm{eff}}2T\Big)\\ 
 		&= \mathcal{T}\exp\Big(-\frac{i}{\hbar}\int_{\frac{3T}{2}}^{2T}\hat{H}_2 dt\Big)
 		\exp\Big(-\frac{i}{\hbar}\hat{H}_1T_1\Big)\mathcal{T}\exp\Big(-\frac{i}{\hbar}\int_{\frac{T}{2}}^{T}\hat{H}_2 dt\Big)\exp\Big(-\frac{i}{\hbar}\hat{H}_1T_1\Big).
-		\label{}
 	\end{align*}
 	Here $\mathcal{T}$ is the time-ordered exponential. The effective Floquet coefficients can be evaluated as given below,	
 	\begin{align}
-		H_F^{(0)} &= \frac{2}{T} \int_{\frac{T}{2}}^{T} dt H(t) = \frac{2}{T} \int_{\frac{T}{2}}^{T} dt \Bigg[\hbar\sum_{i\neq j} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_j -\hbar h\sin(\omega t) \sum_i\hat{\sigma}^z_i\Bigg]= \hbar\sum_{i\neq j} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_j + \frac{4h\hbar}{T \omega}\sum_i\hat{\sigma}^z_i,
+		H_F^{(0)} &= \frac{2}{T} \int_{\frac{T}{2}}^{T} dt H(t) = \frac{2}{T} \int_{\frac{T}{2}}^{T} dt 
+		\Bigg[\hbar\sum_{i\neq j} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_j -\hbar h\sin(\omega t) \sum_i\hat{\sigma}^z_i\Bigg]= \hbar\sum_{i\neq j} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_j + \frac{4h\hbar}{T \omega}\sum_i\hat{\sigma}^z_i,
 	\end{align}	
 	\begin{align}
 		H_F^{(1)} &= \frac{1}{2!(i)\hbar} \frac{2}{T} \int_{\frac{T}{2}}^{T} dt_1  \int_{\frac{T}{2}}^{t_1} dt_2 [H(t_1), H(t_2)]\nonumber\\
