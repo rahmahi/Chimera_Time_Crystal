@@ -115,8 +115,6 @@ In solid-state physics, matter is characterized by the presence of crystalline 
 		\label{eq:movham}
 	\end{align}
 
-		
-
 	Next, we apply the \textit{Jacobi Anger expansion}, $\displaystyle e^{iz \cos(\theta)} = \sum_{n=-\infty}^{\infty} \mathcal{J}_n(z) e^{in\theta}$, where $\mathcal{J}_n$'s denote the  Bessel's function of first kind of $n$'th order. This allows for a Fourier series expansion of $\hat{H}^{mov}(t)$. Now, we introduce Rotating Wave Approximation (RWA), which, in the high frequency limit, approximates the Fourier modes with their coarse-grained values over long times. This allows us to average out all but the zeroth Fourier mode (see Appendix \ref{sec:AppendixA} for details), resulting in the approximation,
 		\begin{multline}
 			\hat{H}^{mov}(t)\approx \hat{H}^{_{RWA}} = \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) \mathcal{J}_0\Big(\frac{4h}{\omega}\Big)\\
@@ -247,6 +245,7 @@ In contrast to the preceding subsection, which focused on the examination of mac
 	% Bibliography
 	%
 	%
+	%\nocite{*}
 	\bibliographystyle{apsrev4-1}
 	\bibliography{chimera}% Produces the bibliography via BibTeX.
 	%
