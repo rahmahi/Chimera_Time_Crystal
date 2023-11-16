@@ -304,35 +304,27 @@ In contrast to the preceding subsection, which focused on the examination of mac
 	\todo[inline]{I'm going to stop here. The rest of the derivation is poorly written and the math is unclear. Also, please use the physics package from \LaTeX\;for commutators and other quantum expressions.}
 	In the limit of large $\omega$ (small $T$), this series can be truncated at lower orders. Now, the proposed spin chain in Eq.\eqref{eq:cleanham} needs to evolve for at least two time periods to manifest a DTC. If the effective time-independent Hamiltonian at that time is denoted by $\hat{H}^{\mathrm{eff}}_{\epsilon_A, 2T}$, then, the propagator
 	\begin{align*}
-		\hat{\mathcal{F}}^{(2)} &\equiv \exp\Big(-\frac{i}{\hbar}\hat{H}_{\epsilon_A, 2T}^{\mathrm{eff}}\;2T\Big)\\ 
-		&= \mathcal{T}\exp\Big(-\frac{i}{\hbar}\int_{\frac{3T}{2}}^{2T}\hat{H}_2 dt\Big)
-		\exp\Big(-\frac{i}{\hbar}\hat{H}_1T_1\Big)\mathcal{T}\exp\Big(-\frac{i}{\hbar}\int_{\frac{T}{2}}^{T}\hat{H}_2 dt\Big)\exp\Big(-\frac{i}{\hbar}\hat{H}_1T_1\Big).
+		\hat{\mathcal{F}}^{2} &\equiv \exp\Big(-\frac{i}{\hbar}\hat{H}_{\epsilon_A, 2T}^{\mathrm{eff}}\;2T\Big)\\ 
+		&= \mathcal{T}\exp\Big(-\frac{i}{\hbar}\int_{\frac{3T}{2}}^{2T}\hat{H}_2(t) dt\Big)
+		\exp\Big(-\frac{i}{\hbar}\hat{H}_1T_1\Big)\mathcal{T}\exp\Big(-\frac{i}{\hbar}\int_{\frac{T}{2}}^{T}\hat{H}_2(t) dt\Big)\exp\Big(-\frac{i}{\hbar}\hat{H}_1T_1\Big).
 	\end{align*}
-	Here $\mathcal{T}$ denotes the time-ordering operation. The effective Floquet coefficients can be evaluated as given below,	
+	Here $\mathcal{T}$ denotes the time-ordering operation. The coefficients of Floquet Magnus expansion for $\hat{H}_2(t)$ in the first-$T_2$ cycle can be evaluated as given below,	
 	\begin{align}
-		H_F^{(0)} &= \frac{2}{T} \int_{\frac{T}{2}}^{T} dt H(t) = \frac{2}{T} \int_{\frac{T}{2}}^{T} dt 
-		\Bigg[\hbar\sum_{i\neq j} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_j -\hbar h\sin(\omega t) \sum_i\hat{\sigma}^z_i\Bigg]= \hbar\sum_{i\neq j} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_j + \frac{4h\hbar}{T \omega}\sum_i\hat{\sigma}^z_i,
+		H_F^{(0)}_\vert_{\left(\frac{T}{2},T\right)} &= \frac{2}{T} \int_{\frac{T}{2}}^{T} dt \hat{H}_2(t) = \frac{2}{T} \int_{\frac{T}{2}}^{T} dt 
+		\Bigg[\hbar\sum_{i\neq j} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_j -\hbar h\sin(\omega t) \sum_i\hat{\sigma}^z_i\Bigg]= \hbar\sum_{i\neq j} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_j + \frac{4h\hbar}{T \omega}\sum_i\hat{\sigma}^z_i.
 	\end{align}	
-	\begin{align}
-		H_F^{(1)} &= \frac{1}{2!(i)\hbar} \frac{2}{T} \int_{\frac{T}{2}}^{T} dt_1  \int_{\frac{T}{2}}^{t_1} dt_2 \comm{H(t_1)}{H(t_2)}\nonumber\\
-		&= \frac{1}{2!(i)\hbar} \frac{2}{T}\int_{\frac{T}{2}}^{T} dt_1 \int_{\frac{T}{2}}^{t_1} dt_2\Bigg[2i\hbar\sum_{ij}^{}J_{ij}\hat{\sigma}^x_i\hat{\sigma}^y_j\Big\{h(t_2) -h(t_1)\Big\}\Bigg]\nonumber\\
-		&= 0
-	\end{align}	
-	and,
+	
+	Through mathematical calculations, $H^{(1)}_F$,$H^{(2)}_F$  and other  higher order FM expansions coefficients are found to be zero. Thereby we get, $H^{\mathrm{eff}}\vert_{\frac{T}{2}, T} = H^{(0)}_F\vert_{\left(\frac{T}{2},T\right)}$. Thus, the effective Hamiltonian in the time cycle $T_1\equiv[\frac{T}{2}, T]$ is given by,	
 	\begin{equation}
-		H_F^{(2)} = \frac{1}{3(i\hbar)^2 (T/2)} \int_{\frac{T}{2}}^{T} dt_1  \int_{{\frac{T}{2}}}^{t_1} dt_2 \int_{\frac{T}{2}}^{t_2} dt_3 \big(\comm{H(t_1)}{\comm{H(t_2)}{H(t_3)}} + \comm{H(t_3)}{\comm{H(t_2)} {H(t_1)}} \big)= 0.    
-	\end{equation}
-	Thus the effective Hamiltonian in the interval $T_1\equiv[\frac{T}{2}, T]$ found to be,	
-	\begin{equation}
-		H^{\mathrm{eff}}\vert_{\frac{T}{2}, T} =  \hbar\sum_{i\neq j} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_{j} + \frac{4h\hbar}{T \omega}\sum_i\hat{\sigma}^z_i.
+		H^{\mathrm{eff}}\vert_{\left(\frac{T}{2},T\right)} =  \hbar\sum_{i\neq j} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_{j} + \frac{4h\hbar}{T \omega}\sum_i\hat{\sigma}^z_i.
 	\end{equation} 	
-	Similarly, the effective Hamiltonian for time interval $T_2\equiv[\frac{3T}{2}, 2T]$ is found as,	
+	Similarly, the effective Hamiltonian for the time cycle $T_2 \equiv[\frac{3T}{2}, 2T]$ is found as,	
 	\begin{equation}
-		H^{\mathrm{eff}}\vert_{\frac{3T}{2}, 2T} = \hbar\sum_{i\neq j} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_{j} + \frac{4h\hbar}{T \omega}\sum_i\hat{\sigma}^z_i.
+		H^{\mathrm{eff}}\vert_{\left(\frac{3T}{2},2T\right)} = \hbar\sum_{i\neq j} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_{j} + \frac{4h\hbar}{T \omega}\sum_i\hat{\sigma}^z_i.
 	\end{equation} 
 	Let us consider, $\epsilon_A \neq 0$ and $\epsilon_B=1$. Also, we consider $\displaystyle \hat{V}_{\epsilon_A} = \exp\Big(\frac{i\epsilon_A \pi}{2}\sum_{l\in A}\hat{\sigma}^x_l\Big)$  and $\displaystyle \hat{\theta}_l = 2 \Big(\sum_{m \in B}J_{lm}\hat{\sigma}^y_m \frac{T}{2} \Big)$ which denotes a rotation acting on operator $\hat{\sigma}^y_l$, also we have contracted all the terms contributed from only region B. We consider, $\displaystyle {H}_B = \Big(\sum_{l,m\in B} J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m + \frac{4h}{\omega T}\sum_{m \in B}\hat{\sigma^z_m}\Big)$. So, we can write,		
 	\begin{multline}
-		\mathcal{T}\exp\bigg\{-\frac{i}{\hbar}\int_{\frac{T}{2}}^{T} \hat{H}_2 dt\bigg\} = \exp\Bigg\{-i \bigg[ \sum_{l,m\in A}J_{lm} \hat{\sigma}_l^y\hat{\sigma}_m^y +\sum_{l,m\in B}J_{lm}
+		\mathcal{T}\exp\bigg\{-\frac{i}{\hbar}\int_{\frac{T}{2}}^{T} \hat{H}_2(t) dt\bigg\} = \exp\Bigg\{-i \bigg[ \sum_{l,m\in A}J_{lm} \hat{\sigma}_l^y\hat{\sigma}_m^y +\sum_{l,m\in B}J_{lm}
 		\hat{\sigma_l^y}\hat{\sigma_m^y}-\sum_{\substack{%
 				l \in A,\\
 				m \in B\hfill}} J_{lm}\hat{\sigma}^y_l\hat{\sigma}^y_m\\+\frac{4h}{\omega T}\big( -\sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{m\in B}^{}\hat{\sigma}^z_m\big)\bigg]\frac{T}{2}\Bigg\},
@@ -369,7 +361,7 @@ In contrast to the preceding subsection, which focused on the examination of mac
 		H^{\mathrm{eff}} \approx\frac{\hbar}{2} \sum_{l,m\in A}J_{lm}\hat{\sigma}_l^y\hat{\sigma}_m^y +\frac{\hbar \epsilon_A \pi}{4} \sum_{\substack{l,m\in A\\l\neq m}} J_{lm}\hat{\sigma}^z_l\hat{\sigma}^y_m + \frac{\hbar}{2}\sum_{l,m\in B}J_{lm}\hat{\sigma}_l^y \hat{\sigma}_m^y + \frac{h\hbar}{\pi}\sum_{m \in B}\hat{\sigma}^z_m \\ -\frac{\hbar \pi \epsilon_A}{4T}\sum_{l\in A}\Bigg\{\hat{\sigma}^x_l \bigg[\cos(\hat{\theta}_l)\cos(\frac{4h}{\omega})+1 \bigg] + \hat{\sigma}^y_l \cos(\hat{\theta}_l)\sin(\frac{4h}{\omega})-\hat{\sigma}^z_l \sin(\hat{\theta}_l)\Bigg\}.
 		\label{eq:app:nfloq_eff3}
 	\end{multline}
-	In the limit of very high frequencies, $T\rightarrow 0$. Therefore,  $\hat{\theta}_l \rightarrow 0$. Thus, the regions $A$ and $B$ decouple in eq.\eqref{eq:app:nfloq_eff3}, and effective fields $\sim \hat{\sigma}^{x,y}_l$ are appended to the Hamiltonian in region $A$ whose intensities depend only on $\epsilon_A$, and the ratio $\frac{4h}{\omega}$. When $\frac{4h}{\omega}$ is an odd multiple of $\pi$, the two regions decouple completely in the ultra-high frequency limit.
+	In the limit of very high frequencies, $T\rightarrow 0$. Therefore,  $\hat{\theta}_l \rightarrow 0$. Thus, the regions $A$ and $B$ decouple in eq.\eqref{eq:app:nfloq_eff3}, and effective fields $\sim \hat{\sigma}^{x,y}_l$ are appended to the Hamiltonian in region $A$ whose intensities depend only on $\epsilon_A$, and the ratio $\frac{4h}{\omega}$. When $\frac{4h}{\omega}$ is an odd multiple of $\pi$, the two regions decouple completely in the high frequency limit.
 	
 	
 	
