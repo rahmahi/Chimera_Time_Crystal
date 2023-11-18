@@ -276,7 +276,7 @@ In contrast to the preceding subsection, which focused on the examination of mac
 		\label{eq:hmovap1}
 	\end{align}
 	Here, we have utilized the expression, $\displaystyle \exp[ia(\hat{n}\cdot\vec{\sigma})] = \mathbbm{1} \cos(a) + i (\hat{n}\cdot\vec{\sigma})\sin(a)$.	Now, we invoke the Jacobi-Anger formula $\displaystyle e^{iz\cos(\omega t)} = \sum_{n=-\infty}^{\infty}\mathcal{J}_n(z)e^{in\omega t}$\cite{arfkenmath}, where $\mathcal{J}_n(z)$ is the Bessel function of the first kind of $n^{th}$ order, and apply to the RHS of  Eq~\ref{eq:hmovap1}. This produces a Fourier series expansion for 
-	 $\hat{H}^{mov}(t)$ with period $\omega$. Note however, that the drive parameters $h$ and $\omega$ are independent of each other. In high frequency limit, where $\omega \gg J_0$, the Rotating Wave Approximaiton (RWA) allows for approximating the Fourier modes with their long time coarse-grain averages. This provides us with the option to average all the Fourier modes to zero, except for the zeroth order mode. Thus, the $\hat{H}^{mov}$ reduces to the RWA-Hamiltonian ($\hat{H}^{_{RWA}}$),
+	 $\hat{H}^{mov}(t)$ with period $\omega$. Note however, that the drive parameters $h$ and $\omega$ are independent of each other. In high frequency limit, where $\omega \gg J_0$, the Rotating Wave Approximation (RWA) allows for approximating the Fourier modes with their long time coarse-grain averages. This provides us with the option to average all the Fourier modes to zero, except for the zeroth order mode. Thus, the $\hat{H}^{mov}$ reduces to the RWA-Hamiltonian ($\hat{H}^{_{RWA}}$),
 	\begin{equation}
 		\hat{H}^{mov}\approx \hat{H}^{_{RWA}} = \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) \mathcal{J}_0(\chi)\Bigg\{\mathbbm{1}\bigg[\mathcal{J}_0(\chi) + \cos(\chi)\bigg] -\hat{\sigma}^z_i\hat{\sigma}^z_j \bigg[\mathcal{J}_0(\chi) - \cos(\chi)\bigg] + \frac{i}{2} \left(\hat{\sigma}^z_i + \hat{\sigma}^z_j\right) \sin(\chi)\Bigg\}.
 		\label{eq:hrwa}
@@ -301,52 +301,50 @@ In contrast to the preceding subsection, which focused on the examination of mac
 		\label{eq:app:mageff}
 	\end{align} 
 	Note that, the contributions of each order in Eq.~\ref{eq:app:mageff} are individually hermitian~\cite{blanes_magnus_2009, haldar_statistical_2022}. 
-	\todo[inline]{I'm going to stop here. The rest of the derivation is poorly written and the math is unclear. Also, please use the physics package from \LaTeX\;for commutators and other quantum expressions.}
+
 	In the limit of large $\omega$ (small $T$), this series can be truncated at lower orders. Now, the proposed spin chain in Eq.\eqref{eq:cleanham} needs to evolve for at least two time periods to manifest a DTC. If the effective time-independent Hamiltonian at that time is denoted by $\hat{H}^{\mathrm{eff}}_{\epsilon_A, 2T}$, then, the propagator
-	\begin{align*}
-		\hat{\mathcal{F}}^{2} &\equiv \exp\Big(-\frac{i}{\hbar}\hat{H}_{\epsilon_A, 2T}^{\mathrm{eff}}\;2T\Big)\\ 
+	\begin{align}
+		\hat{\mathcal{F}}^{2} &\equiv \exp\Big(-\frac{i}{\hbar}\hat{H}_{\epsilon_A, 2T}^{\mathrm{eff}}\;2T\Big) \\ 
 		&= \mathcal{T}\exp\Big(-\frac{i}{\hbar}\int_{\frac{3T}{2}}^{2T}\hat{H}_2(t) dt\Big)
 		\exp\Big(-\frac{i}{\hbar}\hat{H}_1T_1\Big)\mathcal{T}\exp\Big(-\frac{i}{\hbar}\int_{\frac{T}{2}}^{T}\hat{H}_2(t) dt\Big)\exp\Big(-\frac{i}{\hbar}\hat{H}_1T_1\Big).
-	\end{align*}
+		\label{eq:2tprop}
+	\end{align}
 	Here $\mathcal{T}$ denotes the time-ordering operation. The coefficients of Floquet Magnus expansion for $\hat{H}_2(t)$ in the first-$T_2$ cycle can be evaluated as given below,	
-	\begin{align}
-		H_F^{(0)}_\vert_{\left(\frac{T}{2},T\right)} &= \frac{2}{T} \int_{\frac{T}{2}}^{T} dt \hat{H}_2(t) = \frac{2}{T} \int_{\frac{T}{2}}^{T} dt 
+	\begin{equation}
+		H_F^{(0)}\vert_{\left(\frac{T}{2},T\right)} = \frac{2}{T} \int_{\frac{T}{2}}^{T} dt \hat{H}_2(t) = \frac{2}{T} \int_{\frac{T}{2}}^{T} dt 
 		\Bigg[\hbar\sum_{i\neq j} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_j -\hbar h\sin(\omega t) \sum_i\hat{\sigma}^z_i\Bigg]= \hbar\sum_{i\neq j} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_j + \frac{4h\hbar}{T \omega}\sum_i\hat{\sigma}^z_i.
-	\end{align}	
-	
-	Through mathematical calculations, $H^{(1)}_F$,$H^{(2)}_F$  and other  higher order FM expansions coefficients are found to be zero. Thereby we get, $H^{\mathrm{eff}}\vert_{\frac{T}{2}, T} = H^{(0)}_F\vert_{\left(\frac{T}{2},T\right)}$. Thus, the effective Hamiltonian in the time cycle $T_1\equiv[\frac{T}{2}, T]$ is given by,	
+		\label{eq:t2hamilt}
+	\end{equation}	
+	\todo[inline]{The problem with this is that the Hamiltonian is not periodic in $T_2$, so the RHS cannot represent the true $H^{(0)}_F$.}
+	With a little algebra, $H^{(1)}_F$,$H^{(2)}_F$  and other  higher order FM expansions coefficients are found to be zero. Thereby we get, $H^{\mathrm{eff}}\vert_{\frac{T}{2}, T} = H^{(0)}_F\vert_{\left(\frac{T}{2},T\right)}$. Thus, the effective Hamiltonian in the time cycle $T_1\equiv[\frac{T}{2}, T]$ is given by,	
 	\begin{equation}
 		H^{\mathrm{eff}}\vert_{\left(\frac{T}{2},T\right)} =  \hbar\sum_{i\neq j} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_{j} + \frac{4h\hbar}{T \omega}\sum_i\hat{\sigma}^z_i.
 	\end{equation} 	
-	Similarly, the effective Hamiltonian for the time cycle $T_2 \equiv[\frac{3T}{2}, 2T]$ is found as,	
-	\begin{equation}
-		H^{\mathrm{eff}}\vert_{\left(\frac{3T}{2},2T\right)} = \hbar\sum_{i\neq j} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_{j} + \frac{4h\hbar}{T \omega}\sum_i\hat{\sigma}^z_i.
-	\end{equation} 
-	Let us consider, $\epsilon_A \neq 0$ and $\epsilon_B=1$. Also, we consider $\displaystyle \hat{V}_{\epsilon_A} = \exp\Big(\frac{i\epsilon_A \pi}{2}\sum_{l\in A}\hat{\sigma}^x_l\Big)$  and $\displaystyle \hat{\theta}_l = 2 \Big(\sum_{m \in B}J_{lm}\hat{\sigma}^y_m \frac{T}{2} \Big)$ which denotes a rotation acting on operator $\hat{\sigma}^y_l$, also we have contracted all the terms contributed from only region B. We consider, $\displaystyle {H}_B = \Big(\sum_{l,m\in B} J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m + \frac{4h}{\omega T}\sum_{m \in B}\hat{\sigma^z_m}\Big)$. So, we can write,		
-	\begin{multline}
-		\mathcal{T}\exp\bigg\{-\frac{i}{\hbar}\int_{\frac{T}{2}}^{T} \hat{H}_2(t) dt\bigg\} = \exp\Bigg\{-i \bigg[ \sum_{l,m\in A}J_{lm} \hat{\sigma}_l^y\hat{\sigma}_m^y +\sum_{l,m\in B}J_{lm}
+	Clearly, the effective Hamiltonian for the time cycle $T_2 \equiv[\frac{3T}{2}, 2T]$ will also be the same. Now,	let us consider the case where $\epsilon_A \neq 0$ and $\epsilon_B=1$. Furthermore, let us define the operators $\displaystyle \hat{V}_{\epsilon_A} \equiv \exp\Big(\frac{i\epsilon_A \pi}{2}\sum_{l\in A}\hat{\sigma}^x_l\Big), \displaystyle \hat{\theta}_l \equiv 2 \left(\sum_{m \in B}J_{lm}\hat{\sigma}^y_m \frac{T}{2} \right)$; the latter describes a rotation acting on operator $\hat{\sigma}^y_l$ in only region B.  Now, we can simplify the individual propagators in the $T_1$ and $T_2$ cycles as follows.
+	\begin{align}
+		\mathcal{T}\exp\bigg\{-\frac{i}{\hbar}\int_{\frac{T}{2}}^{T} \hat{H}_2(t) dt\bigg\} &= \exp\Bigg\{-i \bigg[ \sum_{l,m\in A}J_{lm} \hat{\sigma}_l^y\hat{\sigma}_m^y +\sum_{l,m\in B}J_{lm}
 		\hat{\sigma_l^y}\hat{\sigma_m^y}-\sum_{\substack{%
 				l \in A,\\
-				m \in B\hfill}} J_{lm}\hat{\sigma}^y_l\hat{\sigma}^y_m\\+\frac{4h}{\omega T}\big( -\sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{m\in B}^{}\hat{\sigma}^z_m\big)\bigg]\frac{T}{2}\Bigg\},
-	\end{multline}	
-	and, $\displaystyle 
-	\exp\Big(-\frac{i}{\hbar} \hat{H}_1 T_1\Big) = \exp\Bigg[\frac{-i(1-\epsilon_A)\pi}{2}\sum_{l \in A}\hat{\sigma}^x_l\Bigg].$
-	Putting these values in the Floquet operator equation can be written as,    	
+				m \in B\hfill}} J_{lm}\hat{\sigma}^y_l\hat{\sigma}^y_m\nonumber\\
+			& +\frac{4h}{\omega T}\big( -\sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{m\in B}^{}\hat{\sigma}^z_m\big)\bigg]\frac{T}{2}\Bigg\},\\
+			\exp\Big(-\frac{i}{\hbar} \hat{H}_1 T_1\Big) &= \exp\Bigg[\frac{-i(1-\epsilon_A)\pi}{2}\sum_{l \in A}\hat{\sigma}^x_l\Bigg].
+	\end{align}	
+	Here, we have used Eqn.~\ref{eq:t2hamilt} to simplify the RHS of the equation above. Substituting these values in the RHS of Eqn~\ref{eq:2tprop}  yields    	
 	\begin{align}
 		\hat{\mathcal{F}}^2 
-		=& \exp\Bigg\{-i \Big[ \sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2} +\sum_{l,m\in B}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}+\sum_{\substack{%
+		=& \exp\Bigg\{-i \Bigg[ \sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2} +\sum_{l,m\in B}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}+\sum_{\substack{%
 				l \in A,\\
-				m \in B\hfill}} J_{lm}\hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2} +\frac{2h}{\omega }\big( +\sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{m\in B}^{}\hat{\sigma}^z_m\big)\Big]\Bigg\} \hat{V}_{\epsilon_A} \nonumber\\
-		& \hspace{1 cm}\exp\Bigg\{-i \Big[ \sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2} +\sum_{l,m\in B}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}-\sum_{\substack{%
+				m \in B\hfill}} J_{lm}\hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2} +\frac{2h}{\omega }\left( +\sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{m\in B}^{}\hat{\sigma}^z_m\right)\Bigg]\Bigg\} \hat{V}_{\epsilon_A} \nonumber\\
+		& \hspace{1 cm}\exp\Bigg\{-i \Bigg[ \sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2} +\sum_{l,m\in B}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}-\sum_{\substack{%
 				l \in A,\\
-				m \in B\hfill}} J_{lm}\hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2} +\frac{2h}{\omega}\big( -\sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{m\in B}^{}\hat{\sigma}^z_m\big)\Big]\Bigg\} \hat{V}_{\epsilon_A}.\nonumber
+				m \in B\hfill}} J_{lm}\hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2} +\frac{2h}{\omega}\left( -\sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{m\in B}^{}\hat{\sigma}^z_m\right)\Bigg]\Bigg\} \hat{V}_{\epsilon_A}.\nonumber
 		\end{align}
-	We can simplify this expression further with the approximation that all operators with norm $\sim T$ approximately commute with each other, since all operators of $\mathcal{O}(T^2)$ can be neglected for sufficiently large $\omega\equiv 2\pi/T$. Thus, for instance, $e^{T\hat{A} + T\hat{B}}= e^{T\hat{A}}\; e^{T\hat{B}}\;e^{C_2 T^2\left[\hat{A}, \hat{B}\right]}\;e^{C_3 T^3\left[\hat{A},\left[\hat{A}, \hat{B}\right]\right]}\;\dots \approx e^{T\hat{A}} e^{T\hat{B}}$, once all higher order operators are neglected after applying the Zassenhaus' formula~\cite{Magnus1954}. This yields
+	We can simplify this expression further with the approximation that all operators with norms $\mathcal{O}(T^2)$ can be neglected in comparison to those with norm $\sim T$ for sufficiently large $\omega\equiv 2\pi/T$. Thus, for instance, $e^{T\hat{A} + T\hat{B}}= e^{T\hat{A}}\; e^{T\hat{B}}\;e^{C_2 T^2\left[\hat{A}, \hat{B}\right]}\;e^{C_3 T^3\left[\hat{A},\left[\hat{A}, \hat{B}\right]\right]}\;\dots \approx e^{T\hat{A}} e^{T\hat{B}}$, once all higher order operators are neglected after applying the Zassenhaus' formula~\cite{Magnus1954}. This yields
 		\begin{align}	
-	\hat{\mathcal{F}}^2 	\approx& \exp\Bigg[-i \sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}\Bigg] \exp\Bigg[-i\Big(\frac{2h}{\omega } \sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{l \in A}\frac{\hat{\theta}_{l}}{2}\hat{\sigma}^y_l\Big)\Bigg]\nonumber\\ 
-		&\hspace{3cm} \hat{V}_{\epsilon_A} \exp\Bigg[i \Big(\sum_{l \in A}\frac{\hat{\theta}_{l}}{2}\hat{\sigma}^y_l + \frac{2h}{\omega} \sum_{l\in A}^{}\hat{\sigma}^z_l\Big)\Bigg] \exp\Bigg[-i\sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}\Bigg] \exp\big[-i H_B T\big]\hat{V}_{\epsilon_A}.\nonumber
+	\hat{\mathcal{F}}^2 	\approx& \exp\Bigg[-i \sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}\Bigg] \exp\Bigg[-i\left(\frac{2h}{\omega } \sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{l \in A}\frac{\hat{\theta}_{l}}{2}\hat{\sigma}^y_l\right)\Bigg]\nonumber\\ 
+		&\hspace{3cm} \hat{V}_{\epsilon_A} \exp\Bigg[i \left(\sum_{l \in A}\frac{\hat{\theta}_{l}}{2}\hat{\sigma}^y_l + \frac{2h}{\omega} \sum_{l\in A}^{}\hat{\sigma}^z_l\right)\Bigg] \exp\Bigg[-i\sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}\Bigg] \exp\big[-i H_B T\big]\hat{V}_{\epsilon_A},\nonumber
 	\end{align}
-	We now observe that $\hat{\theta}_l$ commutes with all operators that live in sector $A$, thus allowing us to treat it effectively as a $c-$number in the expression above. This allows for the simplification
+	where, for the sake of brevity, we have defined the region-B $T_2-$cycle Hamiltonian $\displaystyle {H}_B \equiv \sum_{l,m\in B} J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m + \frac{4h}{\omega T}\sum_{m \in B}\hat{\sigma^z_m}$. We now observe that $\hat{\theta}_l$ commutes with all operators that live in sector $A$, thus allowing us to temporarily treat it as a $c-$number in algebraic manipulations, allowing for the simplification
 	\begin{align}		
 		\hat{\mathcal{F}}^2 	\approx& \exp\Bigg[-2i  \sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}\Bigg]\exp\Bigg[\frac{i \epsilon_A \pi}{2}\sum_{l\in A}\Big\{\hat{\sigma}^x_l \cos(\hat{\theta}_l)\cos(\frac{4h}{\omega})\nonumber\\
 		&\hspace{7cm}+ \hat{\sigma}^y_l \cos(\hat{\theta}_l)\sin(\frac{4h}{\omega})-\hat{\sigma}^z_l \sin(\hat{\theta}_l)\Big\}\Bigg] \exp\big[-i H_B T\big]\hat{V}_{\epsilon_A}\nonumber\\
@@ -354,15 +352,11 @@ In contrast to the preceding subsection, which focused on the examination of mac
 		&\hspace{ 7cm}  +\hat{\sigma}^y_l \cos(\hat{\theta}_l)\sin(\frac{4h}{\omega})-\hat{\sigma}^z_l \sin(\hat{\theta}_l)\Big\}\Bigg]\exp\big[-i H_B T\big]\nonumber\\
 		=&\exp\Bigg[-2i\sum_{l,m\in A}J_{lm}\hat{\sigma}^y_l\hat{\sigma}^y_m \frac{T}{2}\Bigg] \exp\Bigg[-i\epsilon_A \pi \sum_{\substack{l,m \in A\\l\neq m}}J_{lm} \hat{\sigma}^z_l\hat{\sigma}^y_m\frac{T}{2}\Bigg] \exp\Bigg[\frac{i \epsilon_A \pi}{2}\sum_{l\in A}\Bigg\{\hat{\sigma}^x_l\Bigg( \cos(\hat{\theta}_l)\cos(\frac{4h}{\omega})+1\Bigg)\nonumber\\
 		&\hspace{7cm} +\hat{\sigma}^y_l \cos(\hat{\theta}_l)\sin(\frac{4h}{\omega})-\hat{\sigma}^z_l \sin(\hat{\theta}_l)\Bigg\}\Bigg] \exp\big[-i H_B T\big].
-		\label{eq:floq_couple1}
 	\end{align}
-	Now, utilizing the relation $\displaystyle \hat{\mathcal{F}}^2 = \exp\Big(-\frac{i}{\hbar}H^{\mathrm{eff}}2T\Big)$, the effective Floquet Hamiltonian can be found as,
+	Next, we apply the Baker-Campbell-Hausdorff formula~\cite{Magnus1954} successively to all pairs of exponents in the RHS, neglecting all operators with norms $\mathcal{O}(T^2)$ as before, followed by substitution into the RHS of Eqn.~\ref{eq:2tprop}. This finally yields the effective Floquet Hamiltonian, 
 	\begin{multline}
 		H^{\mathrm{eff}} \approx\frac{\hbar}{2} \sum_{l,m\in A}J_{lm}\hat{\sigma}_l^y\hat{\sigma}_m^y +\frac{\hbar \epsilon_A \pi}{4} \sum_{\substack{l,m\in A\\l\neq m}} J_{lm}\hat{\sigma}^z_l\hat{\sigma}^y_m + \frac{\hbar}{2}\sum_{l,m\in B}J_{lm}\hat{\sigma}_l^y \hat{\sigma}_m^y + \frac{h\hbar}{\pi}\sum_{m \in B}\hat{\sigma}^z_m \\ -\frac{\hbar \pi \epsilon_A}{4T}\sum_{l\in A}\Bigg\{\hat{\sigma}^x_l \bigg[\cos(\hat{\theta}_l)\cos(\frac{4h}{\omega})+1 \bigg] + \hat{\sigma}^y_l \cos(\hat{\theta}_l)\sin(\frac{4h}{\omega})-\hat{\sigma}^z_l \sin(\hat{\theta}_l)\Bigg\}.
 		\label{eq:app:nfloq_eff3}
 	\end{multline}
-	In the limit of very high frequencies, $T\rightarrow 0$. Therefore,  $\hat{\theta}_l \rightarrow 0$. Thus, the regions $A$ and $B$ decouple in eq.\eqref{eq:app:nfloq_eff3}, and effective fields $\sim \hat{\sigma}^{x,y}_l$ are appended to the Hamiltonian in region $A$ whose intensities depend only on $\epsilon_A$, and the ratio $\frac{4h}{\omega}$. When $\frac{4h}{\omega}$ is an odd multiple of $\pi$, the two regions decouple completely in the high frequency limit.
-	
-	
-	
+	In the limit of very high frequencies, $T\rightarrow 0$, leading to asymptotically vanishing $\hat{\theta}_l$. In this limit, the coupling between regions manifests as effective fields $\sim \hat{\sigma}^{x,y}_l$ in region $A$ whose intensities depend only on $\epsilon_A$, and the ratio $\frac{4h}{\omega}$. When $h$ is set to an odd multiple of $\pi\omega/4$, these effective fields vanish in the asymptotic limit, causing the regions $A$ and $B$ to decouple completely.
 \end{document}
