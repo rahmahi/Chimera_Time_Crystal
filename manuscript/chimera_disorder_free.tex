@@ -74,6 +74,15 @@ In solid-state physics, matter is characterized by the presence of crystalline 
 		\hat{H_2} = & \hbar\sum_{ij} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_{j} +  \hbar h_D \sum_i \hat{\sigma}^z_i + \hbar\hat{V}(\hat{\sigma}^{\gamma}),
 		\label{eq:sysham2}
 	\end{align}
+
+	\begin{figure}
+		\begin{center}
+			\includegraphics[width=8.2cm]{drive_distribution.pdf}
+		\end{center}
+		\caption[]{Pictorial realization of the temporal progression of external drive for two time periods. The drive is considered in such a way that a spin-flip constant drive $\hat{H_1}$ acts during $T_1$(blue curve) and the periodic drive part of $\hat{H_2}$ in $T_2$(red dashed curve). The ordinate is amplitude and abscissa denotes n'th time period.}
+		\label{Fig:time_distribution}
+	\end{figure}	
+
 	and $\hat{\sigma}^{\mu=x,y,z}_i$ are the Pauli matrices at $i$-th site.  Henceforth, we shall simplify our analysis by assuming that the pulse waves modulating these Hamiltonians have a $50 \%$ duty-cycle, \textit{i.e.} $T_1=T_2=T/2$.  The Hamiltonian $\hat{H}_1$ in Eq~\ref{eq:sysham1} represents a transverse field that can perform spin-flips on spins polarized in the direction of the drive. To realize the DTC phase on the chain, we set an \textit{ideal value} of this field to $g=\pi/T$. Now, we divide the chain into two physical regions denoted by $A$ and $B$, based on two relative deviations $\epsilon_{A/B}\in[0,1]$ of the field from this ideal value. Thus, these deviation parameters are \textit{rotational errors} for the two regions, and play an essential role in differentiating between the two regions~\footnote{For instance, when $\epsilon_A \sim 0$ and $\epsilon_B \sim 1$, the field in region-A cause imperfect spin-flips, while that in region-B do not flip most spins.}. 
 	\begin{figure}[t!]
 		\centering
@@ -88,13 +97,7 @@ In solid-state physics, matter is characterized by the presence of crystalline 
 	\section{\label{sec:level2} Interacting Dynamical Localization}
 	
 	Before investigating the chimera order in our model, we explain how the Hamiltonian $\hat{H}_2$ in Eq.~\eqref{eq:cleanham} exhibits CDT/DL by analytically solving for the dynamics during all $T_2-$cycles. During these times,  the system is driven by a sinusoidal transverse periodic drive $h_D$ as illustrated in Fig.~\ref{Fig:time_distribution}.
-	\begin{figure}
-		\begin{center}
-			\includegraphics[width=7.5cm]{drive_distribution.pdf}
-		\end{center}
-		\caption[]{Pictorial realization of the temporal progression of external drive for two time periods. The drive is considered in such a way that a spin-flip constant drive $\hat{H_1}$ acts during $T_1$(blue curve) and the periodic drive part of $\hat{H_2}$ in $T_2$(red dashed curve). The ordinate is amplitude and abscissa denotes n'th time period.}
-		\label{Fig:time_distribution}
-	\end{figure}	
+	
 	Let us employ the \textit{moving frame method}~\cite{haldar_dynamical_2021}, where a unitary transformation is performed to the instantaneous rest frame of the rotation representing the drive. The transformation on the state yields $\ket{\psi(t)}_{mov} = \hat{U}^\dagger(t_0,t) \ket{\psi(t)}$, where 
 	\begin{equation}
 		\hat{U}(t_0,t) \equiv \mathcal{T} e^{-\frac{i}{\hbar}\int_{t_0}^{t} dt' \hat{H}_D}.
@@ -212,10 +215,10 @@ In contrast to the preceding subsection, which focused on the examination of mac
 		\caption{Time evolution of Entanglement Entropy $S_{AB}$ between regions A and B as a function of time at the CDT/DL point. The left panels plot results for  weak spin coupling, and the right panels for stronger spin couplings. The corresponding values of $J_0$ are the same as those in Fig.~\ref{Fig:regiogionalmag}, and all other parameters are identical to previous simulations. The spin-spin coupling interaction in $\hat{H}_2$ during $T_2$ leads to the onset of a rise in EE. The growth rate of the subject in question remains notably slow, persisting even up to $t=2000\;T$.}
 		\label{Fig:entangle}
 	\end{figure}
-	We have extended previous simulations to a later time point of $t=2000\;T$, and then calculated the EE for each time point. The results are plotted in Fig.~\ref{Fig:entangle} for both weak and strong spin coupling, while maintaining the driving parameters consistently at a CDT/DL point. The EE is found to start rising from the onset of the first $T_2-cycle$, when the spin-interactions begin to impact the behavior of the spin-chain. The increase in EE is observed to be gradual even after prolonged interactions.  The EE exhibits a more rapid increase in the case of strong spin coupling compared to weak spin coupling. As evidenced by Eq.\eqref{eq:floq_eff3}, the coupling present in the effective Hamiltonian is directly proportional to the rotational error $\epsilon_A$. When the value of $\epsilon_A$ is modest, it effectively hinders the interaction between regions A and B, hence inhibiting the increase of EE.\todo[inline]{Yeah, but the EE seems to rise more slowly for shorter ranges than all-to-all. This puts the candidacy of long-range spins as chimeras into some doubt, doesn't it? This is why we should look at FFTs of the magnetization, to ensure that the period-doubling truly persists for long times.}\red{This corroborates the results depicted in Fig.\ref{Fig:regionalFFT}, where  the subharmonic responses for $\beta=0$ exhibit a higher prevalence of Fourier modes at strong coupling, compared to weak coupling.} 
+	We have extended previous simulations to a later time point of $t=2000\;T$, and then calculated the EE for each time point. The results are plotted in Fig.~\ref{Fig:entangle} for both weak and strong spin coupling, while maintaining the driving parameters consistently at a CDT/DL point. The EE is found to start rising from the onset of the first $T_2-cycle$, when the spin-interactions begin to impact the behavior of the spin-chain. The increase in EE is observed to be gradual even after prolonged interactions.  The EE exhibits a more rapid increase in the case of strong spin coupling compared to weak spin coupling. As evidenced by Eq.\eqref{eq:floq_eff3}, the coupling present in the effective Hamiltonian is directly proportional to the rotational error $\epsilon_A$. When the value of $\epsilon_A$ is modest, it effectively hinders the interaction between regions A and B, hence inhibiting the increase of EE. \red{This corroborates the results depicted in Fig.\ref{Fig:regionalFFT}, where  the subharmonic responses for $\beta=0$ exhibit a higher prevalence of Fourier modes at strong coupling, compared to weak coupling.} 
 	
 	\red{	
-	At infinite temperature thermalization, the EE averages to $\displaystyle \overline{\expval{S_{AB}}}_T\rightarrow \left[N \ln{2}-1\right]/2$ \cite{Lu2021} and at localization, it is approximated as $\overline{\expval{S_{AB}}}_L\approx \ln{2}$~\cite{sakurai_phys_nodate}.} \todo[inline]{I thought that a bunch of spin halves at infinite temp should have an entropy of $N\ln{2}$. You've written it the other way round. Also, your expression for $\overline{\expval{S_{AB}}}_L$ is not extensive, which is wrong.}
+	At infinite temperature thermalization, the EE averages to $\displaystyle \overline{\expval{S_{AB}}}_T\rightarrow \left[N \ln{2}-1\right]/2$ \cite{Lu2021} and at localization, it is approximated as $\overline{\expval{S_{AB}}}_L\approx \ln{2}$~\cite{sakurai_phys_nodate}.} 
     \red{In our spin-1/2 model, $N=8$. Thus, the average value of EE for an infinite temperature thermal state, $\overline{\expval{S_{AB}}}_T$, should be close to  $2.27$, and that of a localized state, $\overline{\expval{S_{AB}}}_L$, should be  close to $0.69$. The numerical values of the entanglement entropy (EE) are found to remain approximately in the range of $\in\left[0,0.6\right)$, as can be seen in Fig.\ref{Fig:entangle}. This observation indicates that the entire system remains athermal and localized, even when a significant amount of time has elapsed.}
 	
 	\subsection{\label{sec:level43} Robustness against Static Fields}
@@ -291,7 +294,23 @@ In contrast to the preceding subsection, which focused on the examination of mac
 	\end{equation*}
 	The corresponding propagator can be obtained by solving the Schr\"odinger equation $\displaystyle{i\hbar \partial_t \hat{U}(t) = \hat{H}(t) \hat{U}(t)}$.  The propagator at $t=T$, given by $ \hat{\mathcal{F}}\equiv \hat{U}(T)$ is called the \textit{Floquet operator}. Now, it follows from Floquet's Theorem that, if the system is strobed at integer multiples of $T$, the dynamics can be mapped to that of a time-independent effective Hamiltonian $\hat{H}_F$, such that  $\displaystyle\hat{U}(nT) = \exp\bigg[-\frac{i}{\hbar}\hat{H}_F\; nT \bigg]$~\cite{Eckardt_2015}.  The operator$\hat{H}_F$ (also denoted by $H^\mathrm{eff}$) is obtained from the original time-dependent Hamiltonian, and is given by, $\displaystyle \hat{H}_F = \Bigg(\hat{H}(t) - i\hbar \pdv{t}\Bigg)$ evaluated at $t=T$. 
 	
-	The Floquet Magnus expansion (FM) provides a systematic approach for obtaining a high-frequency expansion for the Floquet Hamiltonian $\hat{H}_F$, allowing for analyzing the dynamics of quantum systems subjected to high-frequency periodic driving. By calculating successive terms in the expansion, one can derive an effective Hamiltonian that captures the essential physics of the system and allows for a deeper understanding of its behavior. $\hat{H}_F$ can be expanded as~\cite{haldar_dynamical_2017},	
+	\red{
+	Now, the proposed spin chain in Eq.\eqref{eq:cleanham} needs to evolve for at least two time periods to manifest a DTC. If the effective time-independent Hamiltonian at that time is denoted by $\hat{H}^{\mathrm{eff}}_{\epsilon_A, 2T}$, then, the propagator
+	\begin{align}
+		\hat{\mathcal{F}}^{2} &\equiv \exp\Big(-\frac{i}{\hbar}\hat{H}_{\epsilon_A, 2T}^{\mathrm{eff}}\;2T\Big) \\ 
+		&= \mathcal{T}\exp\Big(-\frac{i}{\hbar}\int_{\frac{3T}{2}}^{2T}\hat{H}_2(t) dt\Big)
+		\exp\Big(-\frac{i}{\hbar}\hat{H}_1T_1\Big)\mathcal{T}\exp\Big(-\frac{i}{\hbar}\int_{\frac{T}{2}}^{T}\hat{H}_2(t) dt\Big)\exp\Big(-\frac{i}{\hbar}\hat{H}_1T_1\Big).
+		\label{eq:2tprop}
+	\end{align}
+	Here $\mathcal{T}$ denotes the time-ordering operation. 
+	To evaluate $\hat{\mathcal{F}}^2$, we start by calculating each of the four terms in RHS of Eq.\ref{eq:2tprop}. During time cycle , $T_1\equiv\in[0,\frac{T}{2}]$ time independent $\hat{H}_1$ is applied on spin chain, thereby,
+	\begin{equation}
+		\exp\Big(-\frac{i}{\hbar} \hat{H}_1 T_1\Big) = 	\exp\Bigg[\frac{-i(1-\epsilon_A)\pi}{2}\sum_{l \in A}\hat{\sigma}^x_l\Bigg].
+		\label{eq:effham1}
+	\end{equation}	
+	It is evident that the effective Hamiltonian for $T_1 \equiv[T, \frac{3T}{2}]$ will be same as like Eq.\eqref{eq:effham1}.
+	\\
+	Next, in the time cycle ($T_2\equiv\in[\frac{T}{2},T]$), the time dependent Hamiltonian, $\hat{H_2}(t)$ is applied. This requires a time dependent Floquet theory method such as Floquet Magnus expansion (FME) to evaluate $\mathcal{T}\exp\Big(-\frac{i}{\hbar}\int_{\frac{T}{2}}^{T}\hat{H}_2(t) dt\Big)$. The FME} provides a systematic approach for obtaining a high-frequency expansion for the Floquet Hamiltonian $\hat{H}_F$, allowing for analyzing the dynamics of quantum systems subjected to high-frequency periodic driving. By calculating successive terms in the expansion, one can derive an effective Hamiltonian that captures the essential physics of the system and allows for a deeper understanding of its behavior. \red{The generic} $\hat{H}_F$ can be expanded as~\cite{haldar_dynamical_2017},	
 	\begin{align}
 		\hat{H}_F &= \sum_{n=0}^{\infty} H_F^{(n)},\nonumber\\
 		H_F^{(0)} &= \frac{1}{T} \int_{t_0}^{T+t_0} \mathrm{d}t\;\hat{H}(t), \nonumber\\
@@ -302,34 +321,27 @@ In contrast to the preceding subsection, which focused on the examination of mac
 	\end{align} 
 	Note that, the contributions of each order in Eq.~\ref{eq:app:mageff} are individually hermitian~\cite{blanes_magnus_2009, haldar_statistical_2022}. 
 
-	In the limit of large $\omega$ (small $T$), this series can be truncated at lower orders. Now, the proposed spin chain in Eq.\eqref{eq:cleanham} needs to evolve for at least two time periods to manifest a DTC. If the effective time-independent Hamiltonian at that time is denoted by $\hat{H}^{\mathrm{eff}}_{\epsilon_A, 2T}$, then, the propagator
-	\begin{align}
-		\hat{\mathcal{F}}^{2} &\equiv \exp\Big(-\frac{i}{\hbar}\hat{H}_{\epsilon_A, 2T}^{\mathrm{eff}}\;2T\Big) \\ 
-		&= \mathcal{T}\exp\Big(-\frac{i}{\hbar}\int_{\frac{3T}{2}}^{2T}\hat{H}_2(t) dt\Big)
-		\exp\Big(-\frac{i}{\hbar}\hat{H}_1T_1\Big)\mathcal{T}\exp\Big(-\frac{i}{\hbar}\int_{\frac{T}{2}}^{T}\hat{H}_2(t) dt\Big)\exp\Big(-\frac{i}{\hbar}\hat{H}_1T_1\Big).
-		\label{eq:2tprop}
-	\end{align}
-	Here $\mathcal{T}$ denotes the time-ordering operation. The coefficients of Floquet Magnus expansion for $\hat{H}_2(t)$ in the first-$T_2$ cycle can be evaluated as given below,	
+	In the limit of large $\omega$ (small $T$), this series can be truncated at lower orders. 	The coefficients of Floquet Magnus expansion for $\hat{H}_2(t)$ in the first-$T_2$ cycle can be evaluated as given below,	
 	\begin{equation}
 		H_F^{(0)}\vert_{\left(\frac{T}{2},T\right)} = \frac{2}{T} \int_{\frac{T}{2}}^{T} dt \hat{H}_2(t) = \frac{2}{T} \int_{\frac{T}{2}}^{T} dt 
 		\Bigg[\hbar\sum_{i\neq j} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_j -\hbar h\sin(\omega t) \sum_i\hat{\sigma}^z_i\Bigg]= \hbar\sum_{i\neq j} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_j + \frac{4h\hbar}{T \omega}\sum_i\hat{\sigma}^z_i.
 		\label{eq:t2hamilt}
 	\end{equation}	
 	\todo[inline]{The problem with this is that the Hamiltonian is not periodic in $T_2$, so the RHS cannot represent the true $H^{(0)}_F$.}
-	With a little algebra, $H^{(1)}_F$,$H^{(2)}_F$  and other  higher order FM expansions coefficients are found to be zero. Thereby we get, $H^{\mathrm{eff}}\vert_{\frac{T}{2}, T} = H^{(0)}_F\vert_{\left(\frac{T}{2},T\right)}$. Thus, the effective Hamiltonian in the time cycle $T_1\equiv[\frac{T}{2}, T]$ is given by,	
+	With a little algebra, $H^{(1)}_F$,$H^{(2)}_F$  and other  higher order FM expansions coefficients are found to be zero. Thereby we get, $H^{\mathrm{eff}}\vert_{\frac{T}{2}, T} = H^{(0)}_F\vert_{\left(\frac{T}{2},T\right)}$. Thus, the effective Hamiltonian in the time cycle $T_2\equiv[\frac{T}{2}, T]$ is given by,	
 	\begin{equation}
 		H^{\mathrm{eff}}\vert_{\left(\frac{T}{2},T\right)} =  \hbar\sum_{i\neq j} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_{j} + \frac{4h\hbar}{T \omega}\sum_i\hat{\sigma}^z_i.
 	\end{equation} 	
-	Clearly, the effective Hamiltonian for the time cycle $T_2 \equiv[\frac{3T}{2}, 2T]$ will also be the same. Now,	let us consider the case where $\epsilon_A \neq 0$ and $\epsilon_B=1$. Furthermore, let us define the operators $\displaystyle \hat{V}_{\epsilon_A} \equiv \exp\Big(\frac{i\epsilon_A \pi}{2}\sum_{l\in A}\hat{\sigma}^x_l\Big), \displaystyle \hat{\theta}_l \equiv 2 \left(\sum_{m \in B}J_{lm}\hat{\sigma}^y_m \frac{T}{2} \right)$; the latter describes a rotation acting on operator $\hat{\sigma}^y_l$ in only region B.  Now, we can simplify the individual propagators in the $T_1$ and $T_2$ cycles as follows.
-	\begin{align}
-		\mathcal{T}\exp\bigg\{-\frac{i}{\hbar}\int_{\frac{T}{2}}^{T} \hat{H}_2(t) dt\bigg\} &= \exp\Bigg\{-i \bigg[ \sum_{l,m\in A}J_{lm} \hat{\sigma}_l^y\hat{\sigma}_m^y +\sum_{l,m\in B}J_{lm}
-		\hat{\sigma_l^y}\hat{\sigma_m^y}-\sum_{\substack{%
+	Clearly, the effective Hamiltonian for the time cycle $T_2 \equiv[\frac{3T}{2}, 2T]$ will also be the same. Now,	let us consider the case where $\epsilon_A \neq 0$ and $\epsilon_B=1$. Furthermore, let us define the operators $\displaystyle \hat{V}_{\epsilon_A} \equiv \exp\Big(\frac{i\epsilon_A \pi}{2}\sum_{l\in A}\hat{\sigma}^x_l\Big), \displaystyle \hat{\theta}_l \equiv 2 \left(\sum_{m \in B}J_{lm}\hat{\sigma}^y_m \frac{T}{2} \right)$; the latter describes a rotation acting on operator $\hat{\sigma}^y_l$ in only region B.  Now, \sout{we can simplify the individual propagators in the $T_1$ and $T_2$ cycles} \red{we can expand the propagator} in the $T_2$ cycle} as follows.
+	\begin{multline}
+		\mathcal{T}\exp\bigg\{-\frac{i}{\hbar}\int_{\frac{T}{2}}^{T} \hat{H}_2(t) dt\bigg\} = \exp\Bigg\{-i \bigg[ \sum_{l,m\in A}J_{lm} \hat{\sigma}_l^y\hat{\sigma}_m^y +\sum_{l,m\in B}J_{lm}
+		\hat{\sigma_l^y}\hat{\sigma_m^y}+\sum_{\substack{%
 				l \in A,\\
-				m \in B\hfill}} J_{lm}\hat{\sigma}^y_l\hat{\sigma}^y_m\nonumber\\
-			& +\frac{4h}{\omega T}\big( -\sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{m\in B}^{}\hat{\sigma}^z_m\big)\bigg]\frac{T}{2}\Bigg\},\\
-			\exp\Big(-\frac{i}{\hbar} \hat{H}_1 T_1\Big) &= \exp\Bigg[\frac{-i(1-\epsilon_A)\pi}{2}\sum_{l \in A}\hat{\sigma}^x_l\Bigg].
-	\end{align}	
-	Here, we have used Eqn.~\ref{eq:t2hamilt} to simplify the RHS of the equation above. Substituting these values in the RHS of Eqn~\ref{eq:2tprop}  yields    	
+				m \in B\hfill}} J_{lm}\hat{\sigma}^y_l\hat{\sigma}^y_m\\
+			+\frac{4h}{\omega T}\big( \sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{m\in B}^{}\hat{\sigma}^z_m\big)\bigg]\frac{T}{2}\Bigg\}.
+			\label{eq:effham3}
+	\end{multline}	
+	Here, we have used Eq.~\ref{eq:t2hamilt} to simplify the RHS of the equation above. Substituting these values \red{from Eq.\eqref{eq:effham1}} $\&$ \eqref{eq:effham3} in the RHS of Eq.~\eqref{eq:2tprop} yields    	
 	\begin{align}
 		\hat{\mathcal{F}}^2 
 		=& \exp\Bigg\{-i \Bigg[ \sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2} +\sum_{l,m\in B}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}+\sum_{\substack{%
