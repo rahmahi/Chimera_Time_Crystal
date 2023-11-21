@@ -150,7 +150,7 @@ The occurrence of a chimera state in the model outlined in section~\ref{sec:mdl_
 		\label{Fig:strong_weak_ea}
 	\end{figure*}
 
-In such a case, the quantum dynamics of the two regions exhibit mutual independence when the system is first prepared in a state that can be factorized as a product of states in the invariant sub-spaces of regions A and B, respectively. It is crucial to note that no transfer or loss of quantum information occurs between these regions during the ensuing dynamics.  Since we still have a significant degree of flexibility in selecting the driving parameters, it is possible to configure them in such a way as to induce DMBL in region $B$, while preserving a stable DTC in region $A$. Let us now increase the parameter $\epsilon_A$ while maintaining a sufficiently high frequency for the drive, so that it is possible to disregard the term $\hat{\theta}_l \approx 0$ due to the condition $T<<\hbar/J_0$. Under these circumstances, the strength of the coupling between two regions is significantly influenced by the ratio $\chi$, defined as $\chi\equiv 4h/\omega$. This dependence is characterized by the amplitudes $1+\cos{\chi}$ and $\sin{\chi}$, which exhibit a non-monotonic behavior. Specifically, when $\chi$ takes the form of $(2n+1)\pi$, where $n$ is a non-negative integer, the decoupling of regions A and B occurs again, regardless of the value of $\epsilon_A$ being non-zero. Therefore, it is anticipated that a DTC/DMBL chimera will exhibit a rather steady behavior when operating within proximity of this regime. 
+In such a case, the quantum dynamics of the two regions exhibit mutual independence when the system is first prepared in a state that can be factorized as a product of states in the invariant sub-spaces of regions A and B, respectively. It is crucial to note that no transfer or loss of quantum information occurs between these regions during the ensuing dynamics.  Since we still have a significant degree of flexibility in selecting the driving parameters, it is possible to configure them in such a way as to induce DMBL in region $B$, while preserving a stable DTC in region $A$. Let us now increase the parameter $\epsilon_A$ while maintaining a sufficiently high frequency for the drive, so that it is possible to disregard the term $\hat{\theta}_l \approx 0$ due to the condition $T<<\hbar/J_0$. Under these circumstances, the strength of the coupling between two regions is significantly influenced by the ratio $\chi$, defined as $\chi\equiv 4h/\omega$. This dependence is characterized by the amplitudes $1+\cos{\chi}$ and $\sin{\chi}$, which exhibit a non-monotonic behavior. Specifically, when $\chi$ takes the form of $(2n+1)\pi$, where $n$ is a non-negative integer, the decoupling of regions A and B occurs again, regardless of the value of $\epsilon_A$ being non-zero. Therefore, it is anticipated that a DTC-DMBL chimera will exhibit a rather steady behavior when operating within proximity of this regime. 
 
 	
 We now present visuals of the local magnetization, denoted as $\expval{\hat{S}^z_i (t)}$, which is equivalent to the expectation value of the operator $\hat{\sigma}^z_i$ with respect to the state $\ket{\Psi(t)}$, for all sites $i$ in the spin-chain. The aforementioned data has been obtained using numerical simulations of the Schr\"odinger dynamics, represented by the equation $\hat{H}(t)\ket{\Psi(t)}= i \hbar \pdv*{\ket{\Psi(t)}}{t}$. This equation describes the behavior of the quantum many-body state $\ket{\Psi(t)}$. The simulations were conducted using QuTiP, a Python-based Quantum Toolbox~\cite{Johansson2013}. The simulations were performed over extended duration (up to t = 80T, with $\hbar$ normalized to unity) and across various ranges of power law interactions ($\beta = 0,1.5,2.5,\infty$). Additionally, simulations were conducted for both weak and strong interaction amplitudes ( $J_0 = 0.072/T$ and $J_0 = 0.2/T$ respectively), which are similar to the parameters selected by Sakurai in a previous study~\cite{sakurai_phys_nodate}. To assess the durability of this chimera, we set the values of the rotational errors as $\epsilon_A = 0.03$ and $\epsilon_B = 0.9$. Furthermore, in order to observe the emergence of the chimera state in our model, we manipulate the periodic drive in $\hat{H}_2(t)$ by setting a high frequency $\omega=20$ for two different scenarios: one where the parameter $\chi\equiv4h/\omega$ is located at a root of the Bessel function $\mathcal{J}_0(\chi)$, specifically at the CDT/DL point, and another where $\chi$ is at a distance from any roots.
@@ -294,7 +294,7 @@ In contrast to the preceding subsection, which focused on the examination of mac
 	\end{equation*}
 	The corresponding propagator can be obtained by solving the Schr\"odinger equation $\displaystyle{i\hbar \partial_t \hat{U}(t) = \hat{H}(t) \hat{U}(t)}$.  The propagator at $t=T$, given by $ \hat{\mathcal{F}}\equiv \hat{U}(T)$ is called the \textit{Floquet operator}. Now, it follows from Floquet's Theorem that, if the system is strobed at integer multiples of $T$, the dynamics can be mapped to that of a time-independent effective Hamiltonian $\hat{H}_F$, such that  $\displaystyle\hat{U}(nT) = \exp\bigg[-\frac{i}{\hbar}\hat{H}_F\; nT \bigg]$~\cite{Eckardt_2015}.  The operator$\hat{H}_F$ (also denoted by $H^\mathrm{eff}$) is obtained from the original time-dependent Hamiltonian, and is given by, $\displaystyle \hat{H}_F = \Bigg(\hat{H}(t) - i\hbar \pdv{t}\Bigg)$ evaluated at $t=T$. 
 	
-	\red{
+	
 	Now, the proposed spin chain in Eq.\eqref{eq:cleanham} needs to evolve for at least two time periods to manifest a DTC. If the effective time-independent Hamiltonian at that time is denoted by $\hat{H}^{\mathrm{eff}}_{\epsilon_A, 2T}$, then, the propagator
 	\begin{align}
 		\hat{\mathcal{F}}^{2} &\equiv \exp\Big(-\frac{i}{\hbar}\hat{H}_{\epsilon_A, 2T}^{\mathrm{eff}}\;2T\Big) \\ 
@@ -308,27 +308,13 @@ In contrast to the preceding subsection, which focused on the examination of mac
 		\exp\Big(-\frac{i}{\hbar} \hat{H}_1 T_1\Big) = 	\exp\Bigg[\frac{-i(1-\epsilon_A)\pi}{2}\sum_{l \in A}\hat{\sigma}^x_l\Bigg].
 		\label{eq:effham1}
 	\end{equation}	
-	It is evident that the effective Hamiltonian for $t \in[T, 3T/2]$ will be same as that obtained from Eq.\eqref{eq:effham1}. Next, in the time cycle $T_2\in[T/2,T]$, the time dependent Hamiltonian, $\hat{H_2}(t)$ is applied. A high-frequency approximation for the Floquet Hamiltonian corresponding to this  propagator, $\hat{H}_F$, can be obtained from the Floquet Magnus expansion (FME).} A \red{generic} $\hat{H}_F$ in a time-periodic quantum system can be expanded as~\cite{haldar_dynamical_2017},	
+	It is evident that the effective Hamiltonian for $t \in[T, 3T/2]$ will be same as that obtained from Eq.\eqref{eq:effham1}. Next, in the time cycle $T_2\in[T/2,T]$, the time dependent Hamiltonian, $\hat{H_2}(t)$ is applied, therefore,
 	\begin{align}
-		\hat{H}_F &= \sum_{n=0}^{\infty} H_F^{(n)},\nonumber\\
-		H_F^{(0)} &= \frac{1}{T} \int_{t_0}^{T+t_0} \mathrm{d}t\;\hat{H}(t), \nonumber\\
-		H_F^{(1)} &= \frac{1}{2T (i \hbar)} \int_{t_0}^{T+t_0} \mathrm{d}t_1  \int_{t_0}^{t_1} \mathrm{d}t_2\; \comm{\hat{H}(t_1)} {\hat{H}(t_2)},\nonumber\\
-		H_F^{(2)} &= \frac{1}{3 T(i\hbar)^2} \int_{t_0}^{T+t_0} \mathrm{d}t_1  \int_{t_0}^{t_1} \mathrm{d}t_2 \int_{t_0}^{t_2} \mathrm{d}t_3\;\bigg(\comm{\hat{H}(t_1)}{\comm{\hat{H}(t_2)}{\hat{H}(t_3)}} + \comm{\hat{H}(t_3)}{\comm{\hat{H}(t_2)}{\hat{H}(t_1)}}\bigg), \nonumber\\
-		\dots & 
-		\label{eq:app:mageff}
-	\end{align} 
-	Note that, the contributions of each order in Eq.~\ref{eq:app:mageff} are individually hermitian~\cite{blanes_magnus_2009, haldar_statistical_2022}. In the limit of large $\omega$ (small $T$), this series can be truncated at lower orders. 	The coefficients of Floquet Magnus expansion for $\hat{H}_2(t)$ in the first-$T_2$ cycle can be evaluated as given below,	
-	\begin{equation}
-		H_F^{(0)}\vert_{\left(\frac{T}{2},T\right)} = \frac{2}{T} \int_{\frac{T}{2}}^{T} dt \hat{H}_2(t) = \frac{2}{T} \int_{\frac{T}{2}}^{T} dt 
-		\Bigg[\hbar\sum_{i\neq j} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_j -\hbar h\sin(\omega t) \sum_i\hat{\sigma}^z_i\Bigg]= \hbar\sum_{i\neq j} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_j + \frac{4h\hbar}{T \omega}\sum_i\hat{\sigma}^z_i.
-		\label{eq:t2hamilt}
-	\end{equation}	
-	\todo[inline]{The problem with this is that the Hamiltonian is not periodic in $T_2$, so the RHS cannot represent the true $H^{(0)}_F$.}
-	With a little algebra, $H^{(1)}_F$,$H^{(2)}_F$  and other  higher order FM expansions coefficients are found to be zero. Thereby we get, $H^{\mathrm{eff}}\vert_{\frac{T}{2}, T} = H^{(0)}_F\vert_{\left(\frac{T}{2},T\right)}$. Thus, the effective Hamiltonian in the time cycle $T_2\equiv[\frac{T}{2}, T]$ is given by,	
-	\begin{equation}
-		H^{\mathrm{eff}}\vert_{\left(\frac{T}{2},T\right)} =  \hbar\sum_{i\neq j} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_{j} + \frac{4h\hbar}{T \omega}\sum_i\hat{\sigma}^z_i.
-	\end{equation} 	
-	Clearly, the effective Hamiltonian for the time cycle $T_2 \equiv[\frac{3T}{2}, 2T]$ will also be the same. Now,	let us consider the case where $\epsilon_A \neq 0$ and $\epsilon_B=1$. Furthermore, let us define the operators $\displaystyle \hat{V}_{\epsilon_A} \equiv \exp\Big(\frac{i\epsilon_A \pi}{2}\sum_{l\in A}\hat{\sigma}^x_l\Big), \displaystyle \hat{\theta}_l \equiv 2 \left(\sum_{m \in B}J_{lm}\hat{\sigma}^y_m \frac{T}{2} \right)$; the latter describes a rotation acting on operator $\hat{\sigma}^y_l$ in only region B.  Now, \sout{we can simplify the individual propagators in the $T_1$ and $T_2$ cycles} \red{we can expand the propagator} in the $T_2$ cycle as follows.
+		\mathcal{T}\exp\Big(-\frac{i}{\hbar}\int_{\frac{T}{2}}^{T}\hat{H}_2(t) dt\Big) &= \exp( -\frac{i}{\hbar}\int_{\frac{T}{2}}^{T}\Big[\hbar\sum_{i\neq j}J_{ij}\hat{\sigma}^y_i\hat{\sigma}^y_j-\hbar h\sin(\omega t)\sum_i\hat{\sigma}^z_i\Big] dt)\nonumber\\
+		&= \exp(-i \Big[\sum_{i\neq j}J_{ij}\hat{\sigma}^y_i\hat{\sigma}^y_j \frac{T}{2} + \frac{2h}{\omega}\sum_i \sigma^z_i\Big])
+	\end{align}
+	 
+	Clearly, the effective Hamiltonian for the time cycle $T_2 \in[3T/2, 2T]$ will also be the same. Now,	let us consider the case where $\epsilon_A \neq 0$ and $\epsilon_B=1$. Furthermore, let us define the operators $\displaystyle \hat{V}_{\epsilon_A} \equiv \exp\Big(\frac{i\epsilon_A \pi}{2}\sum_{l\in A}\hat{\sigma}^x_l\Big), \displaystyle \hat{\theta}_l \equiv 2 \left(\sum_{m \in B}J_{lm}\hat{\sigma}^y_m \frac{T}{2} \right)$; the latter describes a rotation acting on operator $\hat{\sigma}^y_l$ in only region B.  Now,we can expand the propagator in the $T_2$ cycle as follows.
 	\begin{multline}
 		\mathcal{T}\exp\bigg\{-\frac{i}{\hbar}\int_{\frac{T}{2}}^{T} \hat{H}_2(t) dt\bigg\} = \exp\Bigg\{-i \bigg[ \sum_{l,m\in A}J_{lm} \hat{\sigma}_l^y\hat{\sigma}_m^y +\sum_{l,m\in B}J_{lm}
 		\hat{\sigma_l^y}\hat{\sigma_m^y}+\sum_{\substack{%
@@ -337,7 +323,7 @@ In contrast to the preceding subsection, which focused on the examination of mac
 			+\frac{4h}{\omega T}\big( \sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{m\in B}^{}\hat{\sigma}^z_m\big)\bigg]\frac{T}{2}\Bigg\}.
 			\label{eq:effham3}
 	\end{multline}	
-	Here, we have used Eq.~\ref{eq:t2hamilt} to simplify the RHS of the equation above. Substituting these values \red{from Eq.\eqref{eq:effham1}} $\&$ \eqref{eq:effham3} in the RHS of Eq.~\eqref{eq:2tprop} yields    	
+	Here, we have used Eq.~\ref{eq:t2hamilt} to simplify the RHS of the equation above. Substituting these values from Eq.\eqref{eq:effham1} $\&$ \eqref{eq:effham3} in the RHS of Eq.~\eqref{eq:2tprop} yields    	
 	\begin{align}
 		\hat{\mathcal{F}}^2 
 		=& \exp\Bigg\{-i \Bigg[ \sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2} +\sum_{l,m\in B}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}+\sum_{\substack{%
