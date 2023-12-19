@@ -1,0 +1,361 @@
+\documentclass[
+nofootinbib,
+reprint,
+superscriptaddress,
+amsmath,amssymb,showkeys,
+aps,
+prb,
+]{revtex4-2}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage{physics}
+\usepackage[sort&compress]{natbib}
+\usepackage{ulem}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{bbm}
+\usepackage{color}
+
+% \usepackage[dvipsnames]{xcolor}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\green}[1]{\textcolor{green}{#1}}
+% \usepackage{cancel}
+
+
+\begin{document}
+	\preprint{APS/123-QED}
+	
+	\title{Time Crystal Embodies Chimera in Periodically Driven Quantum Spin System}
+	
+	\author{Mahbub Rahaman}
+	\thanks{Primary and corresponding author}
+	\email[\\Email: ]{mrahaman@scholar.buruniv.ac.in}
+	\affiliation{Department of Physics, The University of Burdwan, Burdwan 713104, India}	
+	\author{Akitada Sakurai}
+	\affiliation{Quantum Information Science and Technology Unit, Okinawa Institute of Science and Technology Graduate University, Onna-son, Okinawa 904-0495, Japan}		
+	\author{Analabha Roy}
+	\thanks{Co-corresponding author}
+	\email[\\Email: ]{daneel@utexas.edu}
+	\affiliation{Department of Physics, The University of Burdwan, Burdwan 713104, India}
+	
+	\begin{abstract}
+		Chimera states are a captivating occurrence in which a system comprised of multiple interconnected elements exhibits a distinctive combination of synchronized and de-synchronized behavior. The emergence of these states can be attributed to the complex interdependence between quantum entanglement and the delicate balance of interactions among system constituents. The emergence of Discrete Time Crystal (DTC) in typical many-body periodically driven systems occurs when there is a breaking of time translation symmetry. Coexisting coupled DTC and a ferromagnetic dynamically many-body localized (DMBL) phase at distinct regions have been investigated under the controlled spin rotational error of a disorder-free spin-1/2 chain for different types of spin-spin interactions. We contribute a novel approach for the emergence of the DTC-DMBL-Chimera phase, which is robust against external static fields in a periodically driven quantum many-body system.
+	\end{abstract}
+	
+	\keywords{Dynamical Many Body localization, Chimera in a quantum system, Time crystal, Periodic drive.}
+	\maketitle
+	
+	%Symmetry is a fundamental concept in physics, offering valuable perspectives on the identification of conservation laws, the formulation of novel theories such as gauge theory~\cite{Yang_1954}, and the understanding of many-body physics. Symmetry and its breaking, specifically spontaneous symmetry breaking (SSB), are fundamental factors in the formulation of the phases of matter in condensed matter physics. SSB has manifested at various scales, including the Higgs mechanism in high-energy physics, cosmology, and  Bose-Einstein condensation  in cold atoms, among other instances~\cite{krasnov_spontaneous_2012, sadler_spontaneous_2006, vanderbruggen_spontaneous_2015}.
+	
+	%In solid-state physics, matter is characterized by the presence of crystalline order, which arises due to continuous translational symmetry breaking in space. Motivated by the equivalence between space and time in relativistic theory, it becomes possible to contemplate SSB occurring along the temporal axis, leading to the emergence of a novel phase of matter. In 2012, Frank Wilczek presented a theoretical framework pertaining to the concept of \textit{time translation symmetry breaking} (TTSB) in the context of quantum mechanical systems~\cite{wilczek_quantum_2012}. In another paper, Shapere and Wilczek proposed TTSB for a classical system~\cite{shapere_classical_2012}. This unveils a new state of matter, $\textit{Time Crystals}$ (TC), where the ground state of the system possesses its own dynamics, distinct from external influence~\cite{wilczek_quantum_2012}, which arises from the intrinsic properties and interactions among the system constituents. Wilczek's proposed TC was an equilibrium state of matter where continuous time translation symmetry was broken. {Bruno commented that Wilczek's proposed rotating soliton should not be the correct ground state  corresponding to the proposed model\cite{Bruno_comment_1}. Bruno also pointed out a contradiction regarding energy-conservation principle due to periodic motion in ground state for a wide range of systems, regardless of their composition and interactions (\textit{the no-go theorem})\cite{Bruno2013}. In addition}, Oshikawa and Watanabe proved {in another no-go theorem} that the TC cannot exist in thermal equilibrium  ~\cite{watanabe_absence_2015}. Their proof does not reject the possibility of a TC  existing in a non-equilibrium system, such as Floquet systems. Hence, the Floquet time crystal (or Discrete time crystal, abbreviated as DTC) was proposed, in which discrete, rather than continuous symmetry, is broken~\cite{else_floquet_2016}.
+	
+	%In a generic DTC, strong disorder-induced \textit{Many-Body Localization} (MBL) is required for long-term stability~\cite{zhang_observation_2017}. MBL prevents DTC from thermalizing, without which every part of the system would regard the rest of the system as a heat-bath, eventually reaching thermal equilibrium~\cite{alet_many-body_2018,else_floquet_2016,smith_many-body_2016,nguyen_signature_2021}.  DTCs have been experimentally realized in several many-body systems, such as arrays of ion-trapped spins~\cite{huang2018,taheri_all-optical_2022, Soham2018, zhang_observation_2017, yao_time_2018}, qubits ~\cite{frey_realization_2022}, ordered dipolar $NH_4H_2PO_4$~\cite{rovny_observation_2018}, by bouncing ultracold atoms on oscillating mirrors~\cite{sacha_time_nodate,golletz_basis_2022}, and others. Alternatively, disorder-free DTCs can be created by direct quenches, delta-kicks, and other periodic driving methods~\cite{else_prethermal_2017, russomanno_spin_2017, ho_critical_2017, yu2019, russomanno_floquet_2017}.  Recent works have explored other prospects for constructing stable DTCs, namely through the emergence of disorder-free \textit{Dynamical Many-Body Localization} (DMBL)  by applying an external time-periodic drive~\cite{Keser2016, haldar_dynamical_2017, haldar_dynamical_2021,bhattacharyya_transverse_2012,aditya2023dynamical,dutta2014,das_exotic_2010}. In this manuscript, we prepare a Time Crystal in a one-dimensional spin-$1/2$ chain by driving it with a square wave, and stabilize it by inducing  \textit{Dynamical Localization} (DL) in a region of the spin chain via \textit{Coherent Destruction of Tunneling} (CDT/DL) with an additional harmonic drive. In CDT, the quantum tunneling of electrons through a classically insurmountable potential barrier is suppressed by applying a time-periodic drive with specific amplitude and frequency~\cite{Grossmann1991, Ashhab2007}. While CDT has been observed in systems where the transfer matrix element is small or finite,  the infinite dimensional counterpart of CDT, is also possible~\cite{das_exotic_2010, Roy2015}. In both CDT and CDT/DL, the system is localized at the initial state for infinite time\cite{Kayanuma2008}.
+	
+	%When the model has the interaction having off-diagonal elements, such as Heisenberg model, it allows the magnetization traveling, and it seems to prompt the thermalization and collapse the chimera state. This paper investigates whether a chimera consisting of a DTC and a CDT/DL-localized ferromagnetic state can coexist simultaneously in a one-dimensional spin-1/2 Heisenberg spin chain driven by external time-periodic drives. We have employed a periodically driven transverse field that breaks $\mathbb{Z}_2$ symmetry in a one-dimensional \textit{disorder-free} quantum spin-$1/2$ chain with long-range power-law decay in the Heisenberg exchange. We will show that even the influence of the Heisenberg interaction is also suppressed in the chimer state.
+	
+	The coexistence of coupled spontaneous synchronized and de-synchronized  dynamics has been known to emerge in the dynamics of coupled systems of identical oscillators in classical systems. This type of emergent behavior is called a \textit{Chimera State}~\cite{kuramoto_coexistence_2002, panaggio_chimera_2015, parastesh_chimeras_2021}. \red{Chimera has been widely explored in classical systems in the last decade.} \red{Latter,} the idea of chimera has been brought to the quantum regime. For example, the chimera phase can be realized in quantum many-body systems, and chimera order has been investigated as a quantum phase of matter~\cite{bastidas_quantum_2015}. However, because non-linearity plays an essential role in their coexistence in classical systems, making the chimera state in closed quantum systems seems challenging since unitary dynamics are linear. Given this point, the quantum version of the chimera phase has been proposed in the semi-classical regimes.
+	
+	However, it does not reject the possibility of a chimera state even if it is a closed quantum system, but one needs to take a different approach to make a system where two different dynamics coexist. Indeed, it has been reported or proposed states in which two different dynamics coexist in the same system~\cite{Bastidas2018,Zha2020,sakurai_phys_nodate}. In recent decades, interest has risen in realizing chimeras in magnetic systems. Here, magnetic order and disorder co-exist in systems of interacting quantum spins that can be represented by the quantum Ising model~\cite{singh_chimera_2011}. 
+	
+	Recent advancements in this domain involve the formation of a \textit{chimera time crystalline order}, as reported by Sakurai \textit{et al.}~\cite{sakurai_phys_nodate}, where a stable chimera was achieved in a one-dimensional interacting spin-1/2 chain where a stable \textit{Discrete Time Crystal} (DTC) phase can exists even it is surrounded by another dynamical state which is Many-Body-Localized(MBL) state. DTC is a state of matter that emerges from the breaking of discrete time translational symmetry of the system~\cite{else_floquet_2016} and in MBL phase, the initial state is preserved for indefinite time by proper introduction of disorder in the system. For such chimera it is found that the MBL prevents DTC from thermalizing, without which every part of the system
+	would regard the rest of the system as a heat-bath, eventually reaching thermal equilibrium~\cite{zhang_observation_2017,alet_many-body_2018,else_floquet_2016,smith_many-body_2016,nguyen_signature_2021}. Thereby MBL protects the coexistence of two different phases. \blue{Now, it is natural to consider whether a chimera can exists in the more general cases in which the interactions \sout{which} do not contribute to the localization but prompt the thermalization. For instance,  \sout{ because of } the Heisenberg interaction has off-diagonal elements, because it allows the magnetization traveling, it seems to break the chimera state.}
+		
+	In this paper we investigate a new chimera comprised of a DTC state in  a disorder-free spin-1/2 chain having the Heisenberg interaction. In our model, instead of the MBL, we consider the Dynamical Many-Body Localization (DMBL)~\cite{Keser2016, haldar_dynamical_2017, haldar_dynamical_2021,bhattacharyya_transverse_2012,aditya2023dynamical,dutta2014,das_exotic_2010} via Coherent Destruction of Tunneling (CDT/DL)~\cite{Grossmann1991,Kayanuma2008} by applying the external time-periodic driving to prevent the thermalization of DTC and construct the chimera state. To break the discrete time translational symmetry and realize the DTC phase, we consider a periodically driven transverse field that breaks $\mathbb{Z}_2$ symmetry, \blue{as similar to the original proposal~\cite{sakurai_phys_nodate} }. We will show that even the influence of the Heisenberg interaction is also suppressed in the chimer state. And we also show the chimer DTC state is robust against the external static and time periodic driving fields. Our work will contribute to the quantum engineering and designing the quantum memory based on the DTC.\cite{zhang_observation_2017}
+	
+	We present our work as follows: In section~\ref{sec:mdl_n_dynam}, we describe the proposed spin model. In section~\ref{sec:level2}, we describe the emergence of DMBL. In section ~\ref{sec:level3}, we numerically investigate the coexistence of time crystal and DMBL phases, and support our results analytically. In section ~\ref{sec:level4}, we look at long-time stability via regional magnetization and  entanglement entropy for the system, and explore the robustness of this chimera against  external static fields. Finally, we discuss our results and conclude.
+	
+	
+	% \red{In classical non-linear physics, there are systems where synchronized and unsynchronized regimes coexist in the same system, and they are called chimera states. In these systems, non-linearity plays an essential role in coexisting. Given this point, the quantum version of the chimera phase has been proposed in the semi-classical regimes. Because unitary dynamics are linear, making the chime state in closed quantum systems like the classical one seems impossible. However, it does not reject the possibility of a chimera state where two different dynamics coexist in the same quantum system, even if it is closed. }
+	
+	% \red{Indeed, it has been reported that more than two different dynamics appear in one system in both theoretical and experimental research. One is a Chimera-DTC, where discrete time crystal (DTC) and many-body localized or extended states coexist in the same system. The original DTC phase is a phase of matter that breaks the discrete-time translational symmetry. }
+	
+	
+	\section{\label{sec:mdl_n_dynam} The Model and System Dynamics}
+	We consider a one-dimensional spin-1/2 chain with N sites and transverse fields, with one field being static and the other harmonically driven in time. In the chain, all sites are connected via the Heisenberg interaction in the $y$ spin axis. Now, we modulate the system in time by two repeating sequences of pulse waves, both with the same time periods $T$.  The first sequence has a pulse width $T_1$, and modulates the static transverse fields acting on the $x$ spin axis. The second  sequence has pulse width $T_2=T-T_1$, and modulates  both the interactions and  time-periodic drive in the transverse field for the $z$ spin axis. Thus, the full Hamiltonian is time-periodic with a period $T=T_1+T_2$, and is given by,
+	
+	We consider a one dimensional spin-1/2 chain with N sites.  We modulate the spin chain in time by two repeating sequences of pulse waves, both with the same time periods $T$.  The first sequence has a pulse width $T_1$, and modulates the spin chain by trasverse fields acting in the $x$ spin axis. The second  sequence has pulse width $T_2=T-T_1$, and modulates the spin chain with a spin-spin Heisenberg interaction term along y axis and a time-periodic drive in the transverse field for in the $z$ spin axis. Thus, the full Hamiltonian is time-periodic with a period $T=T_1+T_2$, and is given by,
+	\begin{align}
+		\hat{H}(t) = 
+		\begin{cases}
+			\hat{H_1} , & 0\leq t < T_1,\\
+			\hat{H_2} , & T_1\leq t < T,
+		\end{cases}
+		\label{eq:cleanham}
+	\end{align}
+	where,
+	\begin{align}
+		\hat{H_1} = & \hbar g (1-\epsilon_A) \sum_{\substack{\\i \in A}}\hat{\sigma}^x_i + \hbar g (1-\epsilon_B) \sum_{i \in B}\hat{\sigma}^x_i+ \hbar\hat{V}(\hat{\sigma}^{\gamma}),\label{eq:sysham1}\\
+		\hat{H_2}(t) = & \hbar\sum_{ij} J_{ij} \hat{\sigma}^y_i \hat{\sigma}^y_{j} +  \hbar h_D \sum_i \hat{\sigma}^z_i + \hbar\hat{V}(\hat{\sigma}^{\gamma}),
+		\label{eq:sysham2}
+	\end{align}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[width=8.2cm]{drive_distribution.pdf}
+		\end{center}
+		\caption{Pictorial realization of the temporal progression of the Hamiltonian in Eq.~\eqref{eq:cleanham}. The modulating pulses are set in such a way that the spin-flipping Hamiltonian $\hat{H_1}$, depicted as Eq.~\eqref{eq:sysham1}, acts during the $T_1-$cycle (blue curve), and the harmonic drive as well as the interactions, depicted as $\hat{H_2}(t)$ in Eq.~\eqref{eq:sysham2}, acts during the $T_2-$cycle(red dashed curve).}
+		\label{Fig:time_distribution}
+	\end{figure}	
+	and $\hat{\sigma}^{\mu=x,y,z}_i$ are the Pauli matrices at $i$-th site.  Henceforth, we shall simplify our analysis by assuming that the pulse waves modulating these Hamiltonians have a $50 \%$ duty-cycle, \textit{i.e.} $T_1=T_2=T/2$.  The Hamiltonian $\hat{H}_1$ in Eq.~\eqref{eq:sysham1} represents a transverse field that can perform spin-flips on spins polarized in the direction of the drive. To realize the DTC phase on the chain, we set an \textit{ideal value} of this field to $g=\pi/T$. Now, we divide the chain into two physical regions denoted by $A$ and $B$, based on two relative deviations $\epsilon_{A/B}\in[0,1]$ of the field from this ideal value. Thus, these deviation parameters are \textit{rotational errors} for the two regions, and play an essential role in differentiating between the two regions~\footnote{For instance, when $\epsilon_A \sim 0$ and $\epsilon_B \sim 1$, the field in region-A cause imperfect spin-flips, while that in region-B do not flip most spins.}. 
+	The Hamiltonian $\hat{H}_2$ in Eq.\eqref{eq:sysham2} represents a standard long-range spin-chain in $1-$dimension. The first term models the interaction between two sites $(i>j)$ with a coupling strength $J_{ij}$, assumed to follow a power law decay $J_{ij}={J_0}/{|i-j|^\beta}$. We have adapted Buyskikh's benchmarking ~\cite{buyskikh_entanglement_2016} to classify the scaling of spin-spin interaction by varying $\beta$. According to this classification, when $\beta\in\left[0,1\right)$, the interaction is classified as \textit{long-range}, with $\beta=0$ called the \textit{all-to-all} interaction; the range $\beta\in \left(1,2\right)$, as \textit{intermediate-range} interaction; the range $\beta > 2$ as the  \textit{short range} interaction, with $\beta= \infty$ called the \textit{nearest-neighbor} interaction. The second term in $\hat{H}_2$ is a continuous transverse time-periodic drive $\displaystyle \hat{H}_D=\hbar h_D \sum_i\hat{\sigma}^z_i$, where $\displaystyle h_D = -h\sin{(\omega t)}$, and $h,\omega$ are the amplitude and frequency (respectively) of the drive. We have considered $\omega$ to be sufficiently high such that $\omega\gg J_0$. 	Experimentally, this can be accomplished using external high-frequency drives whose time-scales are significantly shorter than the relaxation rate due to the interactions in $\hat{H}_2$.~\cite{choi_observation_2017,zhang_observation_2017,Cirac_1995,Blatt_2012}. At specific values of $h$ and $\omega$, our model shows a dynamical state that facilitates the manifestation of CDT/DL, which prevents the system from rapid thermalization. We will elaborate on this in section~\ref{sec:level2}. The final term in both $\hat{H}_{1,2}$, in Eqs.~\eqref{eq:sysham1}, and~\eqref{eq:sysham2}, is $\displaystyle \hat{V}(\hat{\sigma}^{\gamma}) \equiv\gamma  \sum_{i=1}^{N} (\hat{\sigma}^x_i + \hat{\sigma}^y_i)$. It serves as a controlled additional static field that operates on the entire spin chain in the $x$ and $y$ spin axes respectively.  This term can also be interpreted as a static magnetic imperfection that is modulated by a parameter $\gamma$. We have chosen to ignore this by default, and re-introduce it in section\ref{sec:level4} in order to investigate the robustness of the chimera against such imperfections.
+	\begin{figure}[t!]
+		\centering
+		\includegraphics[width=7.cm]{pic_regions.pdf}
+		\caption{Spin-flips that arise in the spin-$1/2$ chain due to the dynamics described in Eqs.~\ref{eq:sysham1} and~\ref{eq:sysham2}, where the system is broken into two regions, $A$ (left panels) and $B$ (right panels). Snapshots at times $t=0, T_1, T, T+T_1 $ and $t=2T$ are represented from the top to bottom panels respectively. The spins at region $B$ remain unaltered for all time. In region $A$, spins are flipped at $T_1$ and preserved by CDT/DL during the $T_2-$cycle until $t=T_1+T_2=T$. In the next $T_1-$cycle, they are flipped back and preserved again by CDT/DL again until $t=2T$. Thus, region $A$ has a \textit{period-doubling} response from $t=0$ to $t=2T$.}
+		\label{Fig:spinflip}
+	\end{figure}
+	
+	We populate the spins in a fully polarized product state of up-spins, as depicted in the top panel of Fig.~\ref{Fig:spinflip}. During the $T_1-$cycle of the pulses,  the spins in region A \textit{ideally} undergo a \textit{spin-flip} resulting in a spin-down orientation, while the spins situated within region B, remain ideally unaltered. If the dynamics in the $T_2-$cycle of the pulses remains localized by CDT/DL, this state of affairs is continued to the time $t=T$, as depicted in the next lower panel of Fig.~\ref{Fig:spinflip}. The localization ensures that each of the spins of the system are independent of each other, preventing any growth of correlations or entanglement between them during this cycle. Now, when the $T_1-$cycle repeats, the spins in \red{region-A are flipped back to initial condition of spin chain, thereby restoring the spin chain to its initial spin-orientation.} The dynamics remains localized during the next $T_2-$cycle due to CDT/DL. Thus, when the system is driven up to the next time period $2T$, a spin magnetization \textit{period doubling}~\cite{rovny_31mathrmp_2018, Pan2020}, or \textit{half-frequency sub-harmonic} response is expected. 
+	
+	\section{\label{sec:level2} Interacting Dynamical Localization}
+	
+	Before investigating the chimera order in our model, we explain how the Hamiltonian $\hat{H}_2$ in Eq.~\eqref{eq:cleanham} exhibits CDT/DL by analytically solving for the dynamics during all $T_2-$cycles. During these times,  the system is driven by a sinusoidal transverse periodic drive $h_D$ as illustrated in Fig.~\ref{Fig:time_distribution}.
+	
+	Let us employ the \textit{moving frame method}~\cite{haldar_dynamical_2021}, where a unitary transformation is performed to the instantaneous rest frame of the rotation representing the drive. The transformation on the state yields $\ket{\psi(t)}_{mov} = \hat{U}^\dagger(t_0,t) \ket{\psi(t)}$, where 
+	\begin{equation}
+		\hat{U}(t_0,t) \equiv \mathcal{T} e^{-\frac{i}{\hbar}\int_{t_0}^{t} dt' \hat{H}_D}.
+		\label{eq:rot1}
+	\end{equation}
+	During the first $T_2-$cycle, $t \in{\Big[\frac{T}{2}, T \Big]}$. Thus,
+	\begin{align}
+		\hat{U}\left(T/2,t\right) =& \exp \Bigg[-\frac{i}{\hbar}\int_{T/2}^{t+T/2} (-h \sin(\omega t'))dt'\hbar\sum_i\hat{\sigma}^z_i\Bigg]\nonumber\\
+		=& \prod_{i} \exp\Big[-i \hat{\sigma}^z_i\zeta(t))\Big],
+	\end{align}	
+	where, $\displaystyle{
+		\zeta (t) = h\int_{T/2}^{T/2+t}  \Big[-\sin(\omega t')dt'\Big]=  \frac{h}{\omega}\Big[1-\cos(\omega t)\Big]}$.		
+	Now, in this `rotating frame', the Hamiltonian transforms to~\cite{haldar_dynamical_2021},
+	\begin{align}
+		\hat{H}^{mov}(t) &= \hat{U}^\dagger \hat{H}_2(t) \hat{U}- i \hat{U}^\dagger \partial_t \hat{U}\nonumber\\
+		&= \hat{U}^\dagger \left(\hbar\sum_{ij}J_{ij}\hat{\sigma}^y_i\hat{\sigma}^y_j\right) \hat{U}\nonumber\\
+		&=\hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) e^{i 2\zeta(t) \hat{\sigma}^z_i}  e^{i 2\zeta(t) \hat{\sigma}^z_j}
+		\label{eq:movham}
+	\end{align}
+	
+	Next, we apply the \textit{Jacobi Anger expansion}, $\displaystyle e^{iz \cos(\theta)} = \sum_{n=-\infty}^{\infty} \mathcal{J}_n(z) e^{in\theta}$, where $\mathcal{J}_n$'s denote the  Bessel's function of first kind of $n$'th order. This allows for a Fourier series expansion of $\hat{H}^{mov}(t)$. Now, we introduce Rotating Wave Approximation (RWA), which, in the high frequency limit, approximates the Fourier modes with their coarse-grained values over long times. This allows us to average out all but the zeroth Fourier mode (see Appendix \ref{sec:AppendixA} for details), resulting in the approximation,
+	\begin{multline}
+		\hat{H}^{mov}(t)\approx \hat{H}^{_{RWA}} = \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) \mathcal{J}_0\Big(\frac{4h}{\omega}\Big)\\
+		\Bigg[\mathbbm{1}\bigg\{\mathcal{J}_0\Big(\frac{4h}{\omega}\Big) + \cos(\frac{4h}{\omega})\bigg\}-\hat{\sigma}^z_i\hat{\sigma}^z_j \bigg\{\mathcal{J}_0\Big(\frac{4h}{\omega}\Big)\\
+		- \cos(\frac{4h}{\omega})\bigg\} + \frac{i}{2} (\hat{\sigma}^z_i + \hat{\sigma}^z_j) \sin(\frac{4h}{\omega})\Bigg].
+		\label{eq:movham1}
+	\end{multline}
+	
+	Now, if the drive parameters $h$ and $\omega$  are {engineered} in such a way that the ratio ${4h}/{\omega}$ lies at one of the roots of $\mathcal{J}_0$~\footnote{This can be achieved when $\omega \gg J_0$ by ensuring that $h\gg J_0$.}, it is possible to nullify the dynamics of $\hat{H}_2$ during all $T_2-$cycles, hence inducing localization in the system. We have supported this result by numerical simulations, detailed in section~\ref{sec:level42}. There, $\hat{\sigma}^z$ is detected as an approximate integral invariant ~\cite{Keser2016,Dodonov1978}. 
+	
+	\section{\label{sec:level3}Coexistence of DTC \& DMBL}
+	\sout{The occurrence of a chimera state in the model outlined in section~\ref{sec:mdl_n_dynam} can be illustrated by employing \textit{Floquet theory} to examine the dynamics at the stroboscopic times, namely, at integer multiples of the time period $T$. The effective Floquet Hamiltonian for a system undergoing two periods can be written as follows:}
+	
+	\red{The underlying dynamics of time periodic Hamiltonian of the chimera model outlined in section~\ref{sec:mdl_n_dynam} can be understood by employing \textit{Floquet theory (FT)}. FT allows to examine the dynamics at the stroboscopic times, namely, at integer multiples of the time period $T$. The effective Floquet Hamiltonian($H^{\mathrm{eff}}$) for a system undergoing two periods can be written as follows:}
+	\begin{widetext}
+		\begin{multline}
+			H^{\mathrm{eff}} \approx\frac{\hbar}{2} \sum_{l,m\in A}J_{lm}\hat{\sigma}_l^y\hat{\sigma}_m^y +\frac{\hbar \epsilon_A \pi}{4} \sum_{\substack{l,m\in A\\l\neq m}} J_{lm}\hat{\sigma}^z_l\hat{\sigma}^y_m + \frac{\hbar}{2}\sum_{l,m\in B}J_{lm}\hat{\sigma}_l^y \hat{\sigma}_m^y + \frac{h\hbar}{\pi}\sum_{m \in B}\hat{\sigma}^z_m \\ -\frac{\hbar \pi \epsilon_A}{4T}\sum_{l\in A}\Bigg\{\hat{\sigma}^x_l \bigg[\cos(\hat{\theta}_l)\cos(\frac{4h}{\omega})+1 \bigg] + \hat{\sigma}^y_l \cos(\hat{\theta}_l)\sin(\frac{4h}{\omega})-\hat{\sigma}^z_l \sin(\hat{\theta}_l)\Bigg\}.
+			\label{eq:floq_eff3}
+		\end{multline}
+	\end{widetext}
+	Here, $\displaystyle \hat{\theta}_l \equiv 2 \Big(\sum_{m \in B}J_{lm}\hat{\sigma}^y_m \frac{T}{2} \Big)$ denotes a rotation acting on $\hat{\sigma}^y_l$, the local $y-$spin\footnote{See Appendix \ref{sec:AppendixB} for details.}. 
+	To examine the influence of rotational error on the chimera order, let us begin by considering the scenario when $\epsilon_A=0$. In this situation, the effective Hamiltonian $H^\mathrm{eff}$ in Eq.~\eqref{eq:floq_eff3}  decouples into terms that live separately in regions A and B, \textit{i.e.},
+	\begin{multline}
+		H^{\mathrm{eff}}_{\epsilon_A=0} =  \frac{\hbar}{2}\Bigg( \sum_{l,m\in A} J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m +\sum_{l,m\in B} J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\\+\frac{2h }{\pi}\sum_{m \in B}\hat{\sigma}^z_m\Bigg).
+	\end{multline}
+	\begin{figure*}[t!]
+		\centering
+		\includegraphics[width=17.5cm]{sz_t_strongweakJ_ea_N_8.pdf}
+		\caption{The time evolution of local magnetization for each spin at region A (Site(i)=0,1,2,3) and region B (Site(i)=4,5,6,7) is plotted for $N=8$ spins in a periodically driven one-dimensional spin chain, starting from a fully polarized spin state, with drive frequency $\omega=20$. The spin rotation error $\epsilon_A = 0.03$ and $\epsilon_B = 0.9$, and $g=\pi/T$, where $T=2\pi/\omega$ is the time period of the drive.  In all three panels, different ranges of spin-interactions such as long-range($\beta=0$), intermediate range($\beta=1.5$), short range($\beta=2.5$), and nearest neighbor range($\beta=\infty$), are chosen and plotted respectively from left to right, namely, (a, b,c,d) in the top row and (e,f,g,h) in the bottom row of each panel. The results from the time evolution for strong spin coupling ($J_0 = 0.2/T$) are shown in the left panel (P) and weak spin coupling ($J_0 = 0.027/T$) in the middle panel (Q). The top panels of P \& Q show plots  where the drive amplitude $h$ is chosen such that the system lies at the lowest CDT/DL point and bottom panels show results away from that CDT/DL point. In the right panel (R), local magnetization for an effectively small spin rotational error $\epsilon_A = 0.05$ (top panel of R) and a larger $\epsilon_A = 0.1$ (bottom panel of R) are plotted at the same CDT/DL point. At small $\epsilon_A=0.5$, the DTC-DMBL chimera is stable, while at $\epsilon_A=0.1$, DTC is stable only for long-range interaction, but in other spin ranges, the DTC phase melts at larger times.}
+		\label{Fig:strong_weak_ea}
+	\end{figure*}
+	In such a case, the quantum dynamics of the two regions exhibit mutual independence when the system is first prepared in a state that can be factorized as a product of states in the invariant sub-spaces of regions A and B, respectively. \sout{It is crucial to note that no transfer or loss of quantum information occurs between these regions during the ensuing dynamics.}  Since we still have a significant degree of flexibility in selecting the driving parameters, it is possible to configure them in such a way as to induce DMBL in region $B$, while preserving a stable DTC in region $A$. Let us now increase the parameter $\epsilon_A$ while maintaining a sufficiently high frequency for the drive, so that it is possible to disregard the term $\hat{\theta}_l \approx 0$ due to the condition $T<<\hbar/J_0$. Under these circumstances, the strength of the coupling between two regions is significantly influenced by the ratio $\chi$, defined as $\chi\equiv 4h/\omega$. This dependence is characterized by the amplitudes $1+\cos{\chi}$ and $\sin{\chi}$, which exhibit a non-monotonic behavior. Specifically, when $\chi$ takes the form of $(2n+1)\pi$, where $n$ is a non-negative integer, the decoupling of regions A and B occurs again, regardless of the value of $\epsilon_A$ being non-zero. \sout{Therefore, it is anticipated that a DTC-DMBL chimera will exhibit a rather steady behavior when operating within proximity of this regime.} \red{Nevertheless, the CDT/DL condition in region-B yields $\chi$ to be one the roots of Bessel's function. This confirms an existing coupling between regions A and B. So $\epsilon_A$ is the key term for controlling the coupling between the two regions of our model.} 
+	
+	
+	We now present visuals of the local magnetization, denoted as $\expval{\hat{S}^z_i (t)}$, which is equivalent to the expectation value of the operator $\hat{\sigma}^z_i$ with respect to the state $\ket{\Psi(t)}$, for all sites $i$ in the spin-chain. The aforementioned data has been obtained using numerical simulations of the Schr\"odinger dynamics, represented by the equation $\hat{H}(t)\ket{\Psi(t)}= i \hbar \pdv*{\ket{\Psi(t)}}{t}$. This equation describes the behavior of the quantum many-body state $\ket{\Psi(t)}$. The simulations were conducted using QuTiP, a Python-based Quantum Toolbox~\cite{Johansson2013}. The simulations were performed over extended duration (up to $t = 80T$, with $\hbar$ normalized to unity) and across various ranges of power law interactions ($\beta = 0,1.5,2.5,\infty$). Additionally, simulations were conducted for both weak and strong interaction amplitudes ( $J_0 = 0.072/T$ and $J_0 = 0.2/T$ respectively), which are similar to the parameters selected by Sakurai in a previous study~\cite{sakurai_phys_nodate}. To assess the durability of this chimera, we set the values of the rotational errors as $\epsilon_A = 0.03$ and $\epsilon_B = 0.9$. Furthermore, in order to observe the emergence of the chimera state in our model, we manipulate the periodic drive in $\hat{H}_2(t)$ by setting a high frequency $\omega=20$ for two different scenarios: one where the parameter $\chi\equiv4h/\omega$ is located at a root of the Bessel function $\mathcal{J}_0(\chi)$, specifically at the CDT/DL point, and another where $\chi$ is at a distance from any roots.
+	
+	As illustrated in Fig.~\ref{Fig:strong_weak_ea}, the local magnetization exhibits sub-harmonics with a frequency that is half of the driving frequency in region A at the CDT/DL point, under the condition of strong spin-spin coupling. Simultaneously, region B exhibits localized dynamics. As a result, the coexistence of the DTC and DMBL phases is observed in regions A and B, respectively, leading to the creation of a chimera state. Conversely, it is evident that the system dynamics demonstrate instability upon deviation from the CDT/DL point, irrespective of the particular values of $J_0$ that have been chosen. In a similar vein, it can be noted that the weak interactions demonstrate the presence of a stable chimera state when they possess a range that encompasses all spins ($\beta=0$). However, when considering intermediate ($\beta = 1.5$), short ($\beta = 2.5$), and nearest-neighbor range interactions ($\beta = \infty$), the DTC melts rapidly inside region A, typically occurring within $20$ cycles of the drive. The results described in this study align with the conclusions published in previous research~\cite{sakurai_phys_nodate}.
+	
+	The stability of this DTC phase exhibits notable disparities between strong and weak coupling interactions. At the CDT/DL point, it is seen that the DTC phase exhibits enhanced stability in the presence of strong coupling compared to weak coupling, specifically for interactions that are not long-range in nature. The phenomenon of stable DTC is observed in long-range spin chains, regardless of the strength of spin interactions. Therefore, it is feasible to see the emergence of a chimera state consisting of two separate phases of matter, specifically a time crystal and a localized ferromagnet, simultaneously in a spin-chain system. This phenomenon can occur under typical experimental settings, with long-range interactions being the most suitable candidate.
+	The suitability of long-range interactions was examined by analyzing the dynamics in frequency space (with the frequency variable denoted by $\Omega$) by applying a Fast Fourier Transform (FFT) on the local magnetism at a specific spin site $(site(i)=1)$ in region A. The numerical FFT algorithms provided by the NumPy library were utilized to achieve this task~\cite{harris2020array}. The results are visually presented in Fig.\ref{Fig:sz_single}.  The frequency $\Omega$ in the abscissas has been scaled relative to the driving frequency $\omega$. The sub-harmonic response at $\Omega=\omega/2$ can be detected by observing the peaks at half-integer multiples of $\omega$. This observation serves as confirmation of the onset of discrete TTSB throughout all selected spin-interaction ranges. The stability of the resulting DTC will be influenced by the contributions originating from the underlying continuum of frequencies. When $\beta$ approaches zero, the continuum exhibits a higher degree of submissiveness towards the sub-harmonic peaks compared to bigger values. This distinction is especially noticeable under conditions of weak coupling. Therefore, in the context of a DTC phase of matter, it is advantageous to consider long-range interactions rather than short-range interactions when selecting potential candidates. The present analysis is consistent with the numerical results shown in Fig.\ref{Fig:strong_weak_ea}, where each individual spin-interaction type provides evidence of a persistent and reliable DTC over an extended duration.
+	\begin{figure}[t]
+		\centering
+		\includegraphics[width=8.cm]{single_sz_fft.pdf}
+		\caption{Fast Fourier Transforms of the local magnetization at site $i=1$ in region A of the spin-chain for weak coupling ($J_0 = 0.072/T$, left panel) and strong coupling ($J_0 = 0.2/T$, right panel) for different values of $\beta$ as indicated in the legend. The amplitude $h$ is adjusted so that the system is at the smallest CDT/DL point. All other parameters are the same as those in Fig~\ref{Fig:strong_weak_ea}. The peaks at half-integer multiples of $\omega$ denote sub-harmonic responses in region A resulting in stable DTC.}
+		\label{Fig:sz_single}
+	\end{figure}
+	
+	Additionally, we have conducted an analysis on the resilience of the DTC in the presence of larger rotational errors. The simulation results are presented in the panel situated on the rightmost side of Fig.~\ref{Fig:strong_weak_ea}. In the present simulations, we examine two distinct values for the parameter $\epsilon_A$, namely $\epsilon_A = 0.05$ and $\epsilon_A = 0.1$, while maintaining a constant value of $\epsilon_B$ at $0.9$. In this study, we investigate various ranges of interactions, denoted by the parameter $\beta$, which assumes the values of $0.0, 1.5, 2.5$, and infinity. The aforementioned investigations are carried out at a CDT/DL point under strong coupling, $J_0 = 0.2/T$.  A steady DTC was observed for all interaction ranges when the value of $\epsilon_A$ was set to $0.05$. The stability of the DTC is maintained for larger values of $\epsilon_A$, namely when $\epsilon_A = 0.1$, when considering all-to-all interactions ($\beta=0$). However, in the case of spin-spin interactions with other ranges, the DTC diminishes rapidly. This finding provides evidence in favor of the hypothesis that long-range interactions are the most advantageous for the development of a DTC-DMBL-chimera.
+	\begin{figure}[t]
+		\centering
+		\includegraphics[width=7.5cm]{quasienergy_8_lowres.pdf}
+		\caption{Floquet quasi-energies of the driven spin-chain,  estimated by numerically diagonalizing $H^{\rm eff}$ in Eq~\ref{eq:floq_eff3} for the one dimensional spin-$1/2$ chain. In these simulations, the number of spins $N=8$. The system has open boundary conditions and strong coupling $J_0=0.2/T$. The quasi-energies are plotted for different values of $h,\omega$, the amplitude and frequency of the periodic drive, respectively.  The abscissa plots ${4h}/{\omega}$, where $\omega$ is kept constant and only $h$ is changed, and the ordinate plots the corresponding quasi-energies. Level repulsion is minimum when ${4h}/{\omega} = (2n+1)\pi$, $n\in \mathbb{N}_0$. The first such point is shown as a vertical black dashed line. The red solid lines indicate the roots of the zeroth order Bessel function $\mathcal{J}_0(\chi)$, \textit{i.e.}, CDT/DL points.}
+		\label{Fig:quasienergy}
+	\end{figure}
+	
+	In order to examine dependencies on drive parameters, we have utilized numerical estimations of eigenvalues to represent the effective Hamiltonian $H^{\rm eff}$. These are connected to the \textit{Floquet quasi-energies} of the driven spin-chain, given by the eigenvalues of the time-dependent observable $\hat{H}(t)-i\hbar\pdv*{}{t}$ evaluated at $t=T$. The numerical diagonalization of the effective Hamiltonian $H^{\rm eff}$ has been performed for a system of $N=8$ spins. The resulting quasi-energies have been displayed as a function of the parameter $\chi$, defined as $\chi\equiv 4h/\omega$. The results are depicted in Fig.~\ref{Fig:quasienergy}. The quasi-energy distribution displays a consistent pattern that is confined to the Floquet Brillouin Zone, namely the interval of $[-\frac{\pi}{2T}, \frac{\pi}{2T}]$, a consequence of Floquet's Theorem~\cite{dutta2014}. It is evident that the minimum repulsion between the quasienergies occurs when the parameter $\chi$ is an odd integer multiple of $\pi$. This finding provides empirical evidence that aligns with the theoretical arguments presented in the initial paragraph of this section. Consequently, it enables the separation of regions A and B, even in cases when $\epsilon_A \neq 0$. In contrast, in the scenario where $0 < \epsilon_A \ll 1 $ and at the CDT/DL point where $\chi$ is situated on a root of $\mathcal{J}_0(\chi)$, it  the coupling between regions A and B is fairly weak.
+	\begin{figure}
+		\centering
+		\includegraphics[width = 7.9cm]{clean_J_strong_MzAB_betas.pdf}
+		\caption{Regional magnetization $M^z_{A/B}$ of the spin-chain. The magnetization of regions A (red) and B (blue) are plotted  as functions of time $t/T$ for both weak spin-coupling ($J_0=0.072/T$, left panels) and strong spin-coupling ($J_0=0.2/T$, right panels) and different ranges of spin interactions (characterized by $\beta$ as specified in the legends). The time period is fixed by setting drive parameters $h,\omega$ to the first CDT/DL point, \textit{i.e.} the first root of $\mathcal{J}_0(\chi)$. All other parameters are the same as the simulations visualized in Fig.~\ref{Fig:strong_weak_ea}.}
+		\label{Fig:regiogionalmag}
+	\end{figure} 
+	\section{\label{sec:level4} Stability of the chimera phase}
+	In this section, we investigate the stability of the chimera phase in various regions of the complex parameter space. We observe simulations run for both strong and weak coupling with a wide variety of interaction ranges. The physical phenomena of interest involve the tunneling of any quantum information between the DTC and the DMBL regions that would serve to melt the DTC, and can be profiled by looking at the regional magnetization, as well as entanglement entropy between the regions, as functions of time. Finally, we investigate the robustness of the chimera against external static fields.
+	
+	\subsection{\label{sec:level42} Regional Magnetization}
+	
+	We now examine the regional magnetization of the chimera state, which is given by the expectation value of the total $z-$spin in a specific region. This can enhance our understanding of the suitability of long-range interactions for the formation of stable time crystals. The expression for the magnetization of regions A and B is  $\displaystyle M^z_{A/B}=\frac{2}{N}\sum_{i\in{A/B}}\expval{\hat{\sigma}^z_i(t)}$~\cite{sakurai_phys_nodate}.
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width = 7.4cm]{mz_betas.pdf}
+		\caption{
+			FFT of regional magnetization $M^z_{A}$ of the spin-chain. The magnetization of regions A are plotted  as functions of time $(\omega/\omega_D)$ for both weak spin-coupling ($J_0=0.072/T$, left panel) and strong spin-coupling ($J_0=0.2/T$, right panels) and different ranges of spin interactions (characterized by $\beta$ as specified in the legends). The time period is fixed by setting drive parameters $h,\omega$ to the first CDT/DL point, \textit{i.e.} the first root of $\mathcal{J}_0(\chi)$. All other parameters are the same as the simulations visualized in Fig.~\ref{Fig:strong_weak_ea}.}
+		\label{Fig:regionalFFT}
+	\end{figure}
+	
+	We expanded the numerical simulations outlined in  sec.~\ref{sec:level3} to encompass longer duration. Consequently, we acquired long-time estimates of the regional magnetization for regions A and B under varying conditions of spin coupling strength and range. The results are plotted in Fig.~\ref{Fig:regiogionalmag}. In both instances, the drive parameters were set to the CDT/DL point. In region B, the value of $M^Z_B$ remains constant at unity across all time for all ranges. In contrast, the behavior of $M^Z_A$ in region A is distinct. In the regime of weak coupling, the persistence of $M^Z_A$ is significant solely for all-to-all interactions, characterized by $\beta=0$. However, for interactions at other ranges, $M^Z_A$ gradually dissipates with time. In the regime of high coupling, it can be observed that the DTC phase present in region A undergoes a gradual dissolution over time, regardless of the range of spin interactions. The underlying mechanisms by which the DTC disintegrates can be investigated in frequency space via an FFT of the regional magnetization. The results, obtained in a manner similar to the FFTs of the site magnetization in sec~\ref{sec:level3}, are depicted in Fig.\ref{Fig:regionalFFT}. In the regime of weak spin-coupling, the sub-harmonic peaks at $\Omega=\omega/2$ exhibit a dominant influence over the continuum of frequency responses in $\Omega$. Consequently, this leads to a sustained regional magnetization over an extended period of time. As the parameter $\beta$ is strengthened,  the continuum of frequencies becomes more prominent, contributing to the faster disintegration of $M^Z_A$. In the scenario of strong coupling, the continuum is more prominent across all ranges, leading to a more rapid disintegration of the regional magnetization compared to the weak spin-coupling.
+	
+	\subsection{\label{sec:level41} Entanglement Entropy}
+	In contrast to the preceding subsection, which focused on the examination of macroscopic observables, the current section delves into a more direct analysis of microscopic aspects through the consideration of entanglement entropy (EE). The EE is commonly employed as a measure to quantify the degree of entanglement exhibited by quantum states across invariant subspaces. It provides valuable insights pertaining to quantum correlations and the ability for information storage. The mathematical expression for the entanglement entropy, denoted as $S_{AB}$, between areas A and B, may be described using the von Neumann entropy~\cite{bayat_entanglement_2022,mendes-santos_measuring_2020}.   The density matrix of a pure state $\ket{\psi}$ is $\hat{\rho}= \ketbra{\psi}$. The reduced density matrices (RDMs) for regions A and B, denoted as $\hat{\rho}_A$ and $\hat{\rho}_B$ respectively, are obtained by taking the partial traces of $\hat{\rho}$ with respect to the complementary regions. Specifically, $\hat{\rho}_A$ is obtained by tracing out region B, \textit{i.e.}, $\hat{\rho}_A\equiv \Tr_B(\hat{\rho})$, while $\hat{\rho}_B\equiv\Tr_A(\hat{\rho})$. The entanglement entropy (EE) is determined by
+	\begin{equation} 
+		S_{AB} = -\Tr\big[\hat{\rho}_A \ln\left(\hat{\rho}_A\right)\big] = -\Tr\big[\hat{\rho}_B \ln\left(\hat{\rho}_B\right)\big].
+		\label{eq:vonentrop}
+	\end{equation}	
+	\begin{figure}
+		\begin{center}
+			\includegraphics[width=8.5cm]{entangEntrp.pdf}
+		\end{center}
+		\caption{Time evolution of Entanglement Entropy $S_{AB}$ between regions A and B as a function of time at the CDT/DL point. The left panels plot results for  weak spin coupling, and the right panels for stronger spin couplings. The corresponding values of $J_0$ are the same as those in Fig.~\ref{Fig:regiogionalmag}, and all other parameters are identical to previous simulations. The spin-spin coupling interaction in $\hat{H}_2$ during $T_2$ leads to the onset of a rise in EE. The growth rate of the subject in question remains notably slow, persisting even up to $t=2000\;T$.}
+		\label{Fig:entangle}
+	\end{figure}
+	We have extended previous simulations to a later time point of $t=2000\;T$, and then calculated the EE for each time point. The results are plotted in Fig.~\ref{Fig:entangle} for both weak and strong spin coupling, while maintaining the driving parameters consistently at a CDT/DL point. The EE is found to start rising from the onset of the first $T_2-cycle$, when the spin-interactions begin to impact the behavior of the spin-chain. The increase in EE is observed to be gradual even after prolonged interactions.  The EE exhibits a more rapid increase in the case of strong spin coupling compared to weak spin coupling. As evidenced by Eq.\eqref{eq:floq_eff3}, the coupling present in the effective Hamiltonian is directly proportional to the rotational error $\epsilon_A$. When the value of $\epsilon_A$ is modest, it effectively hinders the interaction between regions A and B, hence inhibiting the increase of EE. {This corroborates the results depicted in Fig.\ref{Fig:regionalFFT}, where the DTC appears to be more stable at weak coupling than strong coupling.} 
+	
+	
+	When thermalized at infinite temperature, the EE is extensive, and averages to $\displaystyle \overline{\expval{S_{AB}}}_T\rightarrow \left[N \ln{2}-1\right]/2$ \cite{Lu2021}. When localized, the EE per particle vanishes in the thermodynamic limit. For finite sizes, it can be approximated as $\overline{\expval{S_{AB}}}_L\approx \ln{2}$~\cite{sakurai_phys_nodate}. 
+	{In our spin chain, $N=8$, yielding theoretical expressions, $\overline{\expval{S_{AB}}}_T\approx 2.27$, and  $\overline{\expval{S_{AB}}}_L\approx 0.69$. The numerical values of the entanglement entropy (EE) are found to remain approximately in the range of $\in\left[0,0.6\right)$, as can be seen in Fig.\ref{Fig:entangle}. This observation indicates that the entire system remains athermal and localized, even when a significant amount of time has elapsed.}
+	
+	\subsection{\label{sec:level43} Robustness against Static Fields}
+	The influence of the driving parameters $h, \omega$ significantly affects the long-lasting stability of the DTC-DMBL chimera. The strength of the chimera order diminishes even if there is a minor deviation from the CDT/DL point. This raises questions about the mechanisms by which the chimera resists external fields, even while functioning precisely at the CDT/DL point.
+	In order to conduct an investigation, we will now incorporate the static field $\hbar\hat{V}(\hat{\sigma}^{\gamma})$ discussed in section~\ref{sec:mdl_n_dynam} into the Hamiltonian $\hat{H}(t)$. The aforementioned field remains un-modulated by the pulses and acts on the system identically at all times. Simulations were conducted using this field at a CDT/DL point, while maintaining all other parameters at the same values as in earlier simulations. 
+	\begin{figure}
+		\begin{center}
+			\includegraphics[width=8.5cm]{robustness_N_8.pdf}
+		\end{center}
+		\caption{Weak (top panels) and strong (bottom panels) additional static fields defined by $\gamma = J_0/5, J_0$ respectively ($J_0=0.2/T$ ), are applied in addition to the strong spin coupling and transverse field at different interaction ranges set by $\beta = 0.0$ (panels a,e), $\beta= 1.5$ (panels b,f), $\beta=2.5$ (panels c,g), and $\beta= \infty$ (panels d,h). The local magnetization for each site (i) is plotted from $t=0$ to $t=80 T$.}
+		\label{Fig:robustness}
+	\end{figure}
+	These simulations were conducted for both strong ($\gamma= J_0=0.2/T$) and weak ($ \gamma=J_0/5 = 0.2/5T$) field amplitudes. The findings are displayed in Fig.~\ref{Fig:robustness}. At low values of $\gamma$, the influence of spin-interactions is more significant compared to the static field, leading to the continued existence of dynamical localization. Consequently, a stable chimera state of the DTC is observed. Nevertheless, when the value of $\gamma$ increases, the static field becomes dominant over the interactions, resulting in the melting of the DTC after a few cycles. However, it is worth noting that the DMBL phase continues to exist even in the presence of the static field. Therefore, a chimera phase known as \textit{Thermal-DMBL} becomes apparent at longer time scales. Therefore, it is possible to achieve a strong DTC-DMBL hybrid even when external fields are present.
+	
+	\section{\label{sec:level7} Discussion and Conclusion}
+	A quantum chimera state has been discovered, wherein a Discrete Time Crystal (DTC) and a Dynamically Many-Body Localized (DMBL) phase coexist on a one-dimensional spin-$1/2$ chain. This was accomplished  by applying dynamical spin-flips regionally (with two regions labeled `A' and `B'), followed by dynamical localization with a high-frequency periodic drive tuned to CDT/DL points determined by particular values of the drive parameters. The findings from numerical simulations suggest that the DTC does not exhibit long-term persistence when weak spin coupling is present, especially in the case of all-to-all interaction ranges. The presence of a robust spin coupling hinders the relaxation of spins away from the desired DTC, stabilizing the phase regionally for long times throughout all interaction ranges. The stability of the DTC in region A is contingent upon the stability of the DMBL phase in region B. The long-range spin interaction is very robust against the exchange energy per spin, and enable the chimera to persist for both weak and strong coupling. We tuned the spin rotational error at region A and found that the chimera can persist only at small rotational error $\epsilon_A$. The inter-region interaction term in the effective Floquet Hamiltonian in Eq.~\ref{eq:floq_eff3} is directly proportional to the spin rotation error denoted as $\epsilon_A$. In the case of a significant value of $\epsilon_A$, there is an increased level of coupling between the two regions. This heightened coupling results in the immediate melting of the DTC for all interactions, except for those that are long-range in nature.
+	
+	To further study the resilience of this chimera against static perturbations, an additional external static field was included. Numerical simulations have demonstrated that the system is robust in the face of minor perturbations, as evidenced by the sustained presence of the DTC phase inside region A over an extended duration. However, when subjected to more significant perturbations, the system's robustness diminishes, leading to rapid dissolution of the DTC phase across all spin-interaction types. The Floquet Hamiltonian, obtained analytically, illustrates \sout{the occurrence of period-doubling sub-harmonic solutions to the Schr\"odinger dynamics.} \blue{the coupling between region A and B when DMBL exists in region B.} \sout{These solutions arise specifically at the reversal of global ferromagnetic order in the spin chain.} This conclusion is substantiated by exact simulations. The entanglement entropy rises at a very slow rate for both weak and strong regional spin interactions. Hence, the entire system is effectively prevented from undergoing thermalization, even in cases where the DTC phase disintegrates inside region A. The aforementioned property can be employed as quantum memory in various applications, as well as in the development of exceptionally accurate quantum clocks. The experimental realization of the suggested model and dynamics can be achieved using trapped ions~\cite{sakurai_phys_nodate, Friedenauer2008}, as demonstrated in previous studies. \blue{Besides the Ising type model, DTC-DMBL chimera is possible also for other XY-type models.}
+	
+	\sout{To summarize, we examined the various components that contribute to the stability of the DTC-DMBL-chimera order. Long-range spin interactions have been identified as the optimal choice for constructing the chimera. The scope of our analysis encompasses various magnitudes of power-law decay in spin-spin contacts, the magnitude of regional spin rotational error, the intensity of spin-coupling interactions, the presence of an extra external static field, and the parameters associated with the periodic drive. The aforementioned contributions play a key role in ensuring the stability of the chimera order.}
+	
+	\begin{acknowledgments}
+		MR acknowledges The University of Burdwan for support via state-funded fellowship. AR acknowledges support from the University Grants Commission (UGC) of India, via BSR Startup Grant No. F.30-425/2018(BSR), also from the Science and Engineering Research Board (SERB, Govt. of India) Core Research Grant No. CRG/2018/004002.
+	\end{acknowledgments}
+	
+	
+	% Bibliography
+	\bibliographystyle{apsrev4-1}
+	\bibliography{chimera_revised}
+	
+	%Appendix
+	\newpage
+	\clearpage
+	\appendix
+	\onecolumngrid
+	\section{\label{sec:AppendixA} DMBL in $T_2$ time interval}
+	
+	Let us consider a one-dimensional spin-$1/2$ chain consisting of $N$ spins, with Heisenberg exchange interaction between them. The interaction follows a power law decay rule, where the exchange energy between the $i^{th}$ and $j^{th}$ spins is presumed to be  $J_{ij}=J_0\abs{i-j}^{-\beta}$. Let us now  divide the chain into two regions, A and B, and introduce time dependencies via two pulse wave sequences in the manner described in sec.~\ref{sec:mdl_n_dynam} and Fig \ref{Fig:time_distribution}. The first sequence  induces spin-flips in region A within time $T_1$, and the second modulates a global sinusoidal periodic drive in the field \textit{s.t.} $h_D = -h\sin(\omega t)$ within time $T_2$, chosen to be such that the time period $T\equiv 2\pi/\omega = T_1 + T_2$. This drive parameters are controlled in such a way that the system is dynamically localized during the $T_2-$cycles.
+	
+	The Hamiltonian during the $T_2-$cycle is $\displaystyle \hat{H}_2(t) = \hbar\sum_{i>j} J_{ij}\hat{\sigma}^y_i\hat{\sigma}^y_j - \hbar h \sin(\omega t) \sum_i \hat{\sigma}^z_i$. Let us define the free propagator 
+	\begin{equation}
+		\hat{U}(t) \equiv \exp \bigg[-\frac{i}{\hbar}\int_{\frac{T}{2}}^{\frac{T}{2}+t} (-h \sin(\omega t'))dt' \hbar\sum_i\hat{\sigma}^z_i\bigg]
+		=\prod_{i} \exp\big[-i \hat{\sigma}^z_i\zeta(t)\big],
+	\end{equation}
+	where, $\displaystyle \zeta (t) = h\int_{\frac{T}{2}}^{\frac{T}{2}+t}  (-\sin(\omega t')dt') =\frac{h}{\omega}(1-\cos(\omega t))$.
+	Now, the Hamiltonian can be transformed to the moving frame as follows \cite{haldar_statistical_2022}.
+	\begin{align}
+		\hat{H^{mov}}(t) &= \hat{U}^\dagger(t) \hat{H}_2(t) \hat{U}(t)- i \hat{U}^\dagger(t) \partial_t \hat{U}(t) \nonumber\\
+		&= \prod_{i} \exp\big[-i\hat{\sigma}^z_i \zeta(t)\big] \big[\hbar\sum_{ij}J_{ij}\hat{\sigma}^y_i\hat{\sigma}^y_j\big] \exp\big[ i\hat{\sigma}^z_i \zeta(t)\big]\nonumber\\
+		&= \hbar\sum_{ij} J_{ij} e^{-i\hat{\sigma}^z_i \zeta(t)} e^{-i\hat{\sigma}^z_j  \zeta(t)}\Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big)e^{i\hat{\sigma}^z_i \zeta(t)} e^{i\hat{\sigma}^z_j \zeta(t)}\nonumber\\
+		&= \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big)e^{i2\hat{\sigma}^z_i \zeta(t)} e^{i2\hat{\sigma}^z_j \zeta(t)}\nonumber\\
+		&= \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) \Big[\mathbbm{1}\cos^2(2\zeta) -\hat{\sigma}^z_i\hat{\sigma}^z_j \sin^2(2\zeta) + i (\hat{\sigma}^z_i + \hat{\sigma}^z_j)\cos(2\zeta)\sin(2\zeta)\Big].
+		\label{eq:hmovap1}
+	\end{align}
+	Here, we have utilized the expression, $\displaystyle \exp[ia(\hat{n}\cdot\vec{\sigma})] = \mathbbm{1} \cos(a) + i (\hat{n}\cdot\vec{\sigma})\sin(a)$.	Now, we invoke the Jacobi-Anger formula $\displaystyle e^{iz\cos(\omega t)} = \sum_{n=-\infty}^{\infty}\mathcal{J}_n(z)e^{in\omega t}$\cite{arfkenmath}, where $\mathcal{J}_n(z)$ is the Bessel function of the first kind of $n^{th}$ order, and apply to the RHS of  Eq.~\ref{eq:hmovap1}. This produces a Fourier series expansion for 
+	$\hat{H}^{mov}(t)$ with period $\omega$. Note however, that the drive parameters $h$ and $\omega$ are independent of each other. In high frequency limit, where $\omega \gg J_0$, the Rotating Wave Approximation (RWA) allows for approximating the Fourier modes with their long time coarse-grain averages. This provides us with the option to average all the Fourier modes to zero, except for the zeroth order mode. Thus, the $\hat{H}^{mov}$ reduces to the RWA-Hamiltonian ($\hat{H}^{_{RWA}}$),
+	\begin{equation}
+		\hat{H}^{mov}\approx \hat{H}^{_{RWA}} = \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) \mathcal{J}_0(\chi)\Bigg\{\mathbbm{1}\bigg[\mathcal{J}_0(\chi) + \cos(\chi)\bigg] -\hat{\sigma}^z_i\hat{\sigma}^z_j \bigg[\mathcal{J}_0(\chi) - \cos(\chi)\bigg] + \frac{i}{2} \left(\hat{\sigma}^z_i + \hat{\sigma}^z_j\right) \sin(\chi)\Bigg\}.
+		\label{eq:hrwa}
+	\end{equation}	
+	Now, for a particular $\omega$, if $h$ is controlled in such fashion that $\chi\equiv\frac{4h}{\omega}$ lies on one of the roots of $\mathcal{J}_0(\chi)$, then $\hat{H}^{_{RWA}}$ vanishes, resulting in localization of any initial state during the $T_2-$cycles. This can be accomplished in various ways, for instance, if $\omega\gg J_0$, ensuring that $h\gg J_0$ such that $4h/\omega$ is of $\mathcal{O}(1)$ allows for the possibility of $\chi$ falling on the first root of $\mathcal{J}_0(\chi)$ even for large $\omega$.
+	
+	\section{\label{sec:AppendixB} Effective Floquet Hamiltonian}
+	
+	Floquet theory is a widely used methodology for evaluating the behavior of time-periodic systems.  In a quantum system that is time periodic with period $T$, the Hamiltonian obeys $\hat{H}(t+T) = \hat{H}(t)\;\forall t$. If we split the time-dependent part from the time-independent, or \textit{d.c.} part, we can write
+	\begin{equation*}
+		\hat{H}(t) = \hat{H}_0 + \varepsilon \hat{H}_1(t)
+	\end{equation*}
+	The corresponding propagator can be obtained by solving the Schr\"odinger equation $\displaystyle{i\hbar \partial_t \hat{U}(t) = \hat{H}(t) \hat{U}(t)}$.  The propagator at $t=T$, given by $ \hat{\mathcal{F}}\equiv \hat{U}(T)$ is called the \textit{Floquet operator}. Now, it follows from Floquet's Theorem that, if the system is strobed at integer multiples of $T$, the dynamics can be mapped to that of a time-independent effective Hamiltonian $\hat{H}_F$, such that  $\displaystyle\hat{U}(nT) = \exp\bigg[-\frac{i}{\hbar}\hat{H}_F\; nT \bigg]$~\cite{Eckardt_2015}.  The operator$\hat{H}_F$ (also denoted by $H^\mathrm{eff}$) is obtained from the original time-dependent Hamiltonian, and is given by, $\displaystyle \hat{H}_F = \Bigg(\hat{H}(t) - i\hbar \pdv{t}\Bigg)$ evaluated at $t=T$. 
+	
+	
+	Now, the proposed spin chain in Eq.\eqref{eq:cleanham} needs to evolve for at least two time periods to manifest a DTC. If the effective time-independent Hamiltonian at that time is denoted by $\hat{H}^{\mathrm{eff}}_{\epsilon_A, 2T}$, then, the propagator
+	\begin{align}
+		\hat{\mathcal{F}}^{2} &\equiv \exp\Big(-\frac{i}{\hbar}\hat{H}_{\epsilon_A, 2T}^{\mathrm{eff}}\;2T\Big) \label{eq:heff}\\ 
+		&= \mathcal{T}\exp\Big(-\frac{i}{\hbar}\int_{\frac{3T}{2}}^{2T}\hat{H}_2(t) dt\Big)
+		\exp\Big(-\frac{i}{\hbar}\hat{H}_1T_1\Big)\mathcal{T}\exp\Big(-\frac{i}{\hbar}\int_{\frac{T}{2}}^{T}\hat{H}_2(t) dt\Big)\exp\Big(-\frac{i}{\hbar}\hat{H}_1T_1\Big).
+		\label{eq:2tprop}
+	\end{align}
+	Here $\mathcal{T}$ denotes the time-ordering operation. 
+	To evaluate $\hat{\mathcal{F}}^2$, we start by calculating each of the four terms in RHS of Eq.\ref{eq:2tprop}. During the $T_1-$cycle, $t\in[0,T/2]$, and the time-independent Hamiltonian $\hat{H}_1$ is applied on spin chain. Thus,
+	\begin{equation}
+		\exp\Big(-\frac{i}{\hbar} \hat{H}_1 T_1\Big) = 	\exp\Bigg[\frac{-i(1-\epsilon_A)\pi}{2}\sum_{l \in A}\hat{\sigma}^x_l\Bigg].
+		\label{eq:effham1}
+	\end{equation}	
+	It is evident that the effective Hamiltonian for $t \in[T, 3T/2]$ will be same as that obtained from Eq.\eqref{eq:effham1}. Next, during the $T_2-$cycle, $t\in[T/2,T]$, and the time-dependent Hamiltonian, $\hat{H_2}(t)$ is applied. Therefore,
+	\begin{align}
+		\mathcal{T}\exp\Big(-\frac{i}{\hbar}\int_{\frac{T}{2}}^{T}\hat{H}_2(t) dt\Big) &= \exp( -\frac{i}{\hbar}\int_{\frac{T}{2}}^{T}\Big[\hbar\sum_{i\neq j}J_{ij}\hat{\sigma}^y_i\hat{\sigma}^y_j-\hbar h\sin(\omega t)\sum_i\hat{\sigma}^z_i\Big] dt)\nonumber\\
+		&= \exp(-i \Big[\sum_{i\neq j}J_{ij}\hat{\sigma}^y_i\hat{\sigma}^y_j \frac{T}{2} + \frac{2h}{\omega}\sum_i \sigma^z_i\Big])
+		\label{eq:t2hamilt}
+	\end{align}
+	Clearly, the effective Hamiltonian for the times  $t \in[3T/2, 2T]$ will also be the same. Now,	let us consider the case where $\epsilon_A \neq 0$ and $\epsilon_B=1$. Furthermore, let us define the operators $\displaystyle \hat{V}_{\epsilon_A} \equiv \exp\Big(\frac{i\epsilon_A \pi}{2}\sum_{l\in A}\hat{\sigma}^x_l\Big), \displaystyle \hat{\theta}_l \equiv 2 \left(\sum_{m \in B}J_{lm}\hat{\sigma}^y_m \frac{T}{2} \right)$; the latter describes a rotation acting on operator $\hat{\sigma}^y_l$ in only region B.  Now, we can expand expression for the  $T_2-$cycle propagator in Eq.~\ref{eq:t2hamilt} by splitting the contributions from regions A and B. This yields
+	\begin{multline}
+		\mathcal{T}\exp\bigg\{-\frac{i}{\hbar}\int_{\frac{T}{2}}^{T} \hat{H}_2(t) dt\bigg\} = \exp\Bigg\{-i \bigg[ \sum_{l,m\in A}J_{lm} \hat{\sigma}_l^y\hat{\sigma}_m^y +\sum_{l,m\in B}J_{lm}
+		\hat{\sigma_l^y}\hat{\sigma_m^y}+\sum_{\substack{%
+				l \in A,\\
+				m \in B\hfill}} J_{lm}\hat{\sigma}^y_l\hat{\sigma}^y_m\\
+		+\frac{4h}{\omega T}\big( \sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{m\in B}^{}\hat{\sigma}^z_m\big)\bigg]\frac{T}{2}\Bigg\}.
+		\label{eq:effham3}
+	\end{multline}	
+	Substituting the RHS of Eqs.\eqref{eq:effham1} \& \eqref{eq:effham3} into the RHS of Eq.~\eqref{eq:2tprop} yields    	
+	\begin{align}
+		\hat{\mathcal{F}}^2 
+		=& \exp\Bigg\{-i \Bigg[ \sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2} +\sum_{l,m\in B}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}+\sum_{\substack{%
+				l \in A,\\
+				m \in B\hfill}} J_{lm}\hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2} +\frac{2h}{\omega }\left( +\sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{m\in B}^{}\hat{\sigma}^z_m\right)\Bigg]\Bigg\} \hat{V}_{\epsilon_A} \nonumber\\
+		& \hspace{1 cm}\exp\Bigg\{-i \Bigg[ \sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2} +\sum_{l,m\in B}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}-\sum_{\substack{%
+				l \in A,\\
+				m \in B\hfill}} J_{lm}\hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2} +\frac{2h}{\omega}\left( -\sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{m\in B}^{}\hat{\sigma}^z_m\right)\Bigg]\Bigg\} \hat{V}_{\epsilon_A}.\nonumber
+	\end{align}
+	We can simplify this expression further with the approximation that all operators with norms $\mathcal{O}(T^2)$ can be neglected in comparison to those with norm $\sim T$ for sufficiently large $\omega\equiv 2\pi/T$. Thus, for instance, $e^{T\hat{A} + T\hat{B}}= e^{T\hat{A}}\; e^{T\hat{B}}\;e^{C_2 T^2\left[\hat{A}, \hat{B}\right]}\;e^{C_3 T^3\left[\hat{A},\left[\hat{A}, \hat{B}\right]\right]}\;\dots \approx e^{T\hat{A}} e^{T\hat{B}}$, once all higher order operators are neglected after applying the Zassenhaus' formula~\cite{Magnus1954}. This yields
+	\begin{align}	
+		\hat{\mathcal{F}}^2 	\approx& \exp\Bigg[-i \sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}\Bigg] \exp\Bigg[-i\left(\frac{2h}{\omega } \sum_{l\in A}^{}\hat{\sigma}^z_l + \sum_{l \in A}\frac{\hat{\theta}_{l}}{2}\hat{\sigma}^y_l\right)\Bigg]\nonumber\\ 
+		&\hspace{3cm} \hat{V}_{\epsilon_A} \exp\Bigg[i \left(\sum_{l \in A}\frac{\hat{\theta}_{l}}{2}\hat{\sigma}^y_l + \frac{2h}{\omega} \sum_{l\in A}^{}\hat{\sigma}^z_l\right)\Bigg] \exp\Bigg[-i\sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}\Bigg] \exp\big[-i H_B T\big]\hat{V}_{\epsilon_A},\nonumber
+	\end{align}
+	where, for the sake of brevity, we have defined the $T_2-$cycle Hamiltonian in region-B, $\displaystyle {H}_B \equiv \sum_{l,m\in B} J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m + \frac{4h}{\omega T}\sum_{m \in B}\hat{\sigma^z_m}$. We now observe that $\hat{\theta}_l$ commutes with all operators that live in region$-A$, thus allowing us to temporarily treat it as a $c-$number in algebraic manipulations, allowing for the simplification
+	\begin{align}		
+		\hat{\mathcal{F}}^2 	\approx& \exp\Bigg[-2i  \sum_{l,m\in A}J_{lm} \hat{\sigma}^y_l\hat{\sigma}^y_m\frac{T}{2}\Bigg]\exp\Bigg[\frac{i \epsilon_A \pi}{2}\sum_{l\in A}\Big\{\hat{\sigma}^x_l \cos(\hat{\theta}_l)\cos(\frac{4h}{\omega})\nonumber\\
+		&\hspace{7cm}+ \hat{\sigma}^y_l \cos(\hat{\theta}_l)\sin(\frac{4h}{\omega})-\hat{\sigma}^z_l \sin(\hat{\theta}_l)\Big\}\Bigg] \exp\big[-i H_B T\big]\hat{V}_{\epsilon_A}\nonumber\\
+		=&\exp\Bigg[-2i \sum_{l,m\in A}J_{lm} \hat{\sigma}_l^y\hat{\sigma}_m^y\frac{T}{2}\Bigg] \exp\Big(\frac{i\epsilon_A \pi}{2}\sum_{l\in A}\hat{\sigma^x_l}\Big) \exp\Bigg[\frac{i \epsilon_A \pi}{2}\sum_{l\in A}\Big\{\hat{\sigma}^x_l \cos(\hat{\theta}_l)\cos(\frac{4h}{\omega})\nonumber\\
+		&\hspace{ 7cm}  +\hat{\sigma}^y_l \cos(\hat{\theta}_l)\sin(\frac{4h}{\omega})-\hat{\sigma}^z_l \sin(\hat{\theta}_l)\Big\}\Bigg]\exp\big[-i H_B T\big]\nonumber\\
+		=&\exp\Bigg[-2i\sum_{l,m\in A}J_{lm}\hat{\sigma}^y_l\hat{\sigma}^y_m \frac{T}{2}\Bigg] \exp\Bigg[-i\epsilon_A \pi \sum_{\substack{l,m \in A\\l\neq m}}J_{lm} \hat{\sigma}^z_l\hat{\sigma}^y_m\frac{T}{2}\Bigg] \exp\Bigg[\frac{i \epsilon_A \pi}{2}\sum_{l\in A}\Bigg\{\hat{\sigma}^x_l\Bigg( \cos(\hat{\theta}_l)\cos(\frac{4h}{\omega})+1\Bigg)\nonumber\\
+		&\hspace{7cm} +\hat{\sigma}^y_l \cos(\hat{\theta}_l)\sin(\frac{4h}{\omega})-\hat{\sigma}^z_l \sin(\hat{\theta}_l)\Bigg\}\Bigg] \exp\big[-i H_B T\big].
+	\end{align}
+	Next, we apply the Baker-Campbell-Hausdorff formula~\cite{Magnus1954} successively to all pairs of exponents in the RHS, neglecting all operators with norms $\mathcal{O}(T^2)$ as before, followed by substitution into the RHS of Eqn.~\ref{eq:2tprop}. Finally, substitution into Eqn.~\ref{eq:heff} yields the effective Floquet Hamiltonian in the high-frequency limit, 
+	\begin{multline}
+		H^{\mathrm{eff}} \approx\frac{\hbar}{2} \sum_{l,m\in A}J_{lm}\hat{\sigma}_l^y\hat{\sigma}_m^y +\frac{\hbar \epsilon_A \pi}{4} \sum_{\substack{l,m\in A\\l\neq m}} J_{lm}\hat{\sigma}^z_l\hat{\sigma}^y_m + \frac{\hbar}{2}\sum_{l,m\in B}J_{lm}\hat{\sigma}_l^y \hat{\sigma}_m^y + \frac{h\hbar}{\pi}\sum_{m \in B}\hat{\sigma}^z_m \\ -\frac{\hbar \pi \epsilon_A}{4T}\sum_{l\in A}\Bigg\{\hat{\sigma}^x_l \bigg[\cos(\hat{\theta}_l)\cos(\frac{4h}{\omega})+1 \bigg] + \hat{\sigma}^y_l \cos(\hat{\theta}_l)\sin(\frac{4h}{\omega})-\hat{\sigma}^z_l \sin(\hat{\theta}_l)\Bigg\}.
+		\label{eq:app:nfloq_eff3}
+	\end{multline}
+	In the limit of very high frequencies, $T\rightarrow 0$, leading to asymptotically vanishing $\hat{\theta}_l$. In this limit, the coupling between regions manifests as effective fields $\sim \hat{\sigma}^{x,y}_l$ in region $A$ whose intensities depend only on $\epsilon_A$, and the ratio $\frac{4h}{\omega}$. When $h$ is set to an odd multiple of $\pi\omega/4$, these effective fields vanish in the asymptotic limit, causing the regions $A$ and $B$ to decouple completely.
+\end{document}
