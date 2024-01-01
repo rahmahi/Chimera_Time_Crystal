@@ -146,7 +146,7 @@ In such a case, the quantum dynamics of the two regions exhibit mutual independe
 
 \begin{figure*}[t!]
     \centering
-    \includegraphics[width=13.5cm]{sz_t_strongweakJ_N_8.pdf}
+    \includegraphics[width=13.5cm]{sz_t_strongweakJ_N_8.png}
     \caption{The time evolution of local magnetization for each spin at region A (Site(i)=0,1,2,3) and region B (Site(i)=4,5,6,7) is plotted for $N=8$ spins in a periodically driven one-dimensional spin chain, starting from a fully polarized spin state, with drive frequency $\omega=20$. The spin rotation error $\epsilon_A = 0.03$ and $\epsilon_B = 0.9$, and $g=\pi/T$, where $T=2\pi/\omega$ is the time period of the drive.  In all two panels, different ranges of spin-interactions such as long-range($\beta=0$), intermediate range($\beta=1.5$), short range($\beta=2.5$), and nearest neighbor range($\beta=\infty$), are chosen and plotted, respectively, from left to right, namely (a, b, c, d) in the top row and (e, f, g, h) in the bottom row of each panel. The results of the time evolution for the strong spin coupling ($J_0 = 0.2/T$) are shown in the left panel (P) and the weak spin coupling ($J_0 = 0.027/T$) in the right panel (Q). The top panels of P \& Q show plots where the drive amplitude $h$ is chosen so that the system lies at the lowest CDT / DL point, and the bottom panels show the results away from that CDT/DL point.}
     \label{Fig:strong_weak_ea}
 \end{figure*}
@@ -170,7 +170,7 @@ The stability of this DTC phase exhibits notable disparities between strong and 
 The suitability of long-range interactions is examined by analyzing the dynamics in frequency space (with the frequency variable denoted by $\Omega$) by applying a Fast Fourier Transform (FFT) on the local magnetism at a specific spin site $(site(i)=1)$ in region A. Numerical FFT algorithms provided by the NumPy library were utilized to achieve this task~\cite{harris2020array}. The results are visually presented in Fig.\ref{Fig:sz_single}.  The frequency $\Omega$ in the abscissas has been scaled relative to the driving frequency $\omega$. The subharmonic response at$\Omega=\omega/2$ can be detected by observing the peaks at half-integer multiples of $\omega$. This observation serves as confirmation of the onset of discrete TTSB throughout all selected spin-interaction ranges. The stability of the resulting DTC will be influenced by the contributions originating from the underlying continuum of frequencies. When $\beta$ approaches zero, the continuum exhibits a higher degree of submissiveness toward subharmonic peaks compared to higher values. This distinction is especially noticeable under conditions of weak coupling. Therefore, in the context of a DTC phase of matter, it is advantageous to consider long-range interactions rather than short-range interactions when selecting potential candidates. The present analysis is consistent with the numerical results shown in Fig.\ref{Fig:strong_weak_ea}, where each individual spin interaction type provides evidence of a reliable DTC.
 \begin{figure}[t!]
 	\centering
-	\includegraphics[width=13.5cm]{EASJ_N_8.pdf}
+	\includegraphics[width=13.5cm]{EASJ_N_8.png}
 	\caption{The time evolution of local magnetization for each spin at region A (Site(i)=0,1,2,3) and region B (Site(i)=4,5,6,7) is plotted for $N=8$ spins in a periodically driven one-dimensional spin chain, starting from a fully polarized spin state, with drive frequency $\omega=20$. The strong spin-spin coupling $J_0 = 0.2/T$, spin rotation error $\epsilon_B = 0.9$ and $g=\pi/T$, where $T=2\pi/\omega$ is the time period of the drive.  Different ranges of spin-interactions such as long-range($\beta=0$), intermediate range($\beta=1.5$), short range($\beta=2.5$), and nearest neighbor range($\beta=\infty$), are chosen and plotted  for $\epsilon_A =0.05$(left R-panel) and $\epsilon_A =0.1$(right S-panel), respectively, from left to right, namely (a, b, c, d) in each panel.}
 	\label{Fig:ea}
 \end{figure}	
@@ -222,7 +222,7 @@ The influence of the driving parameters $h, \omega$ significantly affects the l
 In order to conduct an investigation, we will now incorporate the static field $\hbar\hat{V}(\hat{\sigma}^{\gamma})$ discussed in Section~\ref{sec:mdl_n_dynam} into the Hamiltonian $\hat{H}(t)$. The aforementioned field remains unmodulated by the pulses and acts on the system identically at all times. Our simulations were conducted using this field at a CDT/DL point, while all other parameters were maintained at the same values as in earlier simulations. 
 \begin{figure}[t!]
 	\begin{center}
-		\includegraphics[width=15cm]{robust_J_N_8.pdf}
+		\includegraphics[width=15cm]{robust_J_N_8.png}
 	\end{center}
 	\caption{Weak (left T- panels) and strong (right V-panels) additional static fields defined by $\gamma = J_0/5, J_0$ respectively ( where $J_0=0.2/T$ ), are applied in addition to the strong spin coupling and transverse field at different interaction ranges set by $\beta = 0.0$ (panels a), $\beta= 1.5$ (panels b), $\beta=2.5$ (panels c), and $\beta= \infty$ (panels d). The local magnetization for each site (i) is plotted from $t=0$ to $t=80 T$.}
 	\label{Fig:robustness}
