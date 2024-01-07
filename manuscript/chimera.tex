@@ -265,8 +265,70 @@ Now, the Hamiltonian can be transformed to the moving frame as follows \cite{hal
     &= \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) \Big[\mathbbm{1}\cos^2(2\zeta) -\hat{\sigma}^z_i\hat{\sigma}^z_j \sin^2(2\zeta) + i (\hat{\sigma}^z_i + \hat{\sigma}^z_j)\cos(2\zeta)\sin(2\zeta)\Big].
     \label{eq:hmovap1}
 \end{align}
-Here, we have utilized the expression, $\displaystyle \exp[ia(\hat{n}\cdot\vec{\sigma})] = \mathbbm{1} \cos(a) + i (\hat{n}\cdot\vec{\sigma})\sin(a)$.	Now, we invoke the Jacobi-Anger formula $\displaystyle e^{iz\cos(\omega t)} = \sum_{n=-\infty}^{\infty}\mathcal{J}_n(z)e^{in\omega t}$\cite{arfkenmath}, where $\mathcal{J}_n(z)$ is the Bessel function of the first kind of $n^{th}$ order, and apply to the RHS of  Eq.~\ref{eq:hmovap1}. This produces a Fourier series expansion for 
-$\hat{H}^{mov}(t)$ with period $\omega$. Note however, that the drive parameters $h$ and $\omega$ are independent of each other. In high frequency limit, where $\omega \gg J_0$, the Rotating Wave Approximation (RWA) allows for approximating the Fourier modes with their long time coarse-grain averages. This provides us with the option to average all the Fourier modes to zero, except for the zeroth order mode. \blue{Additionally, we have applied asymptotic form of Bessel function $\mathcal{J}_0(x) \sim x^{-1 / 2} \cos (x-\pi / 4)$, a good approximation for large $x$. At this limit, when $x$ is chosen to be one of the roots of the Bessel function, $x$ is then approximated to $x\approx (2n+1/2)\pi/2$. This yields, $\mathcal{J}_0(2x)\sim -x^{-1/2}/2$; similarly, $\mathcal{J}_1 \sim (2x)~ x^{-1/2}/2$. So, at larger roots of Bessel function, one can neglect $\mathcal{J}_1$ terms in Eq.\eqref{eq:hmovap1}}.  Thus, the $\hat{H}^{mov}$ reduces to the RWA-Hamiltonian ($\hat{H}^{_{RWA}}$),
+Here, we have utilized the expression, $\displaystyle \exp[ia(\hat{n}\cdot\vec{\sigma})] = \mathbbm{1} \cos(a) + i (\hat{n}\cdot\vec{\sigma})\sin(a)$. Now, we invoke the Jacobi-Anger expansion, $e^{i\eta \cos(\theta)} = \sum_{n=-\infty}^{\infty}\mathcal{J}_n(\eta)e^{in\theta}$, where $\mathcal{J}_n(z)$ is the Bessel function of the first kind of $n^{th}$ order, and apply to the RHS of  Eq.~\ref{eq:hmovap1}. This produces a Fourier series expansion for 
+$\hat{H}^{mov}(t)$ with period $\omega$. \blue{Note however, that the drive parameters $h$ and $\omega$ are independent of each other. In high frequency limit, where $\omega \gg J_0$, the Rotating Wave Approximation (RWA) allows for approximating the Fourier modes with their long time coarse-grain averages. This provides us with the option to average all the faster oscillating Fourier modes to zero.}
+
+\noindent Now we expand and evaluate each terms in Eq.\eqref{eq:hmovap1},
+\begin{align}
+\cos[2](2\zeta) &= 1 + \cos\Bigg(\frac{4h}{\omega}\big(1-\cos(\omega t)\big)\Bigg)\nonumber\\
+&=\cos[2](\frac{4h}{\omega}\cos(\omega t))+ \sin[2](\frac{4h}{\omega}\cos(\omega t))\nonumber\\
+&\hspace{1cm}+ \Bigg[\cos\Big(\frac{4h}{\omega}\Big)\cos\Big(\frac{4h}{\omega}\cos(\omega t)\Big) +\sin\Big(\frac{4h}{\omega}\Big)\sin\Big(\frac{4h}{\omega}\cos(\omega t)\Big)\Bigg].
+\label{eq:cossqr}
+\end{align}
+Similarly,
+\begin{align}
+\sin[2](2\zeta) &=\cos[2](\frac{4h}{\omega}\cos(\omega t))+ \sin[2](\frac{4h}{\omega}\cos(\omega t))\nonumber\\ 
+&\hspace{1cm}-\Bigg[\cos\Big(\frac{4h}{\omega}\Big)\cos\Big(\frac{4h}{\omega}\cos(\omega t)\Big) + \sin\Big(\frac{4h}{\omega}\Big)\sin\Big(\frac{4h}{\omega}\cos(\omega t)\Big)\Bigg],
+\label{eq:sinsqr}
+\end{align}
+and,
+\begin{equation}
+\sin(2\zeta) \cos(2\zeta)=\frac12\Bigg[ \sin\Big(\frac{4h}{\omega}\Big)\cos\Big(\frac{4h}{\omega}\cos(\omega t)\Big) -\cos\Big(\frac{4h}{\omega}\Big)\sin\Big(\frac{4h}{\omega}\cos(\omega t)\Big)\Bigg].
+\label{eq:sincos}
+\end{equation}
+
+\begin{align*}
+\cos(\frac{4h}{\omega}\cos(\omega t)) &= \mathcal{J}_0\Big(\frac{4h}{\omega}\Big) + 2 \sum_{n=1}^\infty (-1)^n \mathcal{J}_{2n}\Big(\frac{4h}{\omega}\Big)\cos(2n\omega t),\\
+\sin(\frac{4h}{\omega}\cos(\omega t)) &=-2 \sum_{n=1}^\infty (-1)^n \mathcal{J}_{2n-1}\Big(\frac{4h}{\omega}\Big)\cos[(2n-1)\omega t],
+\end{align*}
+where $\mathcal{J}_n(z)$ is the Bessel function of the first kind of $n^{th}$ order. Utilizing Jacobi-Anger expansion yields,
+\begin{align}
+\cos^2(2\zeta)
+&= \mathcal{J}^2_0\Big(\frac{4h}{\omega}\Big) + 4\mathcal{J}_0\Big(\frac{4h}{\omega}\Big)\sum_{n=1}^\infty (-1)^n \mathcal{J}_{2n}\Big(\frac{4h}{\omega}\Big)\cos(2n\omega t)\nonumber\\
+&\hspace{0.5cm}+4\sum_{n,m=1}^\infty(-1)^{n+m}\mathcal{J}_{2n}\Big(\frac{4h}{\omega}\Big)\mathcal{J}_{2m}\Big(\frac{4h}{\omega}\Big) \cos(2n\omega t)\cos(2m\omega t)\nonumber\\
+&\hspace{0.5cm}+\Bigg[\cos\left(\frac{4h}{\omega}\right)\left\{\mathcal{J}_0\Big(\frac{4h}{\omega}\Big) + 2 \sum_{n=1}^\infty (-1)^n \mathcal{J}_{2n}\Big(\frac{4h}{\omega}\Big)\cos(2n\omega t)\right\}\nonumber\\
+&\hspace{2.0cm}-2\sin\left(\frac{4h}{\omega}\right) \sum_{n=1}^\infty(-1)^n \mathcal{J}_{2n-1}\Big(\frac{4h}{\omega}\Big)\cos[(2n-1)\omega t]\Bigg],
+\label{eq:cossqr2}
+\end{align}
+
+\begin{align}
+\sin^2(2\zeta)
+&= \mathcal{J}^2_0\Big(\frac{4h}{\omega}\Big) + 4\mathcal{J}_0\Big(\frac{4h}{\omega}\Big)\sum_{n=1}^\infty (-1)^n \mathcal{J}_{2n}\Big(\frac{4h}{\omega}\Big)\cos(2n\omega t)\nonumber\\
+&\hspace{0.5cm}+4\sum_{n,m=1}^\infty(-1)^{n+m}\mathcal{J}_{2n}\Big(\frac{4h}{\omega}\Big)\mathcal{J}_{2m}\Big(\frac{4h}{\omega}\Big) \cos(2n\omega t)\cos(2m\omega t)\nonumber\\
+&\hspace{0.5cm}-\Bigg[\cos\left(\frac{4h}{\omega}\right)\left\{\mathcal{J}_0\Big(\frac{4h}{\omega}\Big) + 2 \sum_{n=1}^\infty (-1)^n \mathcal{J}_{2n}\Big(\frac{4h}{\omega}\Big)\cos(2n\omega t)\right\}\nonumber\\
+&\hspace{2.0cm}-2\sin\left(\frac{4h}{\omega}\right) \sum_{n=1}^\infty(-1)^n \mathcal{J}_{2n-1}\Big(\frac{4h}{\omega}\Big)\cos[(2n-1)\omega t]\Bigg],
+\label{eq:sinsqr2}
+\end{align}
+
+\begin{multline}
+\sin(2\zeta) \cos(2\zeta) = \frac12 \Bigg[\sin\left(\frac{4h}{\omega}\right)\left\{\mathcal{J}_0\Big(\frac{4h}{\omega}\Big) + 2 \sum_{n=1}^\infty (-1)^n \mathcal{J}_{2n}\Big(\frac{4h}{\omega}\Big)\cos(2n\omega t)\right\}\\+2\cos\left(\frac{4h}{\omega}\right)\sum_{n=1}^\infty \mathcal{J}_{2n-1}(-1)^n\Big(\frac{4h}{\omega}\Big)\cos\big[(2n-1)\omega t]\Bigg].
+\label{eq:sincos2}
+\end{multline}
+
+\blue{
+We apply RWA which allows to neglect the faster oscillating terms in Eqs. \eqref{eq:cossqr2}, \eqref{eq:sinsqr2}\& \eqref{eq:sincos2}. This results in only terms with $\mathcal{J}_0$ and several other terms with higher order of $\mathcal{J}^2_{n=m}$ remain. We consider asymptotic form of Bessel function,
+\begin{equation*}
+	J_\alpha(x)=\sqrt{\frac{2}{\pi x}}\left(\cos \left(x-\frac{\alpha \pi}{2}-\frac{\pi}{4}\right)\right),
+\end{equation*}
+with a good approximation for large $x$. It can be simplified, as for  $\alpha=1$ we get $\mathcal{J}_1(x) \sim x^{-1 / 2} \cos (x-\pi / 4)$. At this limit, when $x$ is chosen to be one of the roots of the Bessel function, $x$ is then approximated to $x\approx [(2n+1)+1/2]\pi/2$. This yields, $\mathcal{J}_1(x)\sim x^{-1/2}/2$; similarly we get, $\mathcal{J}_2(x)\sim x^{-1/2}/2$. So, at larger roots of Bessel function $\mathcal{J}_0$, one can neglect higher order Bessel functions $\mathcal{J}_n$, as well as $\mathcal{J}^2_n; n\ge 1$.  Thus, the approximated terms of Eqs. \eqref{eq:cossqr2}, \eqref{eq:sinsqr2}\& \eqref{eq:sincos2} becomes,}
+
+\begin{align}
+	\cos[2](2\zeta) &\simeq \mathcal{J}^2_0\Big(\frac{4h}{\omega}\Big) +  \mathcal{J}_0\Big(\frac{4h}{\omega}\Big) \cos\Big(\frac{4h}{\omega}\Big)\nonumber\\
+	\sin[2](2\zeta) &\simeq \mathcal{J}^2_0\Big(\frac{4h}{\omega}\Big) - \mathcal{J}_0\Big(\frac{4h}{\omega}\Big) \cos\Big(\frac{4h}{\omega}\Big) \nonumber\\
+	\sin(2\zeta) \cos(2\zeta)&= \frac12 \mathcal{J}_0\Big(\frac{4h}{\omega}\Big)\sin\Big(\frac{4h}{\omega}\Big) 
+	\label{eq:approxes}	
+\end{align}
+Finally, we substitute the values from Eq.\eqref{eq:approxes} into Eq.\eqref{eq:hmovap1}. This reduces the moving frame Hamiltonian into a RWA-Hamiltonian ($\hat{H^{_{RWA}}}$) given below,
 \begin{multline}
     \hat{H}^{mov}\approx \hat{H}^{_{RWA}} = \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) \mathcal{J}_0(\chi)\Bigg\{\mathbbm{1}\bigg[\mathcal{J}_0(\chi) + \cos(\chi)\bigg] \\
     -\hat{\sigma}^z_i\hat{\sigma}^z_j \bigg[\mathcal{J}_0(\chi) - \cos(\chi)\bigg] + \frac{i}{2} \left(\hat{\sigma}^z_i + \hat{\sigma}^z_j\right) \sin(\chi)\Bigg\}.
