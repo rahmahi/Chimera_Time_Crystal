@@ -330,11 +330,11 @@ with a good approximation for large $x$. It can be simplified, as for  $\alpha=1
 \end{align}
 Finally, we substitute the values from Eq.\eqref{eq:approxes} into Eq.\eqref{eq:hmovap1}. This reduces the moving frame Hamiltonian into a RWA-Hamiltonian ($\hat{H^{_{RWA}}}$) given below,
 \begin{multline}
-    \hat{H}^{mov}\approx \hat{H}^{_{RWA}} = \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) \mathcal{J}_0(\chi)\Bigg\{\mathbbm{1}\bigg[\mathcal{J}_0(\chi) + \cos(\chi)\bigg] \\
-    -\hat{\sigma}^z_i\hat{\sigma}^z_j \bigg[\mathcal{J}_0(\chi) - \cos(\chi)\bigg] + \frac{i}{2} \left(\hat{\sigma}^z_i + \hat{\sigma}^z_j\right) \sin(\chi)\Bigg\}.
+    \hat{H}^{mov}\approx \hat{H}^{_{RWA}} = \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) \mathcal{J}_0\Big(\frac{4h}{\omega}\Big)\Bigg\{\mathbbm{1}\bigg[\mathcal{J}_0\Big(\frac{4h}{\omega}\Big) + \cos\left(\frac{4h}{\omega}\right)\bigg] \\
+    -\hat{\sigma}^z_i\hat{\sigma}^z_j \bigg[\mathcal{J}_0\Big(\frac{4h}{\omega}\Big) - \cos\left(\frac{4h}{\omega}\right)\bigg] + \frac{i}{2} \left(\hat{\sigma}^z_i + \hat{\sigma}^z_j\right) \sin\left(\frac{4h}{\omega}\right)\Bigg\}.
     \label{eq:hrwa}
 \end{multline}	
-Now, for a particular $\omega$, if $h$ is controlled in such fashion that $\chi\equiv\frac{4h}{\omega}$ lies on one of the roots of $\mathcal{J}_0(\chi)$, then $\hat{H}^{_{RWA}}$ vanishes, resulting in localization of any initial state during the $T_2-$cycles. This can be accomplished in various ways, for instance, if $\omega\gg J_0$, ensuring that $h\gg J_0$ such that $4h/\omega$ is of $\mathcal{O}(1)$ allows for the possibility of $\chi$ falling on the first root of $\mathcal{J}_0(\chi)$ even for large $\omega$.
+Now, for a particular $\omega$, if $h$ is controlled in such fashion that $\frac{4h}{\omega}$ lies on one of the roots of $\mathcal{J}_0\Big(\frac{4h}{\omega}\Big)$, then $\hat{H}^{_{RWA}}$ vanishes, resulting in localization of any initial state during the $T_2-$cycles. This can be accomplished in various ways, for instance, if $\omega\gg J_0$, ensuring that $h\gg J_0$ such that $4h/\omega$ is of $\mathcal{O}(1)$ allows for the possibility of $4h/\omega$ falling on the higher root of $\mathcal{J}_0\Big(\frac{4h}{\omega}\Big)$ even for large $\omega$.
 
 \section{\label{sec:AppendixB} Effective Floquet Hamiltonian}
 
