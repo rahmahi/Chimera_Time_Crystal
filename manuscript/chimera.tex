@@ -107,22 +107,28 @@ During the first $T_2-$cycle, $t \in{\Big[\frac{T}{2}, T \Big]}$. Thus,
 \end{equation}
 where, $\displaystyle{
     \zeta (t) = h\int_{T/2}^{T/2+t}  \Big[-\sin(\omega t')dt'\Big]=  \frac{h}{\omega}\Big[1-\cos(\omega t)\Big]}$.		
-Now, in this `rotating frame', the Hamiltonian transforms to~\cite{haldar_dynamical_2021},
+Now, in this `rotating frame', the Hamiltonian transforms to (see~\ref{sec:AppendixA} for details),
 \begin{align}
-    \hat{H}^{mov}(t) &= \hat{U}^\dagger \hat{H}_2(t) \hat{U}- i \hat{U}^\dagger \partial_t \hat{U}\nonumber\\
-    &= \hat{U}^\dagger \left(\hbar\sum_{ij}J_{ij}\hat{\sigma}^y_i\hat{\sigma}^y_j\right) \hat{U}\nonumber\\
-    &=\hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) e^{i 2\zeta(t) \hat{\sigma}^z_i}  e^{i 2\zeta(t) \hat{\sigma}^z_j}
+    \hat{H}^{mov}(t) &= \hat{U}^\dagger \hat{H}_2(t) \hat{U}- i \hat{U}^\dagger \partial_t \hat{U},\nonumber\\
+    %&= \hat{U}^\dagger \left(\hbar\sum_{ij}J_{ij}\hat{\sigma}^y_i\hat{\sigma}^y_j\right) \hat{U},\nonumber\\
+    %&=\hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) e^{i 2\zeta(t) \hat{\sigma}^z_i}  e^{i 2\zeta(t) \hat{\sigma}^z_j}
+    &=\hbar\sum_{ij}J_{ij}\Big\{\hat{\sigma}^y_i\cos{\big[2\zeta(t)\big]}-\hat{\sigma}^x_i\sin{\big[2\zeta(t)\big]}\Big\}\Big\{\hat{\sigma}^y_j\cos{\big[2\zeta(t)\big]}-\hat{\sigma}^x_j\sin{\big[2\zeta(t)\big]}\Big\},
     \label{eq:movham}
 \end{align}
-	
-Next, we apply the \textit{Jacobi Anger expansion}, $\displaystyle e^{iz \cos(\theta)} = \sum_{n=-\infty}^{\infty} \mathcal{J}_n(z) e^{in\theta}$, where $\mathcal{J}_n$' s denote the Bessel function of first kind of $n^{th}$ order. This allows for a Fourier series expansion of $\hat{H}^{mov}(t)$. Now, we introduce the Rotating Wave Approximation (RWA), which, in the high-frequency limit, approximates the Fourier modes with their coarse-grained values over long times. This allows us to average out all but the zeroth Fourier mode. \blue{Additionally, we consider the asymptotic form of Bessel function for larger variables, which can be appromiated to neglect the higher order Bessel functions (see~\ref{sec:AppendixA} for details). This results in the approximation,}
-\begin{multline}
-    \hat{H}^{mov}\approx \hat{H}^{_{RWA}} = \frac{\hbar}{2}\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) \mathcal{J}_0\Big(\frac{4h}{\omega}\Big)\Bigg\{\mathbbm{1}\bigg[\mathcal{J}_0\Big(\frac{4h}{\omega}\Big) + \cos\left(\frac{4h}{\omega}\right)\bigg] \\
-    -\hat{\sigma}^z_i\hat{\sigma}^z_j \bigg[\mathcal{J}_0\Big(\frac{4h}{\omega}\Big) - \cos\left(\frac{4h}{\omega}\right)\bigg] + i \left(\hat{\sigma}^z_i + \hat{\sigma}^z_j\right) \sin\left(\frac{4h}{\omega}\right)\Bigg\}.
+where, in the last step, we have employed the Baker-Campbell-Hausdorff formula. Next, we decompose the moving frame Hamiltonian into its Fourier modes and introduce the Rotating Wave Approximation (RWA), which, in the high-frequency limit, approximates the Fourier modes with their coarse-grained values over long times. This allows us to average out all but the zeroth Fourier mode (see~\ref{sec:AppendixA} for details). This yields
+%Next, we apply the \textit{Jacobi Anger expansion}, $\displaystyle e^{iz \cos(\theta)} = \sum_{n=-\infty}^{\infty} \mathcal{J}_n(z) e^{in\theta}$, where $\mathcal{J}_n$' s denote the Bessel function of first kind of $n^{th}$ order. This allows for a Fourier series expansion of $\hat{H}^{mov}(t)$. Now, we introduce the Rotating Wave Approximation (RWA), which, in the high-frequency limit, approximates the Fourier modes with their coarse-grained values over long times. This allows us to average out all but the zeroth Fourier mode. \blue{Additionally, we consider the asymptotic form of Bessel function for larger variables, which can be appromiated to neglect the higher order Bessel functions (see~\ref{sec:AppendixA} for details). This results in the approximation,}
+%\begin{multline}
+%    \hat{H}^{mov}\approx \hat{H}^{_{RWA}} = \frac{\hbar}{2}\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) \mathcal{J}_0\Big(\frac{4h}{\omega}\Big)\Bigg\{\mathbbm{1}\bigg[\mathcal{J}_0\Big(\frac{4h}{\omega}\Big) + \cos\left(\frac{4h}{\omega}\right)\bigg] \\
+%    -\hat{\sigma}^z_i\hat{\sigma}^z_j \bigg[\mathcal{J}_0\Big(\frac{4h}{\omega}\Big) - \cos\left(\frac{4h}{\omega}\right)\bigg] + i \left(\hat{\sigma}^z_i + \hat{\sigma}^z_j\right) \sin\left(\frac{4h}{\omega}\right)\Bigg\}.
     \label{eq:movham1}
+%\end{multline}
+\begin{multline}
+\hat{H}^{mov}\approx \hat{H}^{_{RWA}} = \frac{\hbar}{2}\sum_{ij} J_{ij} \hat{\sigma}^y_i\hat{\sigma}^y_j\Bigg\{\left[1+\cos(\frac{4h}{\omega})\mathcal{J}_0\left(\frac{4h}{\omega}\right)\right] \\
++ \hat{\sigma}^x_i\hat{\sigma}^x_j \left[1-\cos(\frac{4h}{\omega})\mathcal{J}_0\left(\frac{4h}{\omega}\right)\right]
++ \left(\hat{\sigma}^x_i\hat{\sigma}^y_j+\hat{\sigma}^y_i\hat{\sigma}^x_j\right)\sin(\frac{4h}{\omega})\mathcal{J}_0\left(\frac{4h}{\omega}\right) \Bigg\}.
+\label{eq:movham1}
 \end{multline}
-	
-Now, if the drive parameters $h$ and $\omega$  are {engineered} in such a way that the ratio ${4h}/{\omega}$ lies at one of the higher roots of $\mathcal{J}_0$~\footnote{This can be achieved when $\omega \gg J_0$ by ensuring that $h\gg J_0$.}, it is possible to nullify the dynamics of $\hat{H}_2$ during all $T_2-$cycles, hence inducing localization in the system. We have supported this result by numerical simulations, detailed in Section~\ref{sec:level42}. There, $\hat{\sigma}^z$ is detected as an approximate integral invariant ~\cite{Keser2016,Dodonov1978}. 
+Now, if the drive parameters $h$ and $\omega$  are engineered in such a way that the ratio ${4h}/{\omega}$ lies at one of the higher roots of $\mathcal{J}_0$~\footnote{This can be achieved when $\omega \gg J_0$ by ensuring that $h\gg J_0$.}, it is possible to nullify the dynamics of $\hat{H}_2$ during all $T_2-$cycles, thus inducing localization in the system. We have supported this result by numerical simulations, detailed in Section~\ref{sec:level42},where, $\hat{\sigma}^z$ is detected as an approximate integral invariant ~\cite{Keser2016,Dodonov1978}. 
 
 \section{\label{sec:level3}Coexistence of DTC \& DMBL}	
 The underlying dynamics of the periodic Hamiltonian of the chimera model outlined in Section~\ref{sec:mdl_n_dynam} can be understood by employing the Floquet theory (FT). FT allows us to examine the dynamics at the stroboscopic times, namely, at integer multiples of the time period $T$. The effective Floquet Hamiltonian($H^{\mathrm{eff}}$) for the proposed spin-system that undergoes two periods can be written as follows:
