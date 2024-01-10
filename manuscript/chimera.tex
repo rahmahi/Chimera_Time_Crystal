@@ -265,83 +265,44 @@ Now, the Hamiltonian can be transformed to the moving frame as follows \cite{hal
 \begin{align}
     \hat{H^{mov}}(t) &= \hat{U}^\dagger(t) \hat{H}_2(t) \hat{U}(t)- i \hat{U}^\dagger(t) \partial_t \hat{U}(t) \nonumber\\
     &= \prod_{i} \exp\big[-i\hat{\sigma}^z_i \zeta(t)\big] \big[\hbar\sum_{ij}J_{ij}\hat{\sigma}^y_i\hat{\sigma}^y_j\big] \exp\big[ i\hat{\sigma}^z_i \zeta(t)\big]\nonumber\\
-    &= \hbar\sum_{ij} J_{ij} e^{-i\hat{\sigma}^z_i \zeta(t)} e^{-i\hat{\sigma}^z_j  \zeta(t)}\Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big)e^{i\hat{\sigma}^z_i \zeta(t)} e^{i\hat{\sigma}^z_j \zeta(t)}\nonumber\\
-    &= \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big)e^{i2\hat{\sigma}^z_i \zeta(t)} e^{i2\hat{\sigma}^z_j \zeta(t)}\nonumber\\
-    &= \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) \Big[\mathbbm{1}\cos^2(2\zeta) -\hat{\sigma}^z_i\hat{\sigma}^z_j \sin^2(2\zeta) + i (\hat{\sigma}^z_i + \hat{\sigma}^z_j)\cos(2\zeta)\sin(2\zeta)\Big].
+    &= \hbar\sum_{ij} J_{ij}\;\big[ e^{-i\hat{\sigma}^z_i \zeta(t)} \hat{\sigma}^y_i e^{i\hat{\sigma}^z_i \zeta(t)}\big]\quad \big[e^{-i\hat{\sigma}^z_j  \zeta(t)}\hat{\sigma}^y_j e^{i\hat{\sigma}^z_j \zeta(t)}\big]\nonumber\\
+    &=\hbar\sum_{ij}J_{ij}\Big\{\hat{\sigma}^y_i\cos{\big[2\zeta(t)\big]}-\hat{\sigma}^x_i\sin{\big[2\zeta(t)\big]}\Big\}\Big\{\hat{\sigma}^y_j\cos{\big[2\zeta(t)\big]}-\hat{\sigma}^x_j\sin{\big[2\zeta(t)\big]}\Big\},\nonumber\\
+    %&= \hbar\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big)e^{i2\hat{\sigma}^z_i \zeta(t)} e^{i2\hat{\sigma}^z_j \zeta(t)}\nonumber\\
+    &= \hbar\sum_{ij} J_{ij}  \Big[ \hat{\sigma}^y_i\hat{\sigma}^y_j\cos^2(2\zeta) +\hat{\sigma}^x_i\hat{\sigma}^x_j \sin^2(2\zeta) - \frac12 (\sigma^y_i\hat{\sigma}^x_j + \hat{\sigma}^x_i\hat{\sigma}^y_j)\sin(4\zeta)\Big].
     \label{eq:hmovap1}
 \end{align}
-Here, we have utilized the expression, $\displaystyle \exp[ia(\hat{n}\cdot\vec{\sigma})] = \mathbbm{1} \cos(a) + i (\hat{n}\cdot\vec{\sigma})\sin(a)$. Now, we invoke the Jacobi-Anger expansion, $e^{i\eta \cos(\theta)} = \sum_{n=-\infty}^{\infty}\mathcal{J}_n(\eta)e^{in\theta}$, where $\mathcal{J}_n(z)$ is the Bessel function of the first kind of $n^{th}$ order, and apply to the RHS of  Eq.~\ref{eq:hmovap1}. This produces a Fourier series expansion for 
-$\hat{H}^{mov}(t)$ with period $\omega$. \blue{Note however, that the drive parameters $h$ and $\omega$ are independent of each other. In high frequency limit, where $\omega \gg J_0$, the Rotating Wave Approximation (RWA) allows for approximating the Fourier modes with their long time coarse-grain averages. This provides us with the option to average all the faster oscillating Fourier modes to zero.}
-
-\noindent Now we expand and evaluate each terms in Eq.\eqref{eq:hmovap1},
+In the penultimate step, we used the Baker-Campbell-Hausdorff formula. Now, we invoke the Jacobi-Anger expansion, $e^{i\eta \cos(\theta)} = \sum_{n=-\infty}^{\infty}\mathcal{J}_n(\eta)e^{in\theta}$, where $\mathcal{J}_n(z)$ is the Bessel function of the first kind of $n^{th}$ order, and apply to the RHS of  Eq.~\ref{eq:hmovap1}. This produces a Fourier series expansion for each amplitude in
+$\hat{H}^{mov}(t)$ with period $\omega$. In high frequency limit, where $\omega \gg J_0$, the Rotating Wave Approximation (RWA) allows for approximating the Fourier modes with their long time averages, thus removing the contributions of all fast-oscillating terms. This yields approximations
 \begin{align}
-2\cos[2](2\zeta) &= 1 + \cos\Bigg(\frac{4h}{\omega}\big(1-\cos(\omega t)\big)\Bigg)\nonumber\\
-&=\cos[2](\frac{4h}{\omega}\cos(\omega t))+ \sin[2](\frac{4h}{\omega}\cos(\omega t))\nonumber\\
-&\hspace{1cm}+ \Bigg[\cos\Big(\frac{4h}{\omega}\Big)\cos\Big(\frac{4h}{\omega}\cos(\omega t)\Big) +\sin\Big(\frac{4h}{\omega}\Big)\sin\Big(\frac{4h}{\omega}\cos(\omega t)\Big)\Bigg].
-\label{eq:cossqr}
+\cos[2](2\zeta) &\approx \frac12 \Bigg[1+ \cos(\frac{4h}{\omega})\mathcal{J}_0\left(\frac{4h}{\omega}\right)\Bigg]\nonumber\\
+\sin[2](2\zeta) &\approx \frac12 \Bigg[1- \cos(\frac{4h}{\omega})\mathcal{J}_0\left(\frac{4h}{\omega}\right)\Bigg]\nonumber\\
+\sin(4\zeta)&\approx \frac12 \sin(\frac{4h}{\omega})\mathcal{J}_0\left(\frac{4h}{\omega}\right).
+\label{eq:sqr}
 \end{align}
-Similarly,
-\begin{align}
-2\sin[2](2\zeta) &=\cos[2](\frac{4h}{\omega}\cos(\omega t))+ \sin[2](\frac{4h}{\omega}\cos(\omega t))\nonumber\\ 
-&\hspace{1cm}-\Bigg[\cos\Big(\frac{4h}{\omega}\Big)\cos\Big(\frac{4h}{\omega}\cos(\omega t)\Big) + \sin\Big(\frac{4h}{\omega}\Big)\sin\Big(\frac{4h}{\omega}\cos(\omega t)\Big)\Bigg],
-\label{eq:sinsqr}
-\end{align}
-and,
-\begin{equation}
-\sin(2\zeta) \cos(2\zeta)=\frac12\Bigg[ \sin\Big(\frac{4h}{\omega}\Big)\cos\Big(\frac{4h}{\omega}\cos(\omega t)\Big) -\cos\Big(\frac{4h}{\omega}\Big)\sin\Big(\frac{4h}{\omega}\cos(\omega t)\Big)\Bigg].
-\label{eq:sincos}
-\end{equation}
-
-\begin{align*}
-\cos(\frac{4h}{\omega}\cos(\omega t)) &= \mathcal{J}_0\Big(\frac{4h}{\omega}\Big) + 2 \sum_{n=1}^\infty (-1)^n \mathcal{J}_{2n}\Big(\frac{4h}{\omega}\Big)\cos(2n\omega t),\\
-\sin(\frac{4h}{\omega}\cos(\omega t)) &=-2 \sum_{n=1}^\infty (-1)^n \mathcal{J}_{2n-1}\Big(\frac{4h}{\omega}\Big)\cos[(2n-1)\omega t],
-\end{align*}
-where $\mathcal{J}_n(z)$ is the Bessel function of the first kind of $n^{th}$ order. Utilizing Jacobi-Anger expansion yields,
-\begin{align}
-2\cos^2(2\zeta)
-&= \mathcal{J}^2_0\Big(\frac{4h}{\omega}\Big) + 4\mathcal{J}_0\Big(\frac{4h}{\omega}\Big)\sum_{n=1}^\infty (-1)^n \mathcal{J}_{2n}\Big(\frac{4h}{\omega}\Big)\cos(2n\omega t)\nonumber\\
-&\hspace{0.5cm}+4\sum_{n,m=1}^\infty(-1)^{n+m}\mathcal{J}_{2n}\Big(\frac{4h}{\omega}\Big)\mathcal{J}_{2m}\Big(\frac{4h}{\omega}\Big) \cos(2n\omega t)\cos(2m\omega t)\nonumber\\
-&\hspace{0.5cm}+4 \sum_{n,m=1}^\infty (-1)^{n+m} \mathcal{J}_{2n-1}\Big(\frac{4h}{\omega}\Big)\mathcal{J}_{2m-1}\Big(\frac{4h}{\omega}\Big)\cos[(2n-1)\omega t]\cos[(2m-1)\omega t]\nonumber\\
-&\hspace{0.5cm}+\Bigg[\cos\left(\frac{4h}{\omega}\right)\left\{\mathcal{J}_0\Big(\frac{4h}{\omega}\Big) + 2 \sum_{n=1}^\infty (-1)^n \mathcal{J}_{2n}\Big(\frac{4h}{\omega}\Big)\cos(2n\omega t)\right\}\nonumber\\
-&\hspace{2.0cm}-2\sin\left(\frac{4h}{\omega}\right) \sum_{n=1}^\infty(-1)^n \mathcal{J}_{2n-1}\Big(\frac{4h}{\omega}\Big)\cos[(2n-1)\omega t]\Bigg],
-\label{eq:cossqr2}
-\end{align}
-
-\begin{align}
-2\sin^2(2\zeta)
-&= \mathcal{J}^2_0\Big(\frac{4h}{\omega}\Big) + 4\mathcal{J}_0\Big(\frac{4h}{\omega}\Big)\sum_{n=1}^\infty (-1)^n \mathcal{J}_{2n}\Big(\frac{4h}{\omega}\Big)\cos(2n\omega t)\nonumber\\
-&\hspace{0.5cm}+4\sum_{n,m=1}^\infty(-1)^{n+m}\mathcal{J}_{2n}\Big(\frac{4h}{\omega}\Big)\mathcal{J}_{2m}\Big(\frac{4h}{\omega}\Big) \cos(2n\omega t)\cos(2m\omega t)\nonumber\\
-&\hspace{0.5cm}+4 \sum_{n,m=1}^\infty (-1)^{n+m} \mathcal{J}_{2n-1}\Big(\frac{4h}{\omega}\Big)\mathcal{J}_{2m-1}\Big(\frac{4h}{\omega}\Big)\cos[(2n-1)\omega t]\cos[(2m-1)\omega t]\nonumber\\
-&\hspace{0.5cm}-\Bigg[\cos\left(\frac{4h}{\omega}\right)\left\{\mathcal{J}_0\Big(\frac{4h}{\omega}\Big) + 2 \sum_{n=1}^\infty (-1)^n \mathcal{J}_{2n}\Big(\frac{4h}{\omega}\Big)\cos(2n\omega t)\right\}\nonumber\\
-&\hspace{2.0cm}-2\sin\left(\frac{4h}{\omega}\right) \sum_{n=1}^\infty(-1)^n \mathcal{J}_{2n-1}\Big(\frac{4h}{\omega}\Big)\cos[(2n-1)\omega t]\Bigg],
-\label{eq:sinsqr2}
-\end{align}
-
+Finally, we substitute the values from Eq.\eqref{eq:sqr} into Eq.\eqref{eq:hmovap1}. This reduces the moving frame Hamiltonian into a RWA-Hamiltonian ($\hat{H^{_{RWA}}}$) given below,
 \begin{multline}
-\sin(2\zeta) \cos(2\zeta) = \frac12 \Bigg[\sin\left(\frac{4h}{\omega}\right)\left\{\mathcal{J}_0\Big(\frac{4h}{\omega}\Big) + 2 \sum_{n=1}^\infty (-1)^n \mathcal{J}_{2n}\Big(\frac{4h}{\omega}\Big)\cos(2n\omega t)\right\}\\+2\cos\left(\frac{4h}{\omega}\right)\sum_{n=1}^\infty \mathcal{J}_{2n-1}(-1)^n\Big(\frac{4h}{\omega}\Big)\cos\big[(2n-1)\omega t]\Bigg].
-\label{eq:sincos2}
-\end{multline}
-
-\blue{
-We apply RWA which allows to neglect the faster oscillating terms in Eqs. \eqref{eq:cossqr2}, \eqref{eq:sinsqr2}\& \eqref{eq:sincos2}. This results in only terms with $\mathcal{J}_0$ and several other terms with higher order of $\mathcal{J}^2_{n=m}$ remain. We consider asymptotic form of Bessel function,
-\begin{equation*}
-	J_\alpha(x)=\sqrt{\frac{2}{\pi x}}\left(\cos \left(x-\frac{\alpha \pi}{2}-\frac{\pi}{4}\right)\right),
-\end{equation*}
-with a good approximation for large $x$. It can be simplified, as for  $\alpha=1$ we get $\mathcal{J}_1(x) \sim x^{-1 / 2} \cos (x-\pi / 4)$. At this limit, when $x$ is chosen to be one of the roots of the Bessel function, $x$ is then approximated to $x\approx [(2n+1)+1/2]\pi/2$. This yields, $\mathcal{J}_1(x)\sim x^{-1/2}/2$; similarly we get, $\mathcal{J}_2(x)\sim x^{-1/2}/2$. So, at larger roots of Bessel function $\mathcal{J}_0$, one can neglect higher order Bessel functions $\mathcal{J}_n$, as well as $\mathcal{J}^2_n; n\ge 1$.  Thus, the approximated terms of Eqs. \eqref{eq:cossqr2}, \eqref{eq:sinsqr2}\& \eqref{eq:sincos2} becomes,}
-
-\begin{align}
-	\cos[2](2\zeta) &\simeq \frac12\left[\mathcal{J}^2_0\Big(\frac{4h}{\omega}\Big) +  \mathcal{J}_0\Big(\frac{4h}{\omega}\Big) \cos\Big(\frac{4h}{\omega}\Big)\right]\nonumber\\
-	\sin[2](2\zeta) &\simeq \frac12\left[\mathcal{J}^2_0\Big(\frac{4h}{\omega}\Big) - \mathcal{J}_0\Big(\frac{4h}{\omega}\Big) \cos\Big(\frac{4h}{\omega}\Big)\right] \nonumber\\
-	\sin(2\zeta) \cos(2\zeta)&\simeq \frac12 \mathcal{J}_0\Big(\frac{4h}{\omega}\Big)\sin\Big(\frac{4h}{\omega}\Big) 
-	\label{eq:approxes}	
-\end{align}
-Finally, we substitute the values from Eq.\eqref{eq:approxes} into Eq.\eqref{eq:hmovap1}. This reduces the moving frame Hamiltonian into a RWA-Hamiltonian ($\hat{H^{_{RWA}}}$) given below,
-\begin{multline}
-    \hat{H}^{mov}\approx \hat{H}^{_{RWA}} = \frac{\hbar}{2}\sum_{ij} J_{ij} \Big(\hat{\sigma}^y_i\hat{\sigma}^y_j\Big) \mathcal{J}_0\Big(\frac{4h}{\omega}\Big)\Bigg\{\mathbbm{1}\bigg[\mathcal{J}_0\Big(\frac{4h}{\omega}\Big) + \cos\left(\frac{4h}{\omega}\right)\bigg] \\
-    -\hat{\sigma}^z_i\hat{\sigma}^z_j \bigg[\mathcal{J}_0\Big(\frac{4h}{\omega}\Big) - \cos\left(\frac{4h}{\omega}\right)\bigg] + i \left(\hat{\sigma}^z_i + \hat{\sigma}^z_j\right) \sin\left(\frac{4h}{\omega}\right)\Bigg\}.
+    \hat{H}^{mov}\approx \hat{H}^{_{RWA}} = \frac{\hbar}{2}\sum_{ij} J_{ij}  \Bigg\{ \hat{\sigma}^y_i\hat{\sigma}^y_j\Bigg[1+ \cos(\frac{4h}{\omega})\mathcal{J}_0\left(\frac{4h}{\omega}\right)\Bigg] +\hat{\sigma}^x_i\hat{\sigma}^x_j \Bigg[1- \cos(\frac{4h}{\omega})\mathcal{J}_0\left(\frac{4h}{\omega}\right)\Bigg] \\
+    - \frac12 (\sigma^y_i\hat{\sigma}^x_j + \hat{\sigma}^x_i\hat{\sigma}^y_j)\sin(\frac{4h}{\omega})\mathcal{J}_0\left(\frac{4h}{\omega}\right)\Bigg\}.
     \label{eq:hrwa}
 \end{multline}	
-Now, for a particular $\omega$, if $h$ is controlled in such fashion that $\frac{4h}{\omega}$ lies on one of higher the roots of $\mathcal{J}_0\Big(\frac{4h}{\omega}\Big)$, then $\hat{H}^{_{RWA}}$ vanishes, resulting in localization of any initial state during the $T_2-$cycles. This can be accomplished in various ways, for instance, if $\omega\gg J_0$, ensuring that $h\gg J_0$ such that $4h/\omega$ is of $\mathcal{O}(1)$ allows for the possibility of $4h/\omega$ falling on the higher root of $\mathcal{J}_0\Big(\frac{4h}{\omega}\Big)$ even for large $\omega$.
+Now, for a particular $\omega$, if $h$ is controlled in such fashion that $\frac{4h}{\omega}$ lies on one of higher the roots of $\mathcal{J}_0\Big(\frac{4h}{\omega}\Big)$, then $\hat{H}^{_{RWA}}$ becomes the "Frozen Hamiltonian",
+\begin{equation}
+\hat{H}^{_{RWA}}_{frz} = \frac{\hbar}{2}\sum_{ij} J_{ij}  \Big[\hat{\sigma}^x_i\hat{\sigma}^x_j + \hat{\sigma}^y_i\hat{\sigma}^y_j\Big].
+\label{eq:hrwa:frz}
+\end{equation}	
+One limiting case of the $J_{ij}$s is the nearest-neighbor case, where $J_{ij} = J_0 \delta_{i\;j\pm1}$. In that case, performing a Jordan-Wigner Transformation 
+\begin{align}
+\hat{\sigma}^x_i &= \left(\hat{c}_i + \hat{c}^\dagger_i\right) \prod_{j=0}^{i-1}\left(1-2\hat{c}^\dagger_j \hat{c}^{\;}_j\right)\nonumber\\
+\hat{\sigma}^y_i &= i\left(\hat{c}_i - \hat{c}^\dagger_i\right) \prod_{j=0}^{i-1}\left(1-2\hat{c}^\dagger_j \hat{c}^{\;}_j\right)\nonumber\\
+\hat{\sigma}^z_i &= 1-2\hat{c}^\dagger_i\hat{c}^{\;}_i,
+\end{align}
+maintains the locality of the Hamiltonian in the basis of fermionic creation and annihilation operators $\hat{c}^{\;}_i, \hat{c}^\dagger_i$. Thus, the Frozen Hamiltonian transforms to the standard tight-binding Hamiltonian $\hat{H}^{_{RWA}}_{frz}=(J_0/2)\sum_i \hat{c}^\dagger_i \hat{c}^{\;}_{i+1}$. The system is completely localized due to the presence of an infinite number of local (approximate) Noether Charges, given by $\hat{n}_m= \hat{d}^{\dagger}_m\hat{d}^{\;}_m$, where
+\begin{equation}
+\hat{d}_m = \frac{1}{\sqrt{N}}\sum_{n=0}^{N-1}e^{-\frac{2nm\pi i}{N}}\hat{c}_n.
+\end{equation}
+When the $J_{ij}$s are extended beyond the nearest-neighbour case to longer ranges, the locality of the Jordan Wigner transformation is destroyed. Nonetheless, both fully polarized states $\ket{\uparrow\uparrow \dots\uparrow}$ and  $\ket{\downarrow\downarrow \dots\downarrow}$ remain eigenstates of $\hat{H}^{_{RWA}}_{frz}$, and their dynamics are still approximately localized in the $T_2$ time interval. In the opposite limiting case of all-to-all interactions in the spins, where $J_{ij}=J_0 \;\forall\;i,j$, we can write $\hat{H}^{_{RWA}}_{frz}\sim \mathbf{S}^2 - \left(S^z\right)^2$, where $\mathbf{S} = \left(S^x, S^y, S^z\right)$, and $S^\mu \sum_i {s}^\mu_i$. In that case, any eigenstate of the macroscopic spin, $\ket{S, S_z}$, is dynamically localized in the $T_2$ time interval. 
+
+In our driving protocol, the system is always ideally populated in a product state at the end of every $T_1$ time interval, with region A being polarized and region B polarized in the opposite direction. Now, as per the Buyskikh classification scheme ~\cite{buyskikh_entanglement_2016}, we have established complete localization in the \textit{nearest-neighbor} and \textit{all-to-all} cases. Some dynamics is expected for intermediate and short ranges due  the contributions of cross-terms between the two regions in $\hat{H}^{_{RWA}}_{frz}$. Nonetheless, these contributions are expected to be minimal in the thermodynamic limit, both for short ranges (due to the area-volume law), and intermediate-ranges (due to minor deviations from the all-to-all case). Numerical analysis reveals that the dynamics of the driven system retains considerable  localization in the $z-$correlations of the spins for most intermediate and short-range cases.\todo[inline]{Describe the numerics here.}
 
 \section{\label{sec:AppendixB} Effective Floquet Hamiltonian}
 
