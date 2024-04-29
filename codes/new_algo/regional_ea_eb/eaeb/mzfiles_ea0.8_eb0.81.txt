@@ -1,0 +1,8 @@
+apr22_RegMz_8_j_0.22918311805232927_beta_0_ea_0.8_eb_0.81_.hdf5
+apr22_RegMz_8_j_0.22918311805232927_beta_1.5_ea_0.8_eb_0.81_.hdf5
+apr22_RegMz_8_j_0.22918311805232927_beta_2.5_ea_0.8_eb_0.81_.hdf5
+apr22_RegMz_8_j_0.22918311805232927_beta_inf_ea_0.8_eb_0.81_.hdf5
+apr22_RegMz_8_j_0.6366197723675814_beta_0_ea_0.8_eb_0.81_.hdf5
+apr22_RegMz_8_j_0.6366197723675814_beta_1.5_ea_0.8_eb_0.81_.hdf5
+apr22_RegMz_8_j_0.6366197723675814_beta_2.5_ea_0.8_eb_0.81_.hdf5
+apr22_RegMz_8_j_0.6366197723675814_beta_inf_ea_0.8_eb_0.81_.hdf5
