@@ -240,15 +240,28 @@ In contrast to the preceding subsection, which focused on the examination of mac
 We have extended previous simulations to  a later time point of $t=2000\;T$, and calculated the EE for  each time point. The results are plotted in figure~\ref{Fig:entangle} for both weak and strong spin coupling, while maintaining the driving parameters consistently at a CDT/DL point. The EE is found to start to rise from the onset of the first $T_2-cycle$, when spin interactions begin to impact the behavior of the spin chain. The increase in EE is observed to be gradual, even after prolonged interactions.  The EE exhibits a more rapid increase in the case of strong spin coupling compared to weak spin coupling. As evidenced by equation~\eqref{eq:floq_eff3}, the coupling present in the effective Hamiltonian is directly proportional to the rotational error $\epsilon_A$. When the value of $\epsilon_A$ is small, it effectively hinders the interaction between regions A and B, therefore suppressing the increase in EE. This corroborates the results depicted in figure~\ref{Fig:ea}, where the DTC appears to be more stable at smaller $\epsilon_A$ than at larger $\epsilon_A$.
 	
 When thermalized at infinite temperature, the EE is extensive and averages at $\displaystyle \overline{\expval{S_{AB}}}_T\rightarrow \left[N \ln{2}-1\right]/2$ \cite{Lu2021}. When localized, the EE per particle vanishes in the thermodynamic limit. For finite sizes, it can be approximated as $\overline{\expval{S_{AB}}}_L\approx \ln{2}$~\cite{sakurai_phys_nodate}. In our spin chain, $N=8$, yielding theoretical expressions, $\overline{\expval{S_{AB}}}_T\approx 2.27$, and $\overline{\expval{S_{AB}}}_L\approx 0.69$. The numerical values of the entanglement entropy (EE) are found to remain approximately in the range of $\in\left[0,0.6\right)$, as can be seen in figure~\ref{Fig:entangle}. This observation indicates that the entire system remains athermal and localized, even when a significant amount of time has elapsed.
-\begin{figure}[t!]
+	
+
+\subsection{\label{sec:level43} System size dependent stability in chimeralike order}
+\begin{figure}[t]
+	\begin{center}
+		\includegraphics[width=13.5cm]{figure13.pdf}
+	\end{center}
+	\caption{FFT over regional magnetization $M^z_A$ data for upto $8\times10^4$T for different spin interaction ranges($\beta = 0,1.5,2.5, \infty[`inf']$) at panels top to bottom respectively. Weak (left panels) and strong (right panels) spin coupling is employed. The drive parameters are at the CDT/DL point considering constant $\omega = 20$ with time period $T= 2\pi/\omega$. The beat frequency $\delta\Omega_B$ is plotted in inset figure of each panel for different system size N.}
+	\label{Fig:size_dependence}
+\end{figure}	
+We observed melting in DTC phase for all possible spin interaction in strong coupling as well as for all selected short range interactions ($\beta > 0$) in weak coupling in figure~\ref{Fig:regiogionalmag}. This necessitates an inquiry over the stability of DTC phase at otherwise system sizes. The DTC-melting accompanies beats in time evolution curves in $M^z_A$ in system size N=8. 
+
+We have considered a set of  different system sizes N = 4,6 and 10 including N=8 and numerically calculated the temporal variation of for $M^z_A$ for an extreme extended time period (up to $8\times10^4$T). We have performed numerical FFT using QuTip~\cite{Johansson2013} and plotted the obtained values for different spin interaction ranges (defined by $\beta$) and coupling strengths in figure~\ref{Fig:size_dependence}. The existing peaks in FFT plots in each panels denote existence of all available frequencies which contributes to the system dynamics over large time. The priority in frequencies is secured by the corresponding amplitudes. We have numerically obtained the beat frequency ($\delta\Omega_B$) from the most prominent frequencies around $\Omega/\omega = 1/2$ and plotted it for different system size N(=4,6,8,10) in the inset of each panel. We observe that $\delta\Omega_B$ decreases with the increase in N at each panel. This indicates that $\delta\Omega_B$ is finite at finite system size. However at thermodynamic limit which is when $N\rightarrow \infty$, $\delta\Omega_B$ is found to tend to zero ($\delta\Omega_B\rightarrow 0$) which results in collapse in FFT-spectrum to a single peak at $\Omega/\omega = 1/2$. This asserts that the stability increases in proposed finite size spin-1/2 model is enduring by increase in N for all selected spin interaction ranges and coupling strengths. And at thermodynamic limit DTC-DMBL chimeralike order is stable at each possible interaction ranges and coupling strengths.
+
+\subsection{\label{sec:level44} Robustness against Static Fields}
+\begin{figure}[t]
 	\begin{center}
 		\includegraphics[width=15cm]{figure12.pdf}
 	\end{center}
 	\caption{Weak (left T- panels) and strong (right V-panels) additional static fields defined by $\gamma = J_0/5, J_0$ respectively ( where $J_0=0.2/T$ ), are applied in addition to the strong spin coupling and transverse field at different interaction ranges set by $\beta = 0.0$ (panels a), $\beta= 1.5$ (panels b), $\beta=2.5$ (panels c), and $\beta= \infty$ (panels d). The frequency of the drive is $\omega = 20$, amplitude $h$ is corresponding to CDT/DL point, $\epsilon_A=0.03$, $\epsilon_B=0.9$ and all other parameters are kept similar to previous simulations.  The local magnetization for each site (i) is plotted from $t=0$ to $t=80 T$.}
 	\label{Fig:robustness}
-\end{figure}	
-\subsection{\label{sec:level43} Robustness against Static Fields}
-
+\end{figure}
 The influence of the driving parameters $h, \omega$ significantly affects the long-lasting stability of the DTC-DMBL chimera. The stability of the chimera order diminishes even if there is a minor deviation from the CDT/DL point. This raises questions about the mechanisms by which the chimera resists external fields, even while functioning precisely at the CDT/DL point.
 In order to conduct an investigation, we will now incorporate the static field $\hbar\hat{V}(\hat{\sigma}^{\gamma})$ discussed in section~\ref{sec:mdl_n_dynam} into the Hamiltonian $\hat{H}(t)$. This static field remains un-modulated by the pulses and acts on the system identically at all times. We conducted the simulation incorporating this field while all other parameters were maintained at the same values at CDT/DL point as in earlier simulations. 
 
@@ -392,6 +405,18 @@ Next, we apply the Baker-Campbell-Hausdorff formula~\cite{Magnus1954} successive
     \label{eq:app:nfloq_eff3}
 \end{multline}
 In the limit of very high frequencies, $T\rightarrow 0$, leading to asymptotically vanishing $\hat{\theta}_l$. In this limit, the coupling between regions manifests as effective fields $\sim \hat{\sigma}^{x,y}_l$ in region $A$ whose intensities depend only on $\epsilon_A$, and the ratio $\frac{4h}{\omega}$. When $h$ is set to an odd multiple of $\pi\omega/4$, these effective fields vanish in the asymptotic limit, causing the regions $A$ and $B$ to decouple completely.
+
+\section{\label{sec:AppendixC} Stability around CDT/DL point}
+\begin{figure}[t]
+	\begin{center}
+		\includegraphics[width=13cm]{figure14.pdf}
+	\end{center}
+	\caption{put caption here \dots}
+	\label{Fig:aroundCDT}
+\end{figure}
+In this paper the numerical results are primarily for a spin-1/2 chain for different sizes (defined by N). However the primary results are focused on system size N=8. The analytical result in appendix~\ref{sec:AppendixA} and ~\ref{sec:AppendixB} suggests to obtain the DMBL in region B at certain set of drive parameters ($h, \omega$) controlled by CDT/DL condition ($\mathcal{J}_0(4h/\omega$)=0). The DMBL phase exists for small time span (T/2 = $\pi/\omega$) due to large drive frequency($\omega=20$) in each time period. This rejects the restriction on DMBL in clean system in thermodynamic limit~\cite{Mahbub2024}. \todo{start writing from here\dots}
+
+
 
 % Bibliography
 \bibliographystyle{iopart-num}
