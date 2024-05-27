@@ -1,9 +1,9 @@
-PWD /home/mahbub/gitrepos/mr/Chimera_Time_Crystal/manuscript
+PWD /home/mahi/vs_repos/Chimera_Time_Crystal/manuscript
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/mahbub/gitrepos/mr/Chimera_Time_Crystal/manuscript/chimera.tex
+INPUT /home/mahi/vs_repos/Chimera_Time_Crystal/manuscript/chimera.tex
 OUTPUT chimera.log
 INPUT ./iopart.cls
 INPUT ./iopart.cls
